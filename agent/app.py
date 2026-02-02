@@ -14,11 +14,25 @@ pending_cases = {}
 VOTE_TIMEOUT = 6     # seconds
 QUORUM = 2           # 2 of 3 nodes
 
+trust_scores = {}
+DEFAULT_TRUST = 1.0
+TRUST_REWARD = 0.05
+TRUST_PENALTY = 0.1
+WEIGHT_THRESHOLD = 2.0
+
+
+
 # -------------------------------
 # NODE CONFIG
 # -------------------------------
 NODE_NAME = os.getenv("NODE_NAME", "Unknown-Node")
 PEERS = os.getenv("PEERS", "").split(",")
+for peer in PEERS:
+    if peer:
+        trust_scores[peer] = DEFAULT_TRUST
+
+trust_scores[NODE_NAME] = DEFAULT_TRUST
+
 
 WHITELIST = ["apt", "apt-get", "dpkg", "curl", "pip"]
 
@@ -36,7 +50,18 @@ sys.stdout.flush()
 def receive_alert():
     data = request.json
     print(f"📩 [{NODE_NAME}] Final alert: {data}")
+    proposer = data.get("node")
+    result = data.get("result")
+
+    if proposer in trust_scores:
+        if result == "terminated":
+            trust_scores[proposer] += TRUST_REWARD
+        else:
+            trust_scores[proposer] -= TRUST_PENALTY
+
+    print(f"📊 [{NODE_NAME}] updated trust: {trust_scores}")
     sys.stdout.flush()
+
     return jsonify({"status": "ack"}), 200
 
 
@@ -190,12 +215,23 @@ def monitor_loop():
                     while time.time() - pending_cases[case_id]["start"] < VOTE_TIMEOUT:
 
                         votes = pending_cases[case_id]["votes"]
-                        yes_votes = sum(1 for v in votes.values() if v)
+                        weighted_sum = 0.0
 
-                        if yes_votes >= QUORUM:
+                        for voter, decision in votes.items():
+                            if decision:
+                                weighted_sum += trust_scores.get(voter, 1.0)
+
+                        print(
+                            f"⚖️ [{NODE_NAME}] weighted votes = {weighted_sum:.2f} "
+                            f"(threshold={WEIGHT_THRESHOLD}) from {votes}"
+                        )
+                        sys.stdout.flush()
+
+                        if weighted_sum >= WEIGHT_THRESHOLD:
+
 
                             print(
-                                f"⚖️ [{NODE_NAME}] quorum reached for {case_id}. "
+                                f"⚖️ [{NODE_NAME}] ⚖️ weighted threshold reached for {case_id}. "
                                 "Executing remediation."
                             )
                             sys.stdout.flush()
