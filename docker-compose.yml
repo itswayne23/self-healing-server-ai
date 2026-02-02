@@ -1,36 +1,43 @@
 services:
   node1:
-    build: ./agent
+    build: .
     container_name: node1
     environment:
       - NODE_NAME=node1
       - PEERS=node2,node3
+    volumes:
+      - node1-data:/app
     networks:
       - cluster-net
-    ports:
-      - "5001:5000"
 
   node2:
-    build: ./agent
+    build: .
     container_name: node2
     environment:
       - NODE_NAME=node2
       - PEERS=node1,node3
+    volumes:
+      - node2-data:/app
     networks:
       - cluster-net
-    ports:
-      - "5002:5000"
 
   node3:
-    build: ./agent
+    build: .
     container_name: node3
     environment:
       - NODE_NAME=node3
       - PEERS=node1,node2
+    volumes:
+      - node3-data:/app
     networks:
       - cluster-net
-    ports:
-      - "5003:5000"
 
+volumes:
+  node1-data:
+  node2-data:
+  node3-data:
+
+  
 networks:
   cluster-net:
+    driver: bridge
