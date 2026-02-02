@@ -4,9 +4,19 @@ import os
 import sys
 import threading
 import requests
+import uuid
 from flask import Flask, request, jsonify
 
-# --- Node identity ---
+# -------------------------------
+# GLOBAL STATE
+# -------------------------------
+pending_cases = {}
+VOTE_TIMEOUT = 6     # seconds
+QUORUM = 2           # 2 of 3 nodes
+
+# -------------------------------
+# NODE CONFIG
+# -------------------------------
 NODE_NAME = os.getenv("NODE_NAME", "Unknown-Node")
 PEERS = os.getenv("PEERS", "").split(",")
 
@@ -19,49 +29,136 @@ app = Flask(__name__)
 print(f"🛡️ Agent running on {NODE_NAME}")
 sys.stdout.flush()
 
-
-# --------------------------------------------------
-# Receive alerts from peers
-# --------------------------------------------------
+# ==================================================
+# RECEIVE FINAL ALERTS (POST-ACTION INFO)
+# ==================================================
 @app.route("/alert", methods=["POST"])
 def receive_alert():
     data = request.json
-    print(f"📩 [{NODE_NAME}] Alert received: {data}")
+    print(f"📩 [{NODE_NAME}] Final alert: {data}")
     sys.stdout.flush()
     return jsonify({"status": "ack"}), 200
 
 
-# --------------------------------------------------
-# Send alert to peers
-# --------------------------------------------------
-def broadcast_alert(payload):
+# ==================================================
+# RECEIVE PROPOSAL FROM PEER
+# ==================================================
+@app.route("/propose", methods=["POST"])
+def receive_proposal():
+    data = request.json
+    case_id = data["case_id"]
+
+    print(f"🗳️ [{NODE_NAME}] proposal received: {data}")
+    sys.stdout.flush()
+
+    # Stage-3 simple logic: always YES
+    vote = True
+
+    proposer = data["from"]
+
+    try:
+        url = f"http://{proposer}:5000/vote"
+        requests.post(url, json={
+            "case_id": case_id,
+            "from": NODE_NAME,
+            "vote": vote
+        }, timeout=2)
+    except Exception as e:
+        print(f"⚠️ vote send failed: {e}")
+        sys.stdout.flush()
+
+    return jsonify({"status": "vote_sent"}), 200
+
+
+# ==================================================
+# RECEIVE VOTE
+# ==================================================
+@app.route("/vote", methods=["POST"])
+def receive_vote():
+    data = request.json
+    case_id = data["case_id"]
+
+    print(f"🗳️ [{NODE_NAME}] vote received: {data}")
+    sys.stdout.flush()
+
+    if case_id in pending_cases:
+        pending_cases[case_id]["votes"][data["from"]] = data["vote"]
+
+    return jsonify({"status": "ack"}), 200
+
+
+# ==================================================
+# PROPOSE INCIDENT TO PEERS
+# ==================================================
+def propose_to_peers(payload):
+
+    case_id = str(uuid.uuid4())
+
+    pending_cases[case_id] = {
+        "votes": {NODE_NAME: True},
+        "start": time.time(),
+        "payload": payload
+    }
+
+    payload["case_id"] = case_id
+
     for peer in PEERS:
         if not peer:
             continue
 
-        print(f"📡 [{NODE_NAME}] sending alert to {peer}")
+        print(f"📨 [{NODE_NAME}] proposing case {case_id} to {peer}")
         sys.stdout.flush()
 
-        url = f"http://{peer}:5000/alert"
+        try:
+            requests.post(
+                f"http://{peer}:5000/propose",
+                json=payload,
+                timeout=2
+            )
+        except Exception as e:
+            print(f"⚠️ proposal failed to {peer}: {e}")
+            sys.stdout.flush()
+
+    return case_id
+
+
+# ==================================================
+# BROADCAST FINAL RESULT AFTER ACTION
+# ==================================================
+def broadcast_final(payload):
+
+    for peer in PEERS:
+        if not peer:
+            continue
+
+        print(f"📡 [{NODE_NAME}] broadcasting FINAL result to {peer}")
+        sys.stdout.flush()
 
         try:
-            requests.post(url, json=payload, timeout=2)
+            requests.post(
+                f"http://{peer}:5000/alert",
+                json=payload,
+                timeout=2
+            )
         except Exception as e:
-            print(f"⚠️ [{NODE_NAME}] could not contact {peer}: {e}")
+            print(f"⚠️ final broadcast failed: {e}")
             sys.stdout.flush()
 
 
-# --------------------------------------------------
-# Monitoring loop
-# --------------------------------------------------
+# ==================================================
+# MONITOR LOOP (STAGE-3 BRAIN)
+# ==================================================
 def monitor_loop():
+
     print(f"🛡️ Security agent background thread started on {NODE_NAME}")
     sys.stdout.flush()
 
     while True:
+
         for proc in psutil.process_iter(["pid", "name"]):
+
             try:
-                cpu = proc.cpu_percent(interval=0.2)
+                cpu = proc.cpu_percent(interval=0.3)
                 name = proc.info.get("name", "unknown")
 
                 if cpu > 40 and not any(w in name.lower() for w in WHITELIST):
@@ -72,11 +169,6 @@ def monitor_loop():
                     )
                     sys.stdout.flush()
 
-                    proc.kill()
-
-                    print(f"✅ [{NODE_NAME}] Process terminated")
-                    sys.stdout.flush()
-
                     payload = {
                         "from": NODE_NAME,
                         "process": name,
@@ -85,7 +177,65 @@ def monitor_loop():
                         "time": time.time()
                     }
 
-                    broadcast_alert(payload)
+                    # -----------------------
+                    # PROPOSE TO PEERS
+                    # -----------------------
+                    case_id = propose_to_peers(payload)
+
+                    # -----------------------
+                    # WAIT FOR QUORUM
+                    # -----------------------
+                    killed = False
+
+                    while time.time() - pending_cases[case_id]["start"] < VOTE_TIMEOUT:
+
+                        votes = pending_cases[case_id]["votes"]
+                        yes_votes = sum(1 for v in votes.values() if v)
+
+                        if yes_votes >= QUORUM:
+
+                            print(
+                                f"⚖️ [{NODE_NAME}] quorum reached for {case_id}. "
+                                "Executing remediation."
+                            )
+                            sys.stdout.flush()
+
+                            try:
+                                proc.kill()
+                                killed = True
+                                print(
+                                    f"✅ [{NODE_NAME}] Process terminated "
+                                    "after consensus"
+                                )
+                                sys.stdout.flush()
+                            except:
+                                pass
+
+                            break
+
+                        time.sleep(0.4)
+
+                    # -----------------------
+                    # OUTCOME
+                    # -----------------------
+                    if killed:
+
+                        final_payload = {
+                            "case_id": case_id,
+                            "node": NODE_NAME,
+                            "result": "terminated",
+                            "process": name
+                        }
+
+                        broadcast_final(final_payload)
+
+                    else:
+                        print(
+                            f"❌ [{NODE_NAME}] quorum NOT reached for {case_id}"
+                        )
+                        sys.stdout.flush()
+
+                        pending_cases.pop(case_id, None)
 
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 pass
@@ -93,9 +243,9 @@ def monitor_loop():
         time.sleep(CHECK_INTERVAL)
 
 
-# --------------------------------------------------
-# Start everything
-# --------------------------------------------------
+# ==================================================
+# START THREAD + HTTP SERVER
+# ==================================================
 threading.Thread(target=monitor_loop, daemon=True).start()
 
 print("🌐 Starting HTTP server...")
