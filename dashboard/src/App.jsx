@@ -21,19 +21,40 @@ import {
 
 const API = "http://localhost:7000";
 
-// Modern color palette
-const COLORS = {
-  primary: "#6366f1",
-  secondary: "#8b5cf6",
-  success: "#10b981",
-  warning: "#f59e0b",
-  danger: "#ef4444",
-  info: "#06b6d4",
-  dark: "#0f172a",
-  card: "rgba(30, 41, 59, 0.7)",
+// Theme color palettes
+const THEMES = {
+  dark: {
+    primary: "#6366f1",
+    secondary: "#8b5cf6",
+    success: "#10b981",
+    warning: "#f59e0b",
+    danger: "#ef4444",
+    info: "#06b6d4",
+    bg: "#0f172a",
+    card: "rgba(30, 41, 59, 0.6)",
+    text: "#f1f5f9",
+    textSecondary: "#94a3b8",
+    border: "rgba(255, 255, 255, 0.08)",
+    shadow: "0 8px 32px rgba(0, 0, 0, 0.4)",
+  },
+  light: {
+    primary: "#4f46e5",
+    secondary: "#7c3aed",
+    success: "#059669",
+    warning: "#d97706",
+    danger: "#dc2626",
+    info: "#0891b2",
+    bg: "#f8fafc",
+    card: "rgba(255, 255, 255, 0.8)",
+    text: "#0f172a",
+    textSecondary: "#475569",
+    border: "rgba(0, 0, 0, 0.08)",
+    shadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+  },
 };
 
 function App() {
+  const [theme, setTheme] = useState("dark");
   const [status, setStatus] = useState({});
   const [events, setEvents] = useState([]);
   const [stats, setStats] = useState({});
@@ -50,7 +71,34 @@ function App() {
   const [knownCases, setKnownCases] = useState(new Set());
   const [selectedNode, setSelectedNode] = useState(null);
 
-  // Simulated data for demo (remove in production)
+  // Apply theme to CSS variables
+  useEffect(() => {
+    const root = document.documentElement;
+    const t = THEMES[theme];
+    
+    root.style.setProperty("--primary", t.primary);
+    root.style.setProperty("--secondary", t.secondary);
+    root.style.setProperty("--success", t.success);
+    root.style.setProperty("--warning", t.warning);
+    root.style.setProperty("--danger", t.danger);
+    root.style.setProperty("--info", t.info);
+    root.style.setProperty("--bg", t.bg);
+    root.style.setProperty("--card", t.card);
+    root.style.setProperty("--text", t.text);
+    root.style.setProperty("--text-secondary", t.textSecondary);
+    root.style.setProperty("--border", t.border);
+    root.style.setProperty("--shadow", t.shadow);
+    
+    // Set data-theme attribute for conditional CSS
+    root.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  // Toggle theme function
+  const toggleTheme = () => {
+    setTheme(prev => prev === "dark" ? "light" : "dark");
+  };
+
+  // Mock data initialization
   useEffect(() => {
     const mockData = {
       status: {
@@ -163,7 +211,7 @@ function App() {
   }
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell theme-${theme}`}>
       {/* Animated Background */}
       <div className="ambient-bg">
         <div className="blob blob-1"></div>
@@ -240,6 +288,20 @@ function App() {
               <span className="search-icon">🔍</span>
             </div>
             <div className="header-actions">
+              {/* THEME TOGGLE */}
+              <button 
+                className={`theme-toggle ${theme}`} 
+                onClick={toggleTheme}
+                title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              >
+                <div className="toggle-track">
+                  <div className="toggle-thumb">
+                    <span className="toggle-icon">{theme === 'dark' ? '🌙' : '☀️'}</span>
+                  </div>
+                </div>
+                <span className="toggle-label">{theme === 'dark' ? 'Dark' : 'Light'}</span>
+              </button>
+
               <button className="icon-btn">🔔</button>
               <button className="icon-btn">⚙️</button>
               <div className="user-avatar">👤</div>
@@ -253,7 +315,7 @@ function App() {
             {/* KPI Cards */}
             <div className="kpi-grid">
               <div className="kpi-card">
-                <div className="kpi-icon" style={{ background: "rgba(99, 102, 241, 0.2)" }}>🖥️</div>
+                <div className="kpi-icon" style={{ background: theme === 'dark' ? "rgba(99, 102, 241, 0.2)" : "rgba(79, 70, 229, 0.1)" }}>🖥️</div>
                 <div className="kpi-content">
                   <h3>{Object.keys(status).length}</h3>
                   <p>Active Nodes</p>
@@ -261,7 +323,7 @@ function App() {
                 </div>
               </div>
               <div className="kpi-card">
-                <div className="kpi-icon" style={{ background: "rgba(239, 68, 68, 0.2)" }}>🚨</div>
+                <div className="kpi-icon" style={{ background: theme === 'dark' ? "rgba(239, 68, 68, 0.2)" : "rgba(220, 38, 38, 0.1)" }}>🚨</div>
                 <div className="kpi-content">
                   <h3>{activeIncidents}</h3>
                   <p>Active Threats</p>
@@ -269,7 +331,7 @@ function App() {
                 </div>
               </div>
               <div className="kpi-card">
-                <div className="kpi-icon" style={{ background: "rgba(16, 185, 129, 0.2)" }}>✅</div>
+                <div className="kpi-icon" style={{ background: theme === 'dark' ? "rgba(16, 185, 129, 0.2)" : "rgba(5, 150, 105, 0.1)" }}>✅</div>
                 <div className="kpi-content">
                   <h3>{stats.resolved || 142}</h3>
                   <p>Resolved Today</p>
@@ -277,7 +339,7 @@ function App() {
                 </div>
               </div>
               <div className="kpi-card">
-                <div className="kpi-icon" style={{ background: "rgba(245, 158, 11, 0.2)" }}>⚡</div>
+                <div className="kpi-icon" style={{ background: theme === 'dark' ? "rgba(245, 158, 11, 0.2)" : "rgba(217, 119, 6, 0.1)" }}>⚡</div>
                 <div className="kpi-content">
                   <h3>{stats.avg_response_time || "2.3s"}</h3>
                   <p>Avg Response</p>
@@ -314,7 +376,7 @@ function App() {
                         </div>
                         <div className="metric">
                           <span className="metric-label">Strikes</span>
-                          <span className="metric-value" style={{ color: n.strikes[n.node] > 0 ? '#ef4444' : '#10b981' }}>
+                          <span className="metric-value" style={{ color: n.strikes[n.node] > 0 ? 'var(--danger)' : 'var(--success)' }}>
                             {n.strikes[n.node] || 0}
                           </span>
                         </div>
@@ -339,18 +401,19 @@ function App() {
                   <BarChart data={trustData}>
                     <defs>
                       <linearGradient id="trustGradient" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor={COLORS.primary} />
-                        <stop offset="100%" stopColor={COLORS.secondary} />
+                        <stop offset="0%" stopColor={THEMES[theme].primary} />
+                        <stop offset="100%" stopColor={THEMES[theme].secondary} />
                       </linearGradient>
                     </defs>
-                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                    <XAxis dataKey="node" stroke="#64748b" fontSize={12} />
-                    <YAxis domain={[0, 1]} stroke="#64748b" fontSize={12} />
+                    <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)"} />
+                    <XAxis dataKey="node" stroke={THEMES[theme].textSecondary} fontSize={12} />
+                    <YAxis domain={[0, 1]} stroke={THEMES[theme].textSecondary} fontSize={12} />
                     <Tooltip 
                       contentStyle={{ 
-                        background: "rgba(15, 23, 42, 0.9)", 
-                        border: "1px solid rgba(255,255,255,0.1)",
-                        borderRadius: "8px"
+                        background: theme === 'dark' ? "rgba(15, 23, 42, 0.9)" : "rgba(255, 255, 255, 0.9)", 
+                        border: `1px solid ${THEMES[theme].border}`,
+                        borderRadius: "8px",
+                        color: THEMES[theme].text
                       }} 
                     />
                     <Bar dataKey="trust" fill="url(#trustGradient)" radius={[6, 6, 0, 0]} />
@@ -375,7 +438,7 @@ function App() {
                       dataKey="value"
                     >
                       {pieData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={[COLORS.danger, COLORS.warning, COLORS.success][index % 3]} />
+                        <Cell key={`cell-${index}`} fill={[THEMES[theme].danger, THEMES[theme].warning, THEMES[theme].success][index % 3]} />
                       ))}
                     </Pie>
                     <Tooltip />
@@ -384,7 +447,7 @@ function App() {
                 <div className="legend">
                   {pieData.map((entry, index) => (
                     <div key={entry.name} className="legend-item">
-                      <div className="legend-dot" style={{ background: [COLORS.danger, COLORS.warning, COLORS.success][index % 3] }}></div>
+                      <div className="legend-dot" style={{ background: [THEMES[theme].danger, THEMES[theme].warning, THEMES[theme].success][index % 3] }}></div>
                       <span>{entry.name}</span>
                       <strong>{entry.value}</strong>
                     </div>
@@ -492,7 +555,7 @@ function App() {
                           <div className="severity-bar">
                             <div 
                               className="severity-fill" 
-                              style={{ width: `${(e.weighted / 10) * 100}%`, background: e.weighted > 7 ? '#ef4444' : e.weighted > 4 ? '#f59e0b' : '#10b981' }}
+                              style={{ width: `${(e.weighted / 10) * 100}%`, background: e.weighted > 7 ? THEMES[theme].danger : e.weighted > 4 ? THEMES[theme].warning : THEMES[theme].success }}
                             ></div>
                             <span>{e.weighted.toFixed(1)}</span>
                           </div>
@@ -522,24 +585,25 @@ function App() {
                 <AreaChart data={timelineData}>
                   <defs>
                     <linearGradient id="colorWeight" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor={COLORS.primary} stopOpacity={0.3}/>
-                      <stop offset="95%" stopColor={COLORS.primary} stopOpacity={0}/>
+                      <stop offset="5%" stopColor={THEMES[theme].primary} stopOpacity={0.3}/>
+                      <stop offset="95%" stopColor={THEMES[theme].primary} stopOpacity={0}/>
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                  <XAxis dataKey="time" stroke="#64748b" fontSize={12} />
-                  <YAxis stroke="#64748b" fontSize={12} />
+                  <CartesianGrid strokeDasharray="3 3" stroke={theme === 'dark' ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)"} />
+                  <XAxis dataKey="time" stroke={THEMES[theme].textSecondary} fontSize={12} />
+                  <YAxis stroke={THEMES[theme].textSecondary} fontSize={12} />
                   <Tooltip 
                     contentStyle={{ 
-                      background: "rgba(15, 23, 42, 0.9)", 
-                      border: "1px solid rgba(255,255,255,0.1)",
-                      borderRadius: "8px"
+                      background: theme === 'dark' ? "rgba(15, 23, 42, 0.9)" : "rgba(255, 255, 255, 0.9)", 
+                      border: `1px solid ${THEMES[theme].border}`,
+                      borderRadius: "8px",
+                      color: THEMES[theme].text
                     }}
                   />
                   <Area 
                     type="monotone" 
                     dataKey="weight" 
-                    stroke={COLORS.primary} 
+                    stroke={THEMES[theme].primary} 
                     fillOpacity={1} 
                     fill="url(#colorWeight)" 
                     strokeWidth={2}
