@@ -20,7 +20,7 @@ DEFAULT_TRUST = 1.0
 
 WEIGHT_THRESHOLD = 2.0
 
-TRUST_FILE = "/app/trust.json"
+TRUST_FILE = "/data/trust.json"
 
 TRUST_DECAY = 0.01
 TRUST_DECAY_INTERVAL = 10   # seconds
@@ -33,6 +33,10 @@ STRIKES = {}
 MAX_STRIKES = 3
 
 CHECK_INTERVAL = 2
+
+EVENT_LOG = []
+MAX_EVENTS = 50
+
 
 WHITELIST = ["apt", "apt-get", "dpkg", "curl", "pip"]
 
@@ -55,12 +59,23 @@ def load_trust():
 
 
 def save_trust():
-    with open(TRUST_FILE, "w") as f:
-        json.dump(
-            {"trust": trust_scores, "strikes": STRIKES},
-            f,
-            indent=2
-        )
+    try:
+        os.makedirs(os.path.dirname(TRUST_FILE), exist_ok=True)
+
+        with open(TRUST_FILE, "w") as f:
+            json.dump(
+                {"trust": trust_scores, "strikes": STRIKES},
+                f,
+                indent=2
+            )
+
+        print(f"💾 [{NODE_NAME}] saved trust to {TRUST_FILE}")
+        sys.stdout.flush()
+
+    except Exception as e:
+        print(f"🔥 [{NODE_NAME}] failed saving trust: {e}")
+        sys.stdout.flush()
+
 
 
 def trust_decay_loop():
@@ -261,6 +276,20 @@ def broadcast_final(payload):
         except Exception as e:
             print(f"⚠️ final broadcast failed: {e}")
 
+@app.route("/status")
+def status():
+    return jsonify({
+        "node": NODE_NAME,
+        "trust": trust_scores,
+        "strikes": STRIKES,
+        "active_cases": len(pending_cases)
+    })
+
+@app.route("/events")
+def events():
+    return jsonify(EVENT_LOG)
+
+
 # ==================================================
 # MONITOR LOOP
 # ==================================================
@@ -342,6 +371,18 @@ def monitor_loop():
 
                         broadcast_final(final_payload)
 
+                        EVENT_LOG.append({
+                            "case_id": case_id,
+                            "process": name,
+                            "node": NODE_NAME,
+                            "result": "terminated",
+                            "weighted": weighted_sum,
+                            "time": time.time()
+                        })
+
+                        EVENT_LOG[:] = EVENT_LOG[-MAX_EVENTS:]
+
+
                     else:
                         print(
                             f"❌ [{NODE_NAME}] weighted threshold NOT reached for {case_id}"
@@ -364,6 +405,15 @@ def monitor_loop():
 
 
                         pending_cases.pop(case_id, None)
+                        EVENT_LOG.append({
+                            "case_id": case_id,
+                            "process": name,
+                            "node": NODE_NAME,
+                            "result": "rejected",
+                            "weighted": weighted_sum,
+                            "time": time.time()
+                        })
+
 
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 pass
