@@ -46,6 +46,8 @@ services:
       - node1
       - node2
       - node3
+    volumes:
+      - controller-data:/app
     networks:
     - cluster-net
 
@@ -53,6 +55,7 @@ volumes:
   node1-data:
   node2-data:
   node3-data:
+  controller-data:
 
   
 networks:

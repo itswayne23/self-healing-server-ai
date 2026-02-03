@@ -2,6 +2,9 @@ from flask import Flask, jsonify
 import requests
 import time
 import threading
+import sqlite3
+from pathlib import Path
+
 
 NODES = ["node1", "node2", "node3"]
 SEEN_CASES = set()
@@ -14,6 +17,76 @@ CLUSTER_EVENTS = []
 
 POLL_INTERVAL = 3
 MAX_EVENTS = 200
+
+DB_PATH = "/app/events.db"
+
+def init_db():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS events (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        case_id TEXT,
+        node TEXT,
+        process TEXT,
+        result TEXT,
+        weighted REAL,
+        time REAL
+    )
+    """)
+
+    conn.commit()
+    conn.close()
+
+
+def insert_event(e):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+    INSERT INTO events
+    (case_id, node, process, result, weighted, time)
+    VALUES (?, ?, ?, ?, ?, ?)
+    """, (
+        e["case_id"],
+        e["node"],
+        e["process"],
+        e["result"],
+        e["weighted"],
+        e["time"]
+    ))
+
+    conn.commit()
+    conn.close()
+
+
+def load_recent_events(limit=200):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+        SELECT case_id, node, process, result, weighted, time
+        FROM events
+        ORDER BY id DESC
+        LIMIT ?
+    """, (limit,))
+
+    rows = cur.fetchall()
+    conn.close()
+
+    return [
+        {
+            "case_id": r[0],
+            "node": r[1],
+            "process": r[2],
+            "result": r[3],
+            "weighted": r[4],
+            "time": r[5],
+        }
+        for r in rows
+    ]
+
 
 
 def poll_nodes():
@@ -38,6 +111,7 @@ def poll_nodes():
 
                     if key not in SEEN_CASES:
                         SEEN_CASES.add(key)
+                        insert_event(e)
                         CLUSTER_EVENTS.append(e)
 
                 CLUSTER_EVENTS[:] = CLUSTER_EVENTS[-MAX_EVENTS:]
@@ -65,6 +139,45 @@ def cluster_events():
 def cluster_nodes():
     return jsonify(list(CLUSTER_STATUS.keys()))
 
+
+@app.route("/history")
+def history():
+    return jsonify(load_recent_events(500))
+
+
+@app.route("/stats")
+def stats():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+        SELECT node, COUNT(*) 
+        FROM events
+        GROUP BY node
+    """)
+
+    per_node = dict(cur.fetchall())
+
+    cur.execute("""
+        SELECT result, COUNT(*)
+        FROM events
+        GROUP BY result
+    """)
+
+    per_result = dict(cur.fetchall())
+
+    conn.close()
+
+    return jsonify({
+        "events_total": sum(per_node.values()),
+        "by_node": per_node,
+        "by_result": per_result
+    })
+
+
+
+init_db()
+CLUSTER_EVENTS[:] = load_recent_events()
 
 threading.Thread(target=poll_nodes, daemon=True).start()
 
