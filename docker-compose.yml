@@ -37,6 +37,17 @@ services:
       - node3-data:/data
     networks:
       - cluster-net
+  controller:
+    build: ./controller
+    container_name: controller
+    ports:
+      - "7000:7000"
+    depends_on:
+      - node1
+      - node2
+      - node3
+    networks:
+    - cluster-net
 
 volumes:
   node1-data:
@@ -47,3 +58,5 @@ volumes:
 networks:
   cluster-net:
     driver: bridge
+
+
