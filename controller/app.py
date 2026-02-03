@@ -4,6 +4,8 @@ import time
 import threading
 import sqlite3
 from pathlib import Path
+from flask_cors import CORS
+
 
 
 NODES = ["node1", "node2", "node3"]
@@ -11,6 +13,8 @@ SEEN_CASES = set()
 
 
 app = Flask(__name__)
+CORS(app)
+
 
 CLUSTER_STATUS = {}
 CLUSTER_EVENTS = []
