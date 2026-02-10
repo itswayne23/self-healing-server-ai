@@ -238,6 +238,21 @@ def explain_case(case_id):
         "raw": event,
     })
 
+@app.route("/cluster/trust")
+def cluster_trust():
+
+    snapshot = {}
+
+    for node, data in CLUSTER_STATUS.items():
+        snapshot[node] = {
+            "trust": data.get("trust"),
+            "strikes": data.get("strikes"),
+            "active_cases": data.get("active_cases"),
+        }
+
+    return jsonify(snapshot)
+
+
 
 init_db()
 CLUSTER_EVENTS[:] = load_recent_events()

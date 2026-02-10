@@ -22,15 +22,25 @@ WEIGHT_THRESHOLD = 2.0
 
 TRUST_FILE = "/data/trust.json"
 
-TRUST_DECAY = 0.01
-TRUST_DECAY_INTERVAL = 10   # seconds
+INACTIVITY_LIMIT = 120     # seconds
+DECAY_RATE = 0.03
 
-TRUST_REWARD = 0.05
-TRUST_PENALTY = 0.15
+MAX_TRUST = 2.0
+MIN_TRUST = 0.1
+
+TRUST_REWARD = 0.06
+TRUST_PENALTY = 0.12
 
 
 STRIKES = {}
 MAX_STRIKES = 3
+node_stats = {}
+# node_stats[node] = {
+#   "votes": 0,
+#   "correct": 0,
+#   "false": 0,
+#   "last_activity": ts
+# }
 
 CHECK_INTERVAL = 2
 
@@ -52,6 +62,7 @@ def load_trust():
             data = json.load(f)
             trust_scores.update(data.get("trust", {}))
             STRIKES.update(data.get("strikes", {}))
+            node_stats.update(data.get("stats", {}))
 
             print(f"📂 [{NODE_NAME}] loaded trust state: {trust_scores}")
     except FileNotFoundError:
@@ -63,11 +74,12 @@ def save_trust():
         os.makedirs(os.path.dirname(TRUST_FILE), exist_ok=True)
 
         with open(TRUST_FILE, "w") as f:
-            json.dump(
-                {"trust": trust_scores, "strikes": STRIKES},
-                f,
-                indent=2
-            )
+            json.dump({
+    "trust": trust_scores,
+    "strikes": STRIKES,
+    "stats": node_stats
+}, f, indent=2)
+
 
         print(f"💾 [{NODE_NAME}] saved trust to {TRUST_FILE}")
         sys.stdout.flush()
@@ -78,33 +90,6 @@ def save_trust():
 
 
 
-def trust_decay_loop():
-    print(f"⏳ [{NODE_NAME}] trust decay thread started")
-    sys.stdout.flush()
-
-    while True:
-        time.sleep(TRUST_DECAY_INTERVAL)
-
-        changed = False
-
-        for node in list(trust_scores.keys()):
-            old = trust_scores[node]
-
-            trust_scores[node] = max(
-                0.1,
-                trust_scores[node] - TRUST_DECAY
-            )
-
-            if trust_scores[node] != old:
-                changed = True
-
-        if changed:
-            print(
-                f"⏳ [{NODE_NAME}] trust decay applied: {trust_scores}"
-            )
-            sys.stdout.flush()
-
-            save_trust()
 
 # -------------------------------
 # NODE CONFIG
@@ -147,26 +132,46 @@ def receive_alert():
     proposer = data.get("node")
     result = data.get("result")
 
-    if proposer in trust_scores:
+    now = time.time()
 
-        if result == "terminated":
-            trust_scores[proposer] += TRUST_REWARD
-            STRIKES[proposer] = 0
+    if proposer not in node_stats:
+        node_stats[proposer] = {
+            "votes": 0,
+            "correct": 0,
+            "false": 0,
+            "last_activity": now
+        }
 
-        else:
-            trust_scores[proposer] = max(
-                0.1,
-                trust_scores[proposer] - TRUST_PENALTY
-            )
-            STRIKES[proposer] = STRIKES.get(proposer, 0) + 1
+    node_stats[proposer]["last_activity"] = now
 
-        print(
-            f"📊 [{NODE_NAME}] updated trust: {trust_scores} "
-            f"strikes={STRIKES}"
+    if result == "terminated":
+
+        trust_scores[proposer] = min(
+            MAX_TRUST,
+            trust_scores.get(proposer, DEFAULT_TRUST) + TRUST_REWARD
         )
-        sys.stdout.flush()
 
-        save_trust()
+        node_stats[proposer]["correct"] += 1
+        STRIKES[proposer] = 0
+
+    else:
+
+        trust_scores[proposer] = max(
+            MIN_TRUST,
+            trust_scores.get(proposer, DEFAULT_TRUST) - TRUST_PENALTY
+        )
+
+        node_stats[proposer]["false"] += 1
+        STRIKES[proposer] = STRIKES.get(proposer, 0) + 1
+
+    print(
+        f"📊 [{NODE_NAME}] updated trust: {trust_scores} "
+        f"stats={node_stats} strikes={STRIKES}"
+    )
+    sys.stdout.flush()
+
+    save_trust()
+
 
 
     print(f"📊 [{NODE_NAME}] trust={trust_scores} strikes={STRIKES}")
@@ -217,8 +222,22 @@ def receive_vote():
 
     print(f"🗳️ [{NODE_NAME}] vote received: {data}")
 
+    voter = data["from"]
+
+    if voter not in node_stats:
+        node_stats[voter] = {
+            "votes": 0,
+            "correct": 0,
+            "false": 0,
+            "last_activity": time.time()
+        }
+
+    node_stats[voter]["votes"] += 1
+    node_stats[voter]["last_activity"] = time.time()
+
     if case_id in pending_cases:
-        pending_cases[case_id]["votes"][data["from"]] = data["vote"]
+        pending_cases[case_id]["votes"][voter] = data["vote"]
+
 
     return jsonify({"status": "ack"}), 200
 
@@ -420,21 +439,49 @@ def monitor_loop():
 
         time.sleep(CHECK_INTERVAL)
 
-# def decay_loop():
+def trust_decay_loop():
 
-#     while True:
-#         time.sleep(60)
+    print(f"🧬 [{NODE_NAME}] adaptive trust engine started")
 
-#         for n in trust_scores:
-#             trust_scores[n] = max(
-#                 0.5,
-#                 trust_scores[n] - TRUST_DECAY
-#             )
+    while True:
 
-#         print(f"⏳ [{NODE_NAME}] trust decay applied: {trust_scores}")
-#         sys.stdout.flush()
+        time.sleep(20)
 
-#         save_trust()
+        now = time.time()
+
+        scores = list(trust_scores.values())
+        if not scores:
+            continue
+
+        median = sorted(scores)[len(scores)//2]
+
+        changed = False
+
+        for node, score in trust_scores.items():
+
+            last = node_stats.get(node, {}).get("last_activity", now)
+
+            idle = now - last
+
+            # only decay long-idle low performers
+            if idle < INACTIVITY_LIMIT:
+                continue
+
+            if score > median:
+                continue
+
+            new = max(
+                MIN_TRUST,
+                score - DECAY_RATE
+            )
+
+            if new != score:
+                trust_scores[node] = new
+                changed = True
+
+        if changed:
+            save_trust()
+
 
 
 # ==================================================
@@ -442,8 +489,8 @@ def monitor_loop():
 # ==================================================
 
 threading.Thread(target=monitor_loop, daemon=True).start()
-# threading.Thread(target=trust_decay_loop, daemon=True).start()  # Disabled: trust should only change based on actual behavior
-# threading.Thread(target=decay_loop, daemon=True).start()
+threading.Thread(target=trust_decay_loop,daemon=True).start()
+
 
 print("🌐 Starting HTTP server...")
 sys.stdout.flush()
