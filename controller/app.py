@@ -128,6 +128,27 @@ def poll_nodes():
 
         time.sleep(POLL_INTERVAL)
 
+def generate_explanation(event):
+    node = event["node"]
+    result = event["result"]
+    weighted = event.get("weighted", 0)
+
+    verdict = (
+        "The cluster reached consensus and terminated the process."
+        if result == "terminated"
+        else "The cluster rejected remediation due to insufficient trust-weighted votes."
+    )
+
+    confidence = "high" if weighted >= 2 else "low"
+
+    return (
+        f"Incident detected by {node}. "
+        f"{verdict} "
+        f"The weighted vote score was {weighted:.2f}, giving {confidence} confidence "
+        f"that the behavior was malicious."
+    )
+
+
 
 @app.route("/cluster/status")
 def cluster_status():
@@ -178,6 +199,44 @@ def stats():
         "by_result": per_result
     })
 
+@app.route("/cluster/explain/<case_id>")
+def explain_case(case_id):
+
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    row = cur.execute(
+        """
+        SELECT case_id, node, process, result, weighted, time
+        FROM events
+        WHERE case_id = ?
+        ORDER BY time DESC
+        LIMIT 1
+        """,
+        (case_id,),
+    ).fetchone()
+
+    conn.close()
+
+    if not row:
+        return jsonify({"error": "case not found"}), 404
+
+    event = {
+        "case_id": row[0],
+        "node": row[1],
+        "process": row[2],
+        "result": row[3],
+        "weighted": row[4],
+        "time": row[5],
+    }
+
+    explanation = generate_explanation(event)
+
+    return jsonify({
+        "case_id": case_id,
+        "explanation": explanation,
+        "raw": event,
+    })
 
 
 init_db()

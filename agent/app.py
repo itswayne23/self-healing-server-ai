@@ -442,7 +442,7 @@ def monitor_loop():
 # ==================================================
 
 threading.Thread(target=monitor_loop, daemon=True).start()
-threading.Thread(target=trust_decay_loop, daemon=True).start()
+# threading.Thread(target=trust_decay_loop, daemon=True).start()  # Disabled: trust should only change based on actual behavior
 # threading.Thread(target=decay_loop, daemon=True).start()
 
 print("🌐 Starting HTTP server...")
