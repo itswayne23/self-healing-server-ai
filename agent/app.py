@@ -20,6 +20,7 @@ trust_scores = {}
 DEFAULT_TRUST = 1.0
 
 WEIGHT_THRESHOLD = 2.0
+QUARANTINE_THRESHOLD = 0.35
 
 TRUST_FILE = "/data/trust.json"
 
@@ -343,11 +344,24 @@ def monitor_loop():
                         votes = pending_cases[case_id]["votes"]
                         weighted_sum = 0.0
 
-                        # Calculate current vote weight
                         for voter, decision in votes.items():
-                            if decision:
-                                acc = reputation.accuracy(voter)
-                                weighted_sum += trust_scores.get(voter, 1.0) * acc
+                            if not decision:
+                                continue
+
+                            # --- Stage 8: reputation + quarantine aware weighting ---
+
+                            t = trust_scores.get(voter, DEFAULT_TRUST)
+
+                            # Ignore quarantined nodes
+                            if t < QUARANTINE_THRESHOLD:
+                                print(f"🚫 [{NODE_NAME}] ignoring {voter} vote (quarantined)")
+                                continue
+
+                            # Reputation-weighted vote
+                            acc = reputation.accuracy(voter)
+
+                            weighted_sum += t * acc
+
 
                         print(f"⚖️ [{NODE_NAME}] weighted={weighted_sum:.2f} threshold={WEIGHT_THRESHOLD}")
 
@@ -451,6 +465,34 @@ def trust_decay_loop():
         if changed:
             save_trust()
 
+def inactivity_decay_loop():
+
+    while True:
+        time.sleep(15)
+
+        now = time.time()
+
+        for node, stats in node_stats.items():
+
+            idle = now - stats.get("last_activity", now)
+
+            if idle > INACTIVITY_LIMIT:
+
+                old = trust_scores.get(node, DEFAULT_TRUST)
+
+                trust_scores[node] = max(
+                    MIN_TRUST,
+                    old - DECAY_RATE
+                )
+
+                print(
+                    f"📉 [{NODE_NAME}] inactivity decay on {node}: "
+                    f"{old:.2f} -> {trust_scores[node]:.2f}"
+                )
+
+                save_trust()
+
+
 
 
 # ==================================================
@@ -459,6 +501,7 @@ def trust_decay_loop():
 
 threading.Thread(target=monitor_loop, daemon=True).start()
 threading.Thread(target=trust_decay_loop,daemon=True).start()
+threading.Thread(target=inactivity_decay_loop,daemon=True).start()
 
 
 print("🌐 Starting HTTP server...")

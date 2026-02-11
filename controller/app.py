@@ -100,15 +100,28 @@ def poll_nodes():
             try:
                 base = f"http://{node}:5000"
 
+                # ---- STATUS ----
                 status = requests.get(
                     f"{base}/status", timeout=2
                 ).json()
 
+                CLUSTER_STATUS[node] = status
+
+                # ---- REPUTATION (Stage 8) ----
+                try:
+                    rep = requests.get(
+                        f"{base}/reputation", timeout=2
+                    ).json()
+
+                    CLUSTER_STATUS[node]["reputation"] = rep
+
+                except Exception as e:
+                    CLUSTER_STATUS[node]["reputation_error"] = str(e)
+
+                # ---- EVENTS ----
                 events = requests.get(
                     f"{base}/events", timeout=2
                 ).json()
-
-                CLUSTER_STATUS[node] = status
 
                 for e in events:
                     key = f"{e['case_id']}:{e['node']}:{e['time']}"
@@ -123,10 +136,12 @@ def poll_nodes():
             except Exception as e:
                 CLUSTER_STATUS[node] = {
                     "node": node,
-                    "error": str(e)
+                    "error": str(e),
+                    "online": False,
                 }
 
         time.sleep(POLL_INTERVAL)
+
 
 def generate_explanation(event):
     node = event["node"]
