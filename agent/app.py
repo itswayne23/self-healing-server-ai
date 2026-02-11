@@ -22,6 +22,10 @@ DEFAULT_TRUST = 1.0
 WEIGHT_THRESHOLD = 2.0
 QUARANTINE_THRESHOLD = 0.35
 
+QUARANTINE_TIME = 180 # seconds
+
+QUARANTINED = {}
+
 TRUST_FILE = "/data/trust.json"
 
 INACTIVITY_LIMIT = 120     # seconds
@@ -60,16 +64,20 @@ reputation = ReputationEngine()
 # -------------------------------
 
 def load_trust():
-    global trust_scores, STRIKES
+    global trust_scores, STRIKES, node_stats
 
     try:
         with open(TRUST_FILE, "r") as f:
             data = json.load(f)
+
             trust_scores.update(data.get("trust", {}))
             STRIKES.update(data.get("strikes", {}))
             node_stats.update(data.get("stats", {}))
 
-            print(f"📂 [{NODE_NAME}] loaded trust state: {trust_scores}")
+            print(f"📂 [{NODE_NAME}] loaded trust state")
+            print(" trust:", trust_scores)
+            print(" stats:", node_stats)
+
     except FileNotFoundError:
         print(f"📂 [{NODE_NAME}] no prior trust file, starting fresh")
 
@@ -114,6 +122,13 @@ STRIKES[NODE_NAME] = 0
 
 # Load persisted memory after defaults
 load_trust()
+
+for node in trust_scores:
+    QUARANTINED[node] = {
+        "active": False,
+        "until": 0
+    }
+
 
 # -------------------------------
 # FLASK APP
@@ -182,6 +197,17 @@ def receive_alert():
         f"stats={node_stats} strikes={STRIKES}"
     )
     sys.stdout.flush()
+
+    # Auto quarantine if strikes too high or trust too low
+    if STRIKES[proposer] >= MAX_STRIKES or trust_scores[proposer] < QUARANTINE_THRESHOLD:
+
+        QUARANTINED[proposer] = {
+            "active": True,
+            "until": time.time() + QUARANTINE_TIME
+        }
+
+        print(f"🚨 [{NODE_NAME}] quarantined {proposer}")
+
 
     save_trust()
 
@@ -306,7 +332,11 @@ def events():
 
 @app.route("/reputation")
 def reputation_snapshot():
-    return jsonify(reputation.snapshot())
+    return jsonify({
+        "node_stats": node_stats,
+        "engine": reputation.snapshot()
+    })
+
 
 
 
@@ -492,6 +522,20 @@ def inactivity_decay_loop():
 
                 save_trust()
 
+def quarantine_watchdog():
+
+    while True:
+        now = time.time()
+
+        for node, q in QUARANTINED.items():
+            if q["active"] and now > q["until"]:
+                q["active"] = False
+                STRIKES[node] = 0
+                print(f"🩺 [{NODE_NAME}] reintegrated {node}")
+
+        time.sleep(5)
+
+
 
 
 
@@ -502,6 +546,7 @@ def inactivity_decay_loop():
 threading.Thread(target=monitor_loop, daemon=True).start()
 threading.Thread(target=trust_decay_loop,daemon=True).start()
 threading.Thread(target=inactivity_decay_loop,daemon=True).start()
+threading.Thread(target=quarantine_watchdog, daemon=True).start()
 
 
 print("🌐 Starting HTTP server...")

@@ -267,6 +267,27 @@ def cluster_trust():
 
     return jsonify(snapshot)
 
+@app.route("/cluster/quarantine")
+def cluster_quarantine():
+    snap = {}
+
+    for node, data in CLUSTER_STATUS.items():
+        snap[node] = data.get("quarantined", {})
+
+    return jsonify(snap)
+
+@app.route("/cluster/reputation")
+def cluster_reputation():
+
+    snap = {}
+
+    for node, data in CLUSTER_STATUS.items():
+        snap[node] = data.get("reputation", {})
+
+    return jsonify(snap)
+
+
+
 
 
 init_db()
