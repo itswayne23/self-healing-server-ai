@@ -76,6 +76,7 @@ def load_trust():
             STRIKES.update(data.get("strikes", {}))
             node_stats.update(data.get("stats", {}))
             QUARANTINED.update(data.get("quarantine", {}))
+            reputation.load_from_snapshot(data.get("reputation", {}))
 
             print(f"📂 [{NODE_NAME}] loaded trust state")
             print(" trust:", trust_scores)
@@ -94,7 +95,8 @@ def save_trust():
     "trust": trust_scores,
     "strikes": STRIKES,
     "stats": node_stats,
-    "quarantine": QUARANTINED
+    "quarantine": QUARANTINED,
+    "reputation": reputation.snapshot()
 }, f, indent=2)
 
 
