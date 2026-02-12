@@ -8,10 +8,12 @@ import uuid
 from flask import Flask, request, jsonify
 import json
 from reputation import ReputationEngine
+import random
 
 # -------------------------------
 # GLOBAL STATE
 # -------------------------------
+global trust_scores, STRIKES, node_stats, QUARANTINED
 
 pending_cases = {}
 VOTE_TIMEOUT = 6
@@ -73,6 +75,7 @@ def load_trust():
             trust_scores.update(data.get("trust", {}))
             STRIKES.update(data.get("strikes", {}))
             node_stats.update(data.get("stats", {}))
+            QUARANTINED.update(data.get("quarantine", {}))
 
             print(f"📂 [{NODE_NAME}] loaded trust state")
             print(" trust:", trust_scores)
@@ -90,7 +93,8 @@ def save_trust():
             json.dump({
     "trust": trust_scores,
     "strikes": STRIKES,
-    "stats": node_stats
+    "stats": node_stats,
+    "quarantine": QUARANTINED
 }, f, indent=2)
 
 
@@ -120,14 +124,33 @@ for peer in PEERS:
 trust_scores[NODE_NAME] = DEFAULT_TRUST
 STRIKES[NODE_NAME] = 0
 
+ATTACK_MODE = os.getenv("ATTACK_MODE", "false").lower() == "true"
+if ATTACK_MODE:
+    print(f"☠️ [{NODE_NAME}] RUNNING IN ATTACK MODE")
+
+ATTACK_PROFILE = {
+    "vote_flip_prob": 0.6,
+    "false_alert_prob": 0.4,
+    "spam_propose_prob": 0.25,
+    "skip_vote_prob": 0.2,
+    "delay_vote_prob": 0.3,
+    "delay_seconds": 5,
+}
+
+ATTACK_PROFILE.update({
+    "false_propose_prob": 0.35,
+})
+
+
 # Load persisted memory after defaults
 load_trust()
 
 for node in trust_scores:
-    QUARANTINED[node] = {
-        "active": False,
-        "until": 0
-    }
+    if node not in QUARANTINED:
+        QUARANTINED[node] = {
+            "active": False,
+            "until": 0
+        }
 
 
 # -------------------------------
@@ -148,6 +171,21 @@ def receive_alert():
     data = request.json
 
     print(f"📩 [{NODE_NAME}] Final alert: {data}")
+
+    # ==================================================
+    # 😈 FINAL ALERT FALSIFICATION ATTACK
+    # ==================================================
+
+    if ATTACK_MODE and random.random() < ATTACK_PROFILE["false_alert_prob"]:
+        print(f"😈 [{NODE_NAME}] falsifying alert payload")
+
+        if data["result"] == "terminated":
+            data["result"] = "allowed"
+        else:
+            data["result"] = "terminated"
+
+        print(f"😈 [{NODE_NAME}] forged alert => {data}")
+
 
     proposer = data.get("node")
     result = data.get("result")
@@ -198,16 +236,7 @@ def receive_alert():
     )
     sys.stdout.flush()
 
-    # Auto quarantine if strikes too high or trust too low
-    if STRIKES[proposer] >= MAX_STRIKES or trust_scores[proposer] < QUARANTINE_THRESHOLD:
-
-        QUARANTINED[proposer] = {
-            "active": True,
-            "until": time.time() + QUARANTINE_TIME
-        }
-
-        print(f"🚨 [{NODE_NAME}] quarantined {proposer}")
-
+    evaluate_quarantine(proposer)
 
     save_trust()
 
@@ -256,12 +285,27 @@ def receive_proposal():
 
 @app.route("/vote", methods=["POST"])
 def receive_vote():
+
     data = request.json
     case_id = data["case_id"]
 
-    print(f"🗳️ [{NODE_NAME}] vote received: {data}")
-
     voter = data["from"]
+    # ==================================================
+    # 😈 ADVERSARIAL BEHAVIOR: DELAY VOTING
+    # ==================================================
+
+    if ATTACK_MODE and random.random() < ATTACK_PROFILE["delay_vote_prob"]:
+        delay = ATTACK_PROFILE["delay_seconds"]
+        print(f"⏳☠️ [{NODE_NAME}] delaying vote on {case_id} by {delay}s")
+        time.sleep(delay)
+
+    vote = data["vote"]
+
+    print(f"🗳️ [{NODE_NAME}] vote received from {voter}: {vote}")
+
+    # -------------------------------
+    # Node stats bookkeeping
+    # -------------------------------
 
     if voter not in node_stats:
         node_stats[voter] = {
@@ -274,9 +318,30 @@ def receive_vote():
     node_stats[voter]["votes"] += 1
     node_stats[voter]["last_activity"] = time.time()
 
-    if case_id in pending_cases:
-        pending_cases[case_id]["votes"][voter] = data["vote"]
+    # ==================================================
+    # 😈 STAGE 9: ADVERSARIAL BEHAVIOR INJECTION
+    # ==================================================
 
+    if ATTACK_MODE:
+
+        r = random.random()
+
+        # Skip vote entirely
+        if r < ATTACK_PROFILE["skip_vote_prob"]:
+            print(f"😈 [{NODE_NAME}] skipping vote for {case_id}")
+            return jsonify({"status": "ignored"}), 200
+
+        # Flip vote
+        if r < ATTACK_PROFILE["vote_flip_prob"]:
+            vote = not vote
+            print(f"😈 [{NODE_NAME}] flipped vote for {case_id}")
+
+    # ==================================================
+    # Store final vote
+    # ==================================================
+
+    if case_id in pending_cases:
+        pending_cases[case_id]["votes"][voter] = vote
 
     return jsonify({"status": "ack"}), 200
 
@@ -323,7 +388,8 @@ def status():
         "node": NODE_NAME,
         "trust": trust_scores,
         "strikes": STRIKES,
-        "active_cases": len(pending_cases)
+        "active_cases": len(pending_cases),
+        "quarantined": QUARANTINED,
     })
 
 @app.route("/events")
@@ -353,8 +419,19 @@ def monitor_loop():
                 # 1. Check for suspicious process
                 cpu = proc.cpu_percent(interval=0.3)
                 name = proc.info.get("name", "unknown")
+                suspicious = cpu > 40 and not any(w in name.lower() for w in WHITELIST)
 
-                if cpu > 40 and not any(w in name.lower() for w in WHITELIST):
+                # 😈 Attacker may fabricate incidents
+                if ATTACK_MODE and random.random() < ATTACK_PROFILE["false_alert_prob"]:
+                    suspicious = True
+                    print(f"☠️ [{NODE_NAME}] fabricated suspicious activity")
+                if ATTACK_MODE and random.random() < ATTACK_PROFILE["spam_propose_prob"]:
+                    print(f"💣 [{NODE_NAME}] spamming proposals")
+                    for _ in range(3):
+                        suspicious = True
+
+
+                if suspicious:
                     print(f"🚨 [{NODE_NAME}] Suspicious {name} PID={proc.pid} CPU={cpu}")
 
                     payload = {
@@ -431,6 +508,7 @@ def monitor_loop():
                         print(f"❌ [{NODE_NAME}] weighted threshold NOT reached for {case_id}")
                         STRIKES[NODE_NAME] = STRIKES.get(NODE_NAME, 0) + 1
                         trust_scores[NODE_NAME] = max(0.1, trust_scores.get(NODE_NAME, 1.0) - TRUST_PENALTY)
+                        evaluate_quarantine(NODE_NAME)
                         reputation.record_false(NODE_NAME)
                         
                         save_trust()
@@ -452,6 +530,7 @@ def monitor_loop():
                 pass
 
         time.sleep(CHECK_INTERVAL)
+
 def trust_decay_loop():
 
     print(f"🧬 [{NODE_NAME}] adaptive trust engine started")
@@ -488,6 +567,8 @@ def trust_decay_loop():
                 score - DECAY_RATE
             )
 
+            evaluate_quarantine(node)
+
             if new != score:
                 trust_scores[node] = new
                 changed = True
@@ -515,6 +596,8 @@ def inactivity_decay_loop():
                     old - DECAY_RATE
                 )
 
+                evaluate_quarantine(node)
+
                 print(
                     f"📉 [{NODE_NAME}] inactivity decay on {node}: "
                     f"{old:.2f} -> {trust_scores[node]:.2f}"
@@ -535,6 +618,42 @@ def quarantine_watchdog():
 
         time.sleep(5)
 
+def evaluate_quarantine(node):
+
+    if STRIKES.get(node, 0) >= MAX_STRIKES or \
+       trust_scores.get(node, DEFAULT_TRUST) < QUARANTINE_THRESHOLD:
+
+        q = QUARANTINED.get(node, {"active": False})
+
+        if not q["active"]:
+            QUARANTINED[node] = {
+                "active": True,
+                "until": time.time() + QUARANTINE_TIME
+            }
+
+            print(f"🚨 [{NODE_NAME}] quarantined {node}")
+            sys.stdout.flush()
+
+
+def attacker_spam_loop():
+    while True:
+        if ATTACK_MODE and random.random() < ATTACK_PROFILE["spam_propose_prob"]:
+
+            fake = {
+                "from": NODE_NAME,
+                "process": "benign-daemon",
+                "pid": random.randint(1000, 9999),
+                "cpu": random.uniform(1, 10),
+                "time": time.time()
+            }
+
+            print(f"😈 [{NODE_NAME}] spamming fake proposal")
+
+            propose_to_peers(fake)
+
+        time.sleep(5)
+
+
 
 
 
@@ -547,6 +666,7 @@ threading.Thread(target=monitor_loop, daemon=True).start()
 threading.Thread(target=trust_decay_loop,daemon=True).start()
 threading.Thread(target=inactivity_decay_loop,daemon=True).start()
 threading.Thread(target=quarantine_watchdog, daemon=True).start()
+threading.Thread(target=attacker_spam_loop, daemon=True).start()
 
 
 print("🌐 Starting HTTP server...")

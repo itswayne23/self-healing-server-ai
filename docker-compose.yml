@@ -5,6 +5,7 @@ services:
     environment:
       - NODE_NAME=node1
       - PEERS=node2,node3
+      - ATTACK_MODE=false
     ports:
       - "5001:5000"
     volumes:
@@ -17,7 +18,8 @@ services:
     container_name: node2
     environment:
       - NODE_NAME=node2
-      - PEERS=node1,node3
+      - PEERS=node1,node3 
+      - ATTACK_MODE=false
     ports:
       - "5002:5000"
     volumes:
@@ -31,6 +33,7 @@ services:
     environment:
       - NODE_NAME=node3
       - PEERS=node1,node2
+      - ATTACK_MODE=false
     ports:
       - "5003:5000"
     volumes:
