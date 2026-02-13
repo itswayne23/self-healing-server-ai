@@ -364,6 +364,7 @@ def propose_to_peers(payload):
     }
 
     payload["case_id"] = case_id
+    payload["start_time"] = pending_cases[case_id]["start"]
 
     # Tell every peer about this incident
     for peer in PEERS:
@@ -520,7 +521,8 @@ def monitor_loop():
                             "node": NODE_NAME,
                             "result": "terminated",
                             "weighted": weighted_sum,
-                            "time": time.time()
+                            "time": time.time(),
+                            "start_time": pending_cases[case_id]["start"]
                         })
                     else:
                         # Penalty for false alarm
@@ -538,7 +540,8 @@ def monitor_loop():
                             "node": NODE_NAME,
                             "result": "rejected",
                             "weighted": weighted_sum,
-                            "time": time.time()
+                            "time": time.time(),
+                            "start_time": pending_cases[case_id]["start"]
                         })
 
                     # Cleanup

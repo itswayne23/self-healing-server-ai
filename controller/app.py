@@ -56,6 +56,18 @@ def init_db():
         time REAL
     )
     """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS metrics (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        case_id UNIQUE,
+        proposer TEXT,
+        start_time REAL,
+        consensus_time REAL,
+        remediation_time REAL,
+        result TEXT
+    )
+    """)
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_metrics_case ON metrics(case_id)")
 
     conn.commit()
     conn.close()
@@ -64,6 +76,7 @@ def init_db():
 def insert_event(e):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
+
 
     cur.execute("""
     INSERT INTO events
@@ -77,7 +90,7 @@ def insert_event(e):
         e["weighted"],
         e["time"]
     ))
-
+    
     conn.commit()
     conn.close()
 
@@ -120,6 +133,34 @@ def broadcast_penalty(node, penalty):
             pass
 
 
+def insert_metric_start(case_id, proposer, start_time):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+        INSERT OR IGNORE INTO metrics (case_id, proposer, start_time)
+        VALUES (?, ?, ?)
+    """, (case_id, proposer, start_time))
+
+    conn.commit()
+    conn.close()
+
+
+
+def update_metric_consensus(case_id, consensus_time, result):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+        UPDATE metrics
+        SET consensus_time = ?, result = ?
+        WHERE case_id = ?
+    """, (consensus_time, result, case_id))
+
+    conn.commit()
+    conn.close()
+
+
 def poll_nodes():
 
     while True:
@@ -155,8 +196,20 @@ def poll_nodes():
 
                     if key not in SEEN_CASES:
                         SEEN_CASES.add(key)
+
+                        start_time = e.get("start_time")
+
+                        if start_time:
+                            insert_metric_start(e["case_id"], e["node"], start_time)
+
                         insert_event(e)
+
+                        # 🔹 Metric consensus if final
+                        if e["result"] in ("terminated", "rejected"):
+                            update_metric_consensus(e["case_id"], e["time"], e["result"])
+
                         CLUSTER_EVENTS.append(e)
+
 
                 CLUSTER_EVENTS[:] = CLUSTER_EVENTS[-MAX_EVENTS:]
 
@@ -239,7 +292,7 @@ def cluster_anomalies_internal():
         if flags:
             anomalies[node] = flags
 
-    return jsonify(anomalies)
+    return anomalies
 
 
 def generate_explanation(event):
@@ -408,6 +461,36 @@ def cluster_reputation():
 @app.route("/cluster/anomalies")
 def cluster_anomalies():
     return jsonify(cluster_anomalies_internal())
+
+@app.route("/cluster/metrics")
+def cluster_metrics():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    rows = cur.execute("""
+    SELECT case_id, proposer, start_time, consensus_time, result
+    FROM metrics
+    """).fetchall()
+
+    conn.close()
+
+    output = []
+
+    for r in rows:
+        if r[3]:
+            latency = round(r[3] - r[2], 2)
+        else:
+            latency = None
+
+        output.append({
+            "case_id": r[0],
+            "proposer": r[1],
+            "latency": latency,
+            "result": r[4]
+        })
+
+    return jsonify(output)
+
 
 
 def anomaly_severity(a):
