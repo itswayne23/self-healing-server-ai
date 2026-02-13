@@ -22,6 +22,11 @@ CLUSTER_EVENTS = []
 POLL_INTERVAL = 3
 MAX_EVENTS = 200
 
+SEEN_ANOMALIES = set()
+GOVERNANCE_ACTIONS = {}
+GOVERNANCE_COOLDOWN = 30  # seconds
+
+
 DB_PATH = "/app/events.db"
 
 def init_db():
@@ -36,6 +41,18 @@ def init_db():
         process TEXT,
         result TEXT,
         weighted REAL,
+        time REAL
+    )
+    """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS anomalies (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        node TEXT,
+        peer TEXT,
+        reason TEXT,
+        accuracy REAL,
+        total_cases INTEGER,
+        severity TEXT,
         time REAL
     )
     """)
@@ -91,6 +108,16 @@ def load_recent_events(limit=200):
         for r in rows
     ]
 
+def broadcast_penalty(node, penalty):
+    for target in NODES:
+        try:
+            requests.post(
+                f"http://{target}:5000/governance/penalize",
+                json={"node": node, "penalty": penalty},
+                timeout=2
+            )
+        except:
+            pass
 
 
 def poll_nodes():
@@ -141,6 +168,78 @@ def poll_nodes():
                 }
 
         time.sleep(POLL_INTERVAL)
+
+def anomaly_watchdog():
+    while True:
+        try:
+            _ = cluster_anomalies_internal()
+        except Exception as e:
+            print(f"anomaly watchdog error: {e}")
+
+        time.sleep(5)
+
+def cluster_anomalies_internal():
+    anomalies = {}
+
+    for node, data in CLUSTER_STATUS.items():
+
+        rep = data.get("reputation", {})
+        engine = rep.get("engine", {})
+
+        flags = []
+
+        for peer, metrics in engine.items():
+
+            total = metrics.get("total", 0)
+            acc = metrics.get("accuracy", 1.0)
+
+            if total < 3:
+                continue
+
+            severity = anomaly_severity({
+                "accuracy": acc,
+                "total_cases": total
+            })
+
+            if not severity:
+                continue
+
+            anomaly_record = {
+                "node": node,          # observer node
+                "peer": peer,          # suspicious peer
+                "reason": "low_accuracy",
+                "severity": severity,
+                "accuracy": round(acc, 2),
+                "total_cases": total
+            }
+
+            flags.append(anomaly_record)
+
+            # 🗄️ DEDUP LOGGING (only log once per severity level)
+            key = f"{node}:{peer}:{severity}"
+
+            if key not in SEEN_ANOMALIES:
+                SEEN_ANOMALIES.add(key)
+                insert_anomaly(anomaly_record)
+
+            # 🔥 GOVERNANCE ENFORCEMENT (cooldown controlled)
+            now = time.time()
+            last = GOVERNANCE_ACTIONS.get(peer, 0)
+
+            if now - last > GOVERNANCE_COOLDOWN:
+
+                if severity == "high":
+                    broadcast_penalty(peer, 0.15)
+
+                if severity == "critical":
+                    broadcast_penalty(peer, 0.25)
+
+                GOVERNANCE_ACTIONS[peer] = now
+
+        if flags:
+            anomalies[node] = flags
+
+    return jsonify(anomalies)
 
 
 def generate_explanation(event):
@@ -276,6 +375,26 @@ def cluster_quarantine():
 
     return jsonify(snap)
 
+@app.route("/cluster/quarantine_timers")
+def cluster_quarantine_timers():
+
+    timers = {}
+    now = time.time()
+
+    for node, data in CLUSTER_STATUS.items():
+        q = data.get("quarantined", {})
+        timers[node] = {}
+
+        for peer, info in q.items():
+            if info.get("active"):
+                remaining = int(info.get("until", 0) - now)
+                timers[node][peer] = max(0, remaining)
+            else:
+                timers[node][peer] = 0
+
+    return jsonify(timers)
+
+
 @app.route("/cluster/reputation")
 def cluster_reputation():
 
@@ -286,14 +405,66 @@ def cluster_reputation():
 
     return jsonify(snap)
 
+@app.route("/cluster/anomalies")
+def cluster_anomalies():
+    return jsonify(cluster_anomalies_internal())
 
 
+def anomaly_severity(a):
+    acc = a.get("accuracy", 1.0)
+    total = a.get("total_cases", 0)
+
+    if total < 3:
+        return None   # not enough data
+
+    if acc < 0.15 and total >= 8:
+        return "critical"
+
+    if acc < 0.25 and total >= 5:
+        return "high"
+
+    if acc < 0.4:
+        return "medium"
+
+    return None
+
+
+def insert_anomaly(a):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+    INSERT INTO anomalies (node, peer, reason, severity, accuracy, total_cases, time)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+    """, (
+        a["node"],
+        a["peer"],
+        a["reason"],
+        a["severity"],
+        a["accuracy"],
+        a["total_cases"],
+        time.time()
+    ))
+
+    conn.commit()
+    conn.close()
+
+def governance_feedback(peer, severity):
+    penalty = {
+        "medium": 0.05,
+        "high": 0.1,
+        "critical": 0.2
+    }.get(severity, 0)
+
+    if penalty > 0:
+        broadcast_penalty(peer, penalty)
 
 
 init_db()
 CLUSTER_EVENTS[:] = load_recent_events()
 
 threading.Thread(target=poll_nodes, daemon=True).start()
+threading.Thread(target=anomaly_watchdog, daemon=True).start()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=7000)

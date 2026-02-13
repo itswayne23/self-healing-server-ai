@@ -43,3 +43,10 @@ class ReputationEngine:
                 "accuracy": round(acc, 3),
             }
         return out
+
+    def load_from_snapshot(self, snapshot):
+        if not snapshot:
+            return
+
+        self.engine = snapshot
+

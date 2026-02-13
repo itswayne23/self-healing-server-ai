@@ -405,6 +405,23 @@ def reputation_snapshot():
         "engine": reputation.snapshot()
     })
 
+@app.route("/governance/penalize", methods=["POST"])
+def governance_penalize():
+    data = request.json
+    node = data["node"]
+    penalty = data.get("penalty", 0.1)
+
+    trust_scores[node] = max(MIN_TRUST, trust_scores.get(node, 1.0) - penalty)
+
+    if trust_scores[node] < QUARANTINE_THRESHOLD:
+        QUARANTINED[node]["active"] = True
+        QUARANTINED[node]["until"] = time.time() + QUARANTINE_TIME
+
+    save_trust()
+
+    return jsonify({"status": "applied"})
+
+
 
 
 
