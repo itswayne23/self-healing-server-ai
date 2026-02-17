@@ -13,7 +13,7 @@ import random
 # -------------------------------
 # GLOBAL STATE
 # -------------------------------
-global trust_scores, STRIKES, node_stats, QUARANTINED
+# global trust_scores, STRIKES, node_stats, QUARANTINED
 
 pending_cases = {}
 VOTE_TIMEOUT = 6
@@ -36,6 +36,13 @@ DECAY_RATE = 0.03
 MAX_TRUST = 2.0
 MIN_TRUST = 0.1
 
+EMA_ALPHA = 0.4
+MAX_TRUST_DELTA = 0.08
+TRUST_COOLDOWN = 10  # seconds
+
+LAST_TRUST_UPDATE = {}
+
+
 TRUST_REWARD = 0.06
 TRUST_PENALTY = 0.12
 
@@ -45,8 +52,6 @@ MAX_STRIKES = 3
 node_stats = {}
 # node_stats[node] = {
 #   "votes": 0,
-#   "correct": 0,
-#   "false": 0,
 #   "last_activity": ts
 # }
 
@@ -74,9 +79,26 @@ def load_trust():
 
             trust_scores.update(data.get("trust", {}))
             STRIKES.update(data.get("strikes", {}))
-            node_stats.update(data.get("stats", {}))
-            QUARANTINED.update(data.get("quarantine", {}))
-            reputation.load_from_snapshot(data.get("reputation", {}))
+            for node, stats in data.get("stats", {}).items():
+                node_stats[node] = {
+                    "votes": stats.get("votes", 0),
+                    "last_activity": stats.get("last_activity", time.time())
+                }
+
+            # Load quarantine state safely
+            loaded_q = data.get("quarantine", {})
+
+            # Type guard in case file is corrupted
+            if not isinstance(loaded_q, dict):
+                print(f"⚠️ [{NODE_NAME}] invalid quarantine format in file, resetting")
+                loaded_q = {}
+
+            QUARANTINED.update(loaded_q)
+
+            rep_snap = data.get("reputation", {})
+            if rep_snap:
+                reputation.load_from_snapshot(rep_snap)
+            LAST_TRUST_UPDATE.update(data.get("last_trust_update", {}))
 
             print(f"📂 [{NODE_NAME}] loaded trust state")
             print(" trust:", trust_scores)
@@ -96,7 +118,8 @@ def save_trust():
     "strikes": STRIKES,
     "stats": node_stats,
     "quarantine": QUARANTINED,
-    "reputation": reputation.snapshot()
+    "reputation": reputation.snapshot(),
+    "last_trust_update": LAST_TRUST_UPDATE
 }, f, indent=2)
 
 
@@ -107,6 +130,35 @@ def save_trust():
         print(f"🔥 [{NODE_NAME}] failed saving trust: {e}")
         sys.stdout.flush()
 
+def apply_trust_update(node, raw_delta):
+    now = time.time()
+
+    # Cooldown check
+    last = LAST_TRUST_UPDATE.get(node, 0)
+    if now - last < TRUST_COOLDOWN:
+        print(f"⏳ [{NODE_NAME}] trust update for {node} skipped (cooldown)")
+        evaluate_quarantine(node)
+        return
+
+    old_trust = trust_scores.get(node, DEFAULT_TRUST)
+
+    # Clamp delta
+    delta = max(-MAX_TRUST_DELTA, min(MAX_TRUST_DELTA, raw_delta))
+
+    # EMA target
+    target = max(MIN_TRUST, min(MAX_TRUST, old_trust + delta))
+
+    new_trust = (EMA_ALPHA * target) + ((1 - EMA_ALPHA) * old_trust)
+
+    trust_scores[node] = new_trust
+    LAST_TRUST_UPDATE[node] = now
+
+    print(
+        f"🧮 [{NODE_NAME}] trust update {node}: "
+        f"{old_trust:.2f} -> {new_trust:.2f} (raw Δ={raw_delta:.3f}, clamped Δ={delta:.3f})"
+    )
+
+    save_trust()
 
 
 
@@ -120,11 +172,12 @@ PEERS = os.getenv("PEERS", "").split(",")
 
 for peer in PEERS:
     if peer:
-        trust_scores[peer] = DEFAULT_TRUST
-        STRIKES[peer] = 0
+        trust_scores.setdefault(peer, DEFAULT_TRUST)
+        STRIKES.setdefault(peer, 0)
 
-trust_scores[NODE_NAME] = DEFAULT_TRUST
-STRIKES[NODE_NAME] = 0
+trust_scores.setdefault(NODE_NAME, DEFAULT_TRUST)
+STRIKES.setdefault(NODE_NAME, 0)
+
 
 ATTACK_MODE = os.getenv("ATTACK_MODE", "false").lower() == "true"
 if ATTACK_MODE:
@@ -178,7 +231,7 @@ def receive_alert():
     # 😈 FINAL ALERT FALSIFICATION ATTACK
     # ==================================================
 
-    if ATTACK_MODE and random.random() < ATTACK_PROFILE["false_alert_prob"]:
+    if ATTACK_MODE and random.random() < ATTACK_PROFILE["false_propose_prob"]:
         print(f"😈 [{NODE_NAME}] falsifying alert payload")
 
         if data["result"] == "terminated":
@@ -192,45 +245,35 @@ def receive_alert():
     proposer = data.get("node")
     result = data.get("result")
 
-    now = time.time()
+    if not proposer:
+        return jsonify({"status": "invalid_alert"}), 400
 
-    if proposer not in node_stats:
-        node_stats[proposer] = {
-            "votes": 0,
-            "correct": 0,
-            "false": 0,
-            "last_activity": now
-        }
+    now = time.time()
+    # --- Ensure proposer exists in trust system ---
+    trust_scores.setdefault(proposer, DEFAULT_TRUST)
+    STRIKES.setdefault(proposer, 0)
+    QUARANTINED.setdefault(proposer, {"active": False, "until": 0})
+
+
+    node_stats.setdefault(proposer, {
+        "votes": 0,
+        "last_activity": now
+    })
 
     node_stats[proposer]["last_activity"] = now
 
-    # --- Reputation engine hook ---
-    if proposer in trust_scores:
-        if result == "terminated":
-            reputation.record_success(proposer)
-        else:
-            reputation.record_false(proposer)
 
-
+    # --- Reputation engine only ---
     if result == "terminated":
-
-        trust_scores[proposer] = min(
-            MAX_TRUST,
-            trust_scores.get(proposer, DEFAULT_TRUST) + TRUST_REWARD
-        )
-
-        node_stats[proposer]["correct"] += 1
+        reputation.record_success(proposer)
+        apply_trust_update(proposer, +TRUST_REWARD)
         STRIKES[proposer] = 0
-
     else:
-
-        trust_scores[proposer] = max(
-            MIN_TRUST,
-            trust_scores.get(proposer, DEFAULT_TRUST) - TRUST_PENALTY
-        )
-
-        node_stats[proposer]["false"] += 1
+        reputation.record_false(proposer)
+        apply_trust_update(proposer, -TRUST_PENALTY)
         STRIKES[proposer] = STRIKES.get(proposer, 0) + 1
+
+
 
     print(
         f"📊 [{NODE_NAME}] updated trust: {trust_scores} "
@@ -239,10 +282,6 @@ def receive_alert():
     sys.stdout.flush()
 
     evaluate_quarantine(proposer)
-
-    save_trust()
-
-
 
     print(f"📊 [{NODE_NAME}] trust={trust_scores} strikes={STRIKES}")
     sys.stdout.flush()
@@ -255,6 +294,10 @@ def receive_alert():
 
 @app.route("/propose", methods=["POST"])
 def receive_proposal():
+    if QUARANTINED.get(NODE_NAME, {}).get("active"):
+        print(f"🚫 [{NODE_NAME}] ignoring proposal (self quarantined)")
+        return jsonify({"status": "quarantined"}), 200
+
     data = request.json
     case_id = data["case_id"]
 
@@ -287,6 +330,9 @@ def receive_proposal():
 
 @app.route("/vote", methods=["POST"])
 def receive_vote():
+    if QUARANTINED.get(NODE_NAME, {}).get("active"):
+        print(f"🚫 [{NODE_NAME}] ignoring vote (self quarantined)")
+        return jsonify({"status": "quarantined"}), 200
 
     data = request.json
     case_id = data["case_id"]
@@ -312,8 +358,6 @@ def receive_vote():
     if voter not in node_stats:
         node_stats[voter] = {
             "votes": 0,
-            "correct": 0,
-            "false": 0,
             "last_activity": time.time()
         }
 
@@ -353,6 +397,11 @@ def receive_vote():
 
 
 def propose_to_peers(payload):
+
+    if QUARANTINED.get(NODE_NAME, {}).get("active"):
+        print(f"🚫 [{NODE_NAME}] cannot propose while quarantined")
+        return None
+
     # Create a unique ID for this specific incident
     case_id = str(uuid.uuid4())
 
@@ -412,19 +461,20 @@ def governance_penalize():
     node = data["node"]
     penalty = data.get("penalty", 0.1)
 
-    trust_scores[node] = max(MIN_TRUST, trust_scores.get(node, 1.0) - penalty)
+    if node == NODE_NAME:
+        return jsonify({"status": "ignored_self"})
 
-    if trust_scores[node] < QUARANTINE_THRESHOLD:
-        QUARANTINED[node]["active"] = True
-        QUARANTINED[node]["until"] = time.time() + QUARANTINE_TIME
+    if QUARANTINED.get(node, {}).get("active"):
+        return jsonify({"status": "ignored_quarantined"})
 
+    trust_scores.setdefault(node, DEFAULT_TRUST)
+    STRIKES.setdefault(node, 0)
+    QUARANTINED.setdefault(node, {"active": False, "until": 0})
+    apply_trust_update(node, -penalty)
+    evaluate_quarantine(node)
     save_trust()
 
     return jsonify({"status": "applied"})
-
-
-
-
 
 # ==================================================
 # MONITOR LOOP
@@ -445,10 +495,10 @@ def monitor_loop():
                 if ATTACK_MODE and random.random() < ATTACK_PROFILE["false_alert_prob"]:
                     suspicious = True
                     print(f"☠️ [{NODE_NAME}] fabricated suspicious activity")
-                if ATTACK_MODE and random.random() < ATTACK_PROFILE["spam_propose_prob"]:
-                    print(f"💣 [{NODE_NAME}] spamming proposals")
-                    for _ in range(3):
-                        suspicious = True
+                # if ATTACK_MODE and random.random() < ATTACK_PROFILE["spam_propose_prob"]:
+                #     print(f"💣 [{NODE_NAME}] spamming proposals")
+                #     for _ in range(3):
+                #         suspicious = True
 
 
                 if suspicious:
@@ -464,6 +514,8 @@ def monitor_loop():
 
                     # 2. Start the proposal
                     case_id = propose_to_peers(payload)
+                    if not case_id:
+                        continue
                     killed = False
 
                     # 3. Voting Window
@@ -480,7 +532,7 @@ def monitor_loop():
                             t = trust_scores.get(voter, DEFAULT_TRUST)
 
                             # Ignore quarantined nodes
-                            if t < QUARANTINE_THRESHOLD:
+                            if QUARANTINED.get(voter, {}).get("active"):
                                 print(f"🚫 [{NODE_NAME}] ignoring {voter} vote (quarantined)")
                                 continue
 
@@ -528,11 +580,17 @@ def monitor_loop():
                         # Penalty for false alarm
                         print(f"❌ [{NODE_NAME}] weighted threshold NOT reached for {case_id}")
                         STRIKES[NODE_NAME] = STRIKES.get(NODE_NAME, 0) + 1
-                        trust_scores[NODE_NAME] = max(0.1, trust_scores.get(NODE_NAME, 1.0) - TRUST_PENALTY)
+                        apply_trust_update(NODE_NAME, -TRUST_PENALTY)
                         evaluate_quarantine(NODE_NAME)
                         reputation.record_false(NODE_NAME)
-                        
-                        save_trust()
+
+                        node_stats.setdefault(NODE_NAME, {
+                            "votes": 0,
+                            "last_activity": time.time()
+                        })
+
+                        # node_stats[NODE_NAME]["false"] += 1
+                        node_stats[NODE_NAME]["last_activity"] = time.time()
 
                         EVENT_LOG.append({
                             "case_id": case_id,
@@ -569,9 +627,10 @@ def trust_decay_loop():
 
         median = sorted(scores)[len(scores)//2]
 
-        changed = False
-
         for node, score in trust_scores.items():
+
+            if QUARANTINED.get(node, {}).get("active"):
+                continue
 
             last = node_stats.get(node, {}).get("last_activity", now)
 
@@ -583,49 +642,12 @@ def trust_decay_loop():
 
             if score > median:
                 continue
-
-            new = max(
-                MIN_TRUST,
-                score - DECAY_RATE
-            )
+            print(f"🧬 [{NODE_NAME}] decay candidate {node} idle={idle:.1f}s score={score:.2f}")
+            last_update = LAST_TRUST_UPDATE.get(node, 0)
+            if now - last_update >= TRUST_COOLDOWN:
+                apply_trust_update(node, -DECAY_RATE)
 
             evaluate_quarantine(node)
-
-            if new != score:
-                trust_scores[node] = new
-                changed = True
-
-        if changed:
-            save_trust()
-
-def inactivity_decay_loop():
-
-    while True:
-        time.sleep(15)
-
-        now = time.time()
-
-        for node, stats in node_stats.items():
-
-            idle = now - stats.get("last_activity", now)
-
-            if idle > INACTIVITY_LIMIT:
-
-                old = trust_scores.get(node, DEFAULT_TRUST)
-
-                trust_scores[node] = max(
-                    MIN_TRUST,
-                    old - DECAY_RATE
-                )
-
-                evaluate_quarantine(node)
-
-                print(
-                    f"📉 [{NODE_NAME}] inactivity decay on {node}: "
-                    f"{old:.2f} -> {trust_scores[node]:.2f}"
-                )
-
-                save_trust()
 
 def quarantine_watchdog():
 
@@ -637,10 +659,16 @@ def quarantine_watchdog():
                 q["active"] = False
                 STRIKES[node] = 0
                 print(f"🩺 [{NODE_NAME}] reintegrated {node}")
+                save_trust()
 
         time.sleep(5)
 
 def evaluate_quarantine(node):
+
+    q = QUARANTINED.setdefault(node, {"active": False, "until": 0})
+
+    if q["active"]:
+        return
 
     if STRIKES.get(node, 0) >= MAX_STRIKES or \
        trust_scores.get(node, DEFAULT_TRUST) < QUARANTINE_THRESHOLD:
@@ -654,6 +682,7 @@ def evaluate_quarantine(node):
             }
 
             print(f"🚨 [{NODE_NAME}] quarantined {node}")
+            save_trust()
             sys.stdout.flush()
 
 
@@ -675,18 +704,12 @@ def attacker_spam_loop():
 
         time.sleep(5)
 
-
-
-
-
-
 # ==================================================
 # START THREAD + SERVER
 # ==================================================
 
 threading.Thread(target=monitor_loop, daemon=True).start()
 threading.Thread(target=trust_decay_loop,daemon=True).start()
-threading.Thread(target=inactivity_decay_loop,daemon=True).start()
 threading.Thread(target=quarantine_watchdog, daemon=True).start()
 threading.Thread(target=attacker_spam_loop, daemon=True).start()
 
