@@ -26,6 +26,12 @@ SEEN_ANOMALIES = set()
 GOVERNANCE_ACTIONS = {}
 GOVERNANCE_COOLDOWN = 30  # seconds
 
+NODE_LATENCY = {}
+NODE_LAST_SEEN = {}
+for n in NODES:
+    NODE_LAST_SEEN[n] = time.time()
+    NODE_LATENCY[n] = 0.0
+
 
 DB_PATH = "/app/events.db"
 
@@ -169,11 +175,23 @@ def poll_nodes():
                 base = f"http://{node}:5000"
 
                 # ---- STATUS ----
-                status = requests.get(
-                    f"{base}/status", timeout=2
-                ).json()
+                start = time.time()
+                try:
+                    resp = requests.get(f"{base}/status", timeout=2)
+                    latency = time.time() - start
 
-                CLUSTER_STATUS[node] = status
+                    status = resp.json()
+
+                    NODE_LATENCY[node] = latency
+                    NODE_LAST_SEEN[node] = time.time()
+                    CLUSTER_STATUS[node] = status
+
+                except Exception as e:
+                    CLUSTER_STATUS.setdefault(node, {})
+                    CLUSTER_STATUS[node]["error"] = str(e)
+                    CLUSTER_STATUS[node]["online"] = False
+
+                    NODE_LATENCY[node] = MAX_LATENCY
 
                 # ---- REPUTATION (Stage 8) ----
                 try:
@@ -187,9 +205,13 @@ def poll_nodes():
                     CLUSTER_STATUS[node]["reputation_error"] = str(e)
 
                 # ---- EVENTS ----
-                events = requests.get(
-                    f"{base}/events", timeout=2
-                ).json()
+                try:
+                    events = requests.get(
+                        f"{base}/events", timeout=2
+                    ).json()
+                except:
+                    events = []
+
 
                 for e in events:
                     key = f"{e['case_id']}:{e['node']}:{e['time']}"
@@ -210,8 +232,15 @@ def poll_nodes():
 
                         CLUSTER_EVENTS.append(e)
 
-
                 CLUSTER_EVENTS[:] = CLUSTER_EVENTS[-MAX_EVENTS:]
+                # ✅ attach health directly (optional but recommended)
+                if "error" not in CLUSTER_STATUS[node]:
+                    CLUSTER_STATUS[node]["health"] = compute_node_health(
+                        node, CLUSTER_STATUS[node]
+                    )
+                else:
+                    CLUSTER_STATUS[node]["health"] = 0.0
+
 
             except Exception as e:
                 CLUSTER_STATUS[node] = {
@@ -314,6 +343,54 @@ def generate_explanation(event):
         f"The weighted vote score was {weighted:.2f}, giving {confidence} confidence "
         f"that the behavior was malicious."
     )
+
+MAX_LATENCY = 1.0
+MAX_ACTIVE_CASES = 5
+
+def compute_node_health(node, data):
+    trust_map = data.get("trust", {})
+    rep_engine = data.get("reputation", {}).get("engine", {})
+    active_cases = data.get("active_cases", 0)
+
+    # --- avg trust ---
+    avg_trust = (
+        sum(trust_map.values()) / len(trust_map)
+        if trust_map else 1.0
+    )
+
+    # --- reputation accuracy ---
+    accuracy = rep_engine.get(node, {}).get("accuracy", 1.0)
+
+    # --- latency score ---
+    latency = NODE_LATENCY.get(node, MAX_LATENCY)
+    latency_score = max(0.0, min(1.0, 1 - (latency / MAX_LATENCY)))
+
+    # --- stability score ---
+    stability_score = max(
+        0.0,
+        min(1.0, 1 - (active_cases / MAX_ACTIVE_CASES))
+    )
+
+    health = (
+        0.4 * avg_trust +
+        0.3 * accuracy +
+        0.2 * latency_score +
+        0.1 * stability_score
+    )
+
+    last_seen = NODE_LAST_SEEN.get(node, 0)
+    offline_time = time.time() - last_seen
+
+    is_offline = data.get("online") is False or "error" in data
+
+    if is_offline:
+        if offline_time > 5:
+            health *= 0.5
+        if offline_time > 10:
+            health = 0.0
+
+
+    return round(health, 3)
 
 
 
@@ -491,6 +568,18 @@ def cluster_metrics():
 
     return jsonify(output)
 
+@app.route("/cluster/health")
+def cluster_health():
+    health_map = {}
+
+    for node, data in CLUSTER_STATUS.items():
+        if "error" in data:
+            health_map[node] = 0.0
+            continue
+
+        health_map[node] = compute_node_health(node, data)
+
+    return jsonify(health_map)
 
 
 def anomaly_severity(a):
