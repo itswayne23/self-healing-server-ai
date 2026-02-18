@@ -442,6 +442,7 @@ def status():
         "strikes": STRIKES,
         "active_cases": len(pending_cases),
         "quarantined": QUARANTINED,
+        "adaptive_quorum": get_adaptive_threshold(),
     })
 
 @app.route("/events")
@@ -479,6 +480,33 @@ def governance_penalize():
 # ==================================================
 # MONITOR LOOP
 # ==================================================
+def get_adaptive_threshold():
+    active_nodes = []
+    trust_sum = 0.0
+
+    for node, t in trust_scores.items():
+        if QUARANTINED.get(node, {}).get("active"):
+            continue
+        active_nodes.append(node)
+        trust_sum += t
+
+    if not active_nodes:
+        return WEIGHT_THRESHOLD  # fallback
+
+    avg_trust = trust_sum / len(active_nodes)
+
+    adaptive = WEIGHT_THRESHOLD * (1 + (1 - avg_trust))
+
+    # Clamp
+    adaptive = max(1.5, adaptive)
+    adaptive = min(adaptive, len(active_nodes))
+
+    print(
+        f"🎯 [{NODE_NAME}] adaptive quorum={adaptive:.2f} "
+        f"(avg_trust={avg_trust:.2f}, active_nodes={len(active_nodes)})"
+    )
+
+    return adaptive
 
 def monitor_loop():
     print(f"🛡️ Security thread started on {NODE_NAME}")
@@ -542,10 +570,16 @@ def monitor_loop():
                             weighted_sum += t * acc
 
 
-                        print(f"⚖️ [{NODE_NAME}] weighted={weighted_sum:.2f} threshold={WEIGHT_THRESHOLD}")
+                        threshold = get_adaptive_threshold()
+
+                        print(
+                            f"⚖️ [{NODE_NAME}] weighted={weighted_sum:.2f} "
+                            f"threshold={threshold:.2f}"
+                        )
+
 
                         # 4. Check if we have enough weight to act
-                        if weighted_sum >= WEIGHT_THRESHOLD:
+                        if weighted_sum >= threshold:
                             print(f"⚖️ [{NODE_NAME}] quorum reached. Executing remediation.")
                             try:
                                 proc.kill()
