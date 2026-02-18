@@ -36,6 +36,8 @@ POLICY_COOLDOWN = 30  # seconds
 LAST_POLICY_ACTION = {}
 RECOVERY_CANDIDATES = {}
 
+CLUSTER_SNAPSHOTS = {}
+SNAPSHOT_VERSION = 0
 
 DB_PATH = "/app/events.db"
 
@@ -207,6 +209,16 @@ def poll_nodes():
 
                 except Exception as e:
                     CLUSTER_STATUS[node]["reputation_error"] = str(e)
+
+                # ---- STATE SNAPSHOT (Stage 16) ----
+                global SNAPSHOT_VERSION
+                SNAPSHOT_VERSION += 1
+
+                try:
+                    snap = requests.get(f"{base}/state/snapshot", timeout=2).json()
+                    CLUSTER_SNAPSHOTS[node] = snap
+                except Exception as e:
+                    CLUSTER_SNAPSHOTS[node] = {"error": str(e)}
 
                 # ---- EVENTS ----
                 try:
@@ -626,6 +638,13 @@ def cluster_health():
 @app.route("/cluster/recovery_candidates")
 def cluster_recovery_candidates():
     return jsonify(RECOVERY_CANDIDATES)
+
+@app.route("/cluster/snapshots")
+def cluster_snapshots():
+    return jsonify({
+        "version": SNAPSHOT_VERSION,
+        "nodes": CLUSTER_SNAPSHOTS
+    })
 
 # -----------------------------------------------------------------
 def anomaly_severity(a):

@@ -502,6 +502,19 @@ def governance_quarantine():
     print(f"🚨 [{NODE_NAME}] peer {node} quarantined by policy")
     return jsonify({"status": "peer_quarantined"})
 
+@app.route("/state/snapshot")
+def state_snapshot():
+    return jsonify({
+        "node": NODE_NAME,
+        "trust": trust_scores,
+        "strikes": STRIKES,
+        "quarantined": QUARANTINED,
+        "reputation": reputation.snapshot(),
+        "node_stats": node_stats,
+        "events": EVENT_LOG[-20:],   # last 20 events only
+        "timestamp": time.time()
+    })
+
 
 # ==================================================
 # MONITOR LOOP
