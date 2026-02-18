@@ -32,6 +32,10 @@ for n in NODES:
     NODE_LAST_SEEN[n] = time.time()
     NODE_LATENCY[n] = 0.0
 
+POLICY_COOLDOWN = 30  # seconds
+LAST_POLICY_ACTION = {}
+RECOVERY_CANDIDATES = {}
+
 
 DB_PATH = "/app/events.db"
 
@@ -233,13 +237,16 @@ def poll_nodes():
                         CLUSTER_EVENTS.append(e)
 
                 CLUSTER_EVENTS[:] = CLUSTER_EVENTS[-MAX_EVENTS:]
-                # ✅ attach health directly (optional but recommended)
+
+                # ✅ compute health + run policy
                 if "error" not in CLUSTER_STATUS[node]:
-                    CLUSTER_STATUS[node]["health"] = compute_node_health(
-                        node, CLUSTER_STATUS[node]
-                    )
+                    health = compute_node_health(node, CLUSTER_STATUS[node])
+                    CLUSTER_STATUS[node]["health"] = health
+
+                    evaluate_policy(node, health)
                 else:
                     CLUSTER_STATUS[node]["health"] = 0.0
+
 
 
             except Exception as e:
@@ -392,6 +399,41 @@ def compute_node_health(node, data):
 
     return round(health, 3)
 
+def evaluate_policy(node, health):
+    now = time.time()
+    last = LAST_POLICY_ACTION.get(node, 0)
+
+    if now - last < POLICY_COOLDOWN:
+        return
+
+    # --- degraded ---
+    if 0.65 > health >= 0.45:
+        broadcast_penalty(node, 0.05)
+        RECOVERY_CANDIDATES[node] = "monitor"
+
+    # --- unhealthy ---
+    elif 0.45 > health >= 0.3:
+        broadcast_penalty(node, 0.1)
+        RECOVERY_CANDIDATES[node] = "recover"
+
+    # --- critical ---
+    elif health < 0.3:
+        broadcast_penalty(node, 0.2)
+        force_quarantine(node)
+        RECOVERY_CANDIDATES[node] = "replace"
+
+    LAST_POLICY_ACTION[node] = now
+   
+def force_quarantine(node):
+    for target in NODES:
+        try:
+            requests.post(
+                f"http://{target}:5000/governance/quarantine",
+                json={"node": node, "duration": 180},
+                timeout=2
+            )
+        except:
+            pass
 
 
 @app.route("/cluster/status")
@@ -581,7 +623,11 @@ def cluster_health():
 
     return jsonify(health_map)
 
+@app.route("/cluster/recovery_candidates")
+def cluster_recovery_candidates():
+    return jsonify(RECOVERY_CANDIDATES)
 
+# -----------------------------------------------------------------
 def anomaly_severity(a):
     acc = a.get("accuracy", 1.0)
     total = a.get("total_cases", 0)

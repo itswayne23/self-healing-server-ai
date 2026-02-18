@@ -477,6 +477,32 @@ def governance_penalize():
 
     return jsonify({"status": "applied"})
 
+@app.route("/governance/quarantine", methods=["POST"])
+def governance_quarantine():
+    data = request.json
+    node = data["node"]
+    duration = data.get("duration", 180)
+
+    if node == NODE_NAME:
+        QUARANTINED[NODE_NAME] = {
+            "active": True,
+            "until": time.time() + duration
+        }
+        save_trust()
+        print(f"🚨 [{NODE_NAME}] force quarantined by controller")
+        return jsonify({"status": "self_quarantined"})
+
+    QUARANTINED.setdefault(node, {"active": False, "until": 0})
+    QUARANTINED[node] = {
+        "active": True,
+        "until": time.time() + duration
+    }
+
+    save_trust()
+    print(f"🚨 [{NODE_NAME}] peer {node} quarantined by policy")
+    return jsonify({"status": "peer_quarantined"})
+
+
 # ==================================================
 # MONITOR LOOP
 # ==================================================
