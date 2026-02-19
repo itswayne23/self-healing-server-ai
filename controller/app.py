@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import requests
 import time
 import threading
@@ -645,6 +645,38 @@ def cluster_snapshots():
         "version": SNAPSHOT_VERSION,
         "nodes": CLUSTER_SNAPSHOTS
     })
+
+@app.route("/cluster/recover", methods=["POST"])
+def cluster_recover():
+    data = request.json
+    node = data.get("node")
+
+    if node not in CLUSTER_SNAPSHOTS.get("nodes", {}):
+        return jsonify({"status": "unknown_node"}), 404
+
+    print(f"🩺 recovery requested by {node}")
+
+    # Pick healthiest donor
+    donor = None
+    for peer, snap in CLUSTER_SNAPSHOTS["nodes"].items():
+        if peer != node and snap.get("trust"):
+            donor = snap
+            break
+
+    if not donor:
+        return jsonify({"status": "no_donor"}), 500
+
+    try:
+        requests.post(
+            f"http://{node}:5000/state/restore",
+            json=donor,
+            timeout=3
+        )
+    except:
+        pass
+
+    return jsonify({"status": "recovery_sent"})
+
 
 # -----------------------------------------------------------------
 def anomaly_severity(a):

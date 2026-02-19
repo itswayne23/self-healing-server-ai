@@ -67,6 +67,14 @@ reputation = ReputationEngine()
 
 RESTORE_IN_PROGRESS = False
 
+RECOVERY_MODE = False
+RECOVERY_COOLDOWN = 30
+LAST_RECOVERY = 0
+
+LAB_FREEZE_TRUST = False
+
+BOOT_TIME = time.time()
+BOOTSTRAP_GRACE = 25  # seconds
 
 # -------------------------------
 # PERSISTENCE HELPERS
@@ -137,6 +145,10 @@ def save_trust():
         sys.stdout.flush()
 
 def apply_trust_update(node, raw_delta):
+    if LAB_FREEZE_TRUST:
+        print(f"🧊 [{NODE_NAME}] trust frozen, skipping update for {node}")
+        return
+
     now = time.time()
 
     # Cooldown check
@@ -277,7 +289,9 @@ def receive_alert():
     else:
         reputation.record_false(proposer)
         apply_trust_update(proposer, -TRUST_PENALTY)
-        STRIKES[proposer] = STRIKES.get(proposer, 0) + 1
+        if not LAB_FREEZE_TRUST:
+            STRIKES[proposer] = STRIKES.get(proposer, 0) + 1
+
 
 
 
@@ -300,6 +314,10 @@ def receive_alert():
 
 @app.route("/propose", methods=["POST"])
 def receive_proposal():
+    if RECOVERY_MODE:
+        print(f"🧬 [{NODE_NAME}] ignoring proposal (recovery mode)")
+        return jsonify({"status": "recovery_mode"}), 200
+
     if QUARANTINED.get(NODE_NAME, {}).get("active"):
         print(f"🚫 [{NODE_NAME}] ignoring proposal (self quarantined)")
         return jsonify({"status": "quarantined"}), 200
@@ -336,6 +354,9 @@ def receive_proposal():
 
 @app.route("/vote", methods=["POST"])
 def receive_vote():
+    if RECOVERY_MODE:
+        print(f"🧬 [{NODE_NAME}] ignoring vote (recovery mode)")
+        return jsonify({"status": "recovery_mode"}), 200
     if QUARANTINED.get(NODE_NAME, {}).get("active"):
         print(f"🚫 [{NODE_NAME}] ignoring vote (self quarantined)")
         return jsonify({"status": "quarantined"}), 200
@@ -523,7 +544,7 @@ def state_snapshot():
 
 @app.route("/state/restore", methods=["POST"])
 def state_restore():
-    global RESTORE_IN_PROGRESS, reputation
+    global RESTORE_IN_PROGRESS, reputation, RECOVERY_MODE
 
     data = request.json
 
@@ -561,6 +582,8 @@ def state_restore():
 
     finally:
         RESTORE_IN_PROGRESS = False
+        RECOVERY_MODE = False
+        print(f"🩺 [{NODE_NAME}] recovery complete, rejoining cluster")
 
     return jsonify({"status": "restored"}), 200
 
@@ -569,6 +592,9 @@ def state_restore():
 # MONITOR LOOP
 # ==================================================
 def get_adaptive_threshold():
+    if LAB_FREEZE_TRUST:
+        return WEIGHT_THRESHOLD
+
     active_nodes = []
     trust_sum = 0.0
 
@@ -701,7 +727,9 @@ def monitor_loop():
                     else:
                         # Penalty for false alarm
                         print(f"❌ [{NODE_NAME}] weighted threshold NOT reached for {case_id}")
-                        STRIKES[NODE_NAME] = STRIKES.get(NODE_NAME, 0) + 1
+                        if not LAB_FREEZE_TRUST:
+                            STRIKES[NODE_NAME] = STRIKES.get(NODE_NAME, 0) + 1
+
                         apply_trust_update(NODE_NAME, -TRUST_PENALTY)
                         evaluate_quarantine(NODE_NAME)
                         reputation.record_false(NODE_NAME)
@@ -738,6 +766,9 @@ def trust_decay_loop():
     print(f"🧬 [{NODE_NAME}] adaptive trust engine started")
 
     while True:
+        if LAB_FREEZE_TRUST:
+            time.sleep(5)
+            continue
 
         time.sleep(20)
 
@@ -774,6 +805,10 @@ def trust_decay_loop():
 def quarantine_watchdog():
 
     while True:
+        if LAB_FREEZE_TRUST:
+            time.sleep(5)
+            continue
+
         now = time.time()
 
         for node, q in QUARANTINED.items():
@@ -786,6 +821,8 @@ def quarantine_watchdog():
         time.sleep(5)
 
 def evaluate_quarantine(node):
+    if LAB_FREEZE_TRUST:
+        return
 
     q = QUARANTINED.setdefault(node, {"active": False, "until": 0})
 
@@ -826,6 +863,40 @@ def attacker_spam_loop():
 
         time.sleep(5)
 
+def self_recovery_loop():
+    global RECOVERY_MODE, LAST_RECOVERY
+
+    while True:
+        time.sleep(10)
+
+        now = time.time()
+
+        # Cooldown
+        if now - LAST_RECOVERY < RECOVERY_COOLDOWN:
+            continue
+
+        trust_empty = not trust_scores or all(v == DEFAULT_TRUST for v in trust_scores.values())
+        rep_empty = not reputation.snapshot()
+
+        bootstrap_phase = (time.time() - BOOT_TIME) < BOOTSTRAP_GRACE
+
+        if not bootstrap_phase and (trust_empty or rep_empty):
+
+            print(f"🆘 [{NODE_NAME}] state corruption detected, requesting recovery")
+
+            RECOVERY_MODE = True
+            LAST_RECOVERY = now
+
+            try:
+                requests.post(
+                    "http://controller:7000/cluster/recover",
+                    json={"node": NODE_NAME},
+                    timeout=3
+                )
+            except Exception as e:
+                print(f"⚠️ recovery request failed: {e}")
+
+
 # ==================================================
 # START THREAD + SERVER
 # ==================================================
@@ -834,6 +905,7 @@ threading.Thread(target=monitor_loop, daemon=True).start()
 threading.Thread(target=trust_decay_loop,daemon=True).start()
 threading.Thread(target=quarantine_watchdog, daemon=True).start()
 threading.Thread(target=attacker_spam_loop, daemon=True).start()
+threading.Thread(target=self_recovery_loop, daemon=True).start()
 
 
 print("🌐 Starting HTTP server...")
