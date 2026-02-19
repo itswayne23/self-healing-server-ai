@@ -960,6 +960,25 @@ def attacker_spam_loop():
 
         time.sleep(5)
 
+def fetch_peer_snapshots():
+    snapshots = []
+
+    for peer in PEERS:
+        if not peer or peer == NODE_NAME:
+            continue
+
+        try:
+            r = requests.get(f"http://{peer}:5000/state/snapshot", timeout=2)
+            snap = r.json()
+
+            if snap.get("trust"):
+                snapshots.append(snap)
+
+        except Exception as e:
+            print(f"⚠️ [{NODE_NAME}] snapshot fetch failed from {peer}: {e}")
+
+    return snapshots
+
 def self_recovery_loop():
     global RECOVERY_MODE, LAST_RECOVERY
 
@@ -985,11 +1004,18 @@ def self_recovery_loop():
             LAST_RECOVERY = now
 
             try:
-                requests.post(
-                    "http://controller:7000/cluster/recover",
-                    json={"node": NODE_NAME},
-                    timeout=3
-                )
+                restored = quorum_restore()
+
+                if not restored:
+                    try:
+                        requests.post(
+                            "http://controller:7000/cluster/recover",
+                            json={"node": NODE_NAME},
+                            timeout=3
+                        )
+                    except Exception as e:
+                        print(f"⚠️ recovery request failed: {e}")
+
             except Exception as e:
                 print(f"⚠️ recovery request failed: {e}")
 
@@ -1019,6 +1045,82 @@ def wal_compact():
 
     except Exception as e:
         print(f"🔥 WAL compact failed: {e}")
+
+def select_quorum_snapshot(snaps):
+    if not snaps:
+        return None
+
+    # Sort by timestamp (newest first)
+    snaps = sorted(snaps, key=lambda x: x.get("timestamp", 0), reverse=True)
+
+    # Count similar snapshots by trust hash
+    counts = {}
+
+    for s in snaps:
+        key = json.dumps(s.get("trust", {}), sort_keys=True)
+        counts.setdefault(key, []).append(s)
+
+    # Find majority
+    required = max(1, (len(PEERS) // 2))
+
+    for group in counts.values():
+        if len(group) >= required:
+            print(f"🧬 [{NODE_NAME}] quorum snapshot selected")
+            return group[0]
+
+    # fallback: newest
+    print(f"🧬 [{NODE_NAME}] no quorum match, using newest snapshot")
+    return snaps[0]
+
+def quorum_restore():
+    global RESTORE_IN_PROGRESS, RECOVERY_MODE
+
+    print(f"🧬 [{NODE_NAME}] attempting peer quorum restore")
+
+    snaps = fetch_peer_snapshots()
+    snap = select_quorum_snapshot(snaps)
+
+    if not snap:
+        print(f"⚠️ [{NODE_NAME}] no peer snapshots available")
+        return False
+
+    RESTORE_IN_PROGRESS = True
+
+    try:
+        trust_scores.clear()
+        trust_scores.update(snap.get("trust", {}))
+
+        STRIKES.clear()
+        STRIKES.update(snap.get("strikes", {}))
+
+        QUARANTINED.clear()
+        QUARANTINED.update(snap.get("quarantined", {}))
+
+        # never keep self quarantined after recovery
+        QUARANTINED.setdefault(NODE_NAME, {"active": False, "until": 0})
+        QUARANTINED[NODE_NAME]["active"] = False
+        QUARANTINED[NODE_NAME]["until"] = 0
+
+        node_stats.clear()
+        node_stats.update(snap.get("node_stats", {}))
+
+        reputation.records = {}
+        reputation.load_from_snapshot(snap.get("reputation", {}))
+
+        EVENT_LOG.clear()
+        EVENT_LOG.extend(snap.get("events", []))
+
+        LAST_TRUST_UPDATE.clear()
+        LAST_TRUST_UPDATE.update(snap.get("last_trust_update", {}))
+        
+        save_trust()
+
+        print(f"🩺 [{NODE_NAME}] quorum restore successful")
+        return True
+
+    finally:
+        RESTORE_IN_PROGRESS = False
+        RECOVERY_MODE = False
 
 
 # ==================================================
