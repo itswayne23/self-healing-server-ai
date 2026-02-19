@@ -78,6 +78,10 @@ BOOTSTRAP_GRACE = 25  # seconds
 
 WAL_FILE = "/data/wal.log"
 
+STATE_VERSION = 0
+LAST_SYNC = 0
+SYNC_INTERVAL = 5
+
 # -------------------------------
 # PERSISTENCE HELPERS
 # -------------------------------
@@ -111,6 +115,9 @@ def load_trust():
             if rep_snap:
                 reputation.load_from_snapshot(rep_snap)
             LAST_TRUST_UPDATE.update(data.get("last_trust_update", {}))
+
+            global STATE_VERSION
+            STATE_VERSION = data.get("state_version", 0)
 
             print(f"📂 [{NODE_NAME}] loaded trust state")
             print(" trust:", trust_scores)
@@ -179,16 +186,19 @@ def save_trust():
         return
     try:
         os.makedirs(os.path.dirname(TRUST_FILE), exist_ok=True)
+        global STATE_VERSION
+        STATE_VERSION += 1
 
         with open(TRUST_FILE, "w") as f:
             json.dump({
-    "trust": trust_scores,
-    "strikes": STRIKES,
-    "stats": node_stats,
-    "quarantine": QUARANTINED,
-    "reputation": reputation.snapshot(),
-    "last_trust_update": LAST_TRUST_UPDATE
-}, f, indent=2)
+                "trust": trust_scores,
+                "strikes": STRIKES,
+                "stats": node_stats,
+                "quarantine": QUARANTINED,
+                "reputation": reputation.snapshot(),
+                "last_trust_update": LAST_TRUST_UPDATE,
+                "state_version": STATE_VERSION
+            }, f, indent=2)
 
 
         print(f"💾 [{NODE_NAME}] saved trust to {TRUST_FILE}")
@@ -618,6 +628,16 @@ def state_snapshot():
         "timestamp": time.time()
     })
 
+@app.route("/state/digest")
+def state_digest():
+    return jsonify({
+        "node": NODE_NAME,
+        "version": STATE_VERSION,
+        "timestamp": time.time(),
+        "trust_hash": hash(json.dumps(trust_scores, sort_keys=True)),
+    })
+
+
 @app.route("/state/restore", methods=["POST"])
 def state_restore():
     global RESTORE_IN_PROGRESS, reputation, RECOVERY_MODE
@@ -960,6 +980,25 @@ def attacker_spam_loop():
 
         time.sleep(5)
 
+def fetch_peer_snapshots():
+    snapshots = []
+
+    for peer in PEERS:
+        if not peer or peer == NODE_NAME:
+            continue
+
+        try:
+            r = requests.get(f"http://{peer}:5000/state/snapshot", timeout=2)
+            snap = r.json()
+
+            if snap.get("trust"):
+                snapshots.append(snap)
+
+        except Exception as e:
+            print(f"⚠️ [{NODE_NAME}] snapshot fetch failed from {peer}: {e}")
+
+    return snapshots
+
 def self_recovery_loop():
     global RECOVERY_MODE, LAST_RECOVERY
 
@@ -985,11 +1024,18 @@ def self_recovery_loop():
             LAST_RECOVERY = now
 
             try:
-                requests.post(
-                    "http://controller:7000/cluster/recover",
-                    json={"node": NODE_NAME},
-                    timeout=3
-                )
+                restored = quorum_restore()
+
+                if not restored:
+                    try:
+                        requests.post(
+                            "http://controller:7000/cluster/recover",
+                            json={"node": NODE_NAME},
+                            timeout=3
+                        )
+                    except Exception as e:
+                        print(f"⚠️ recovery request failed: {e}")
+
             except Exception as e:
                 print(f"⚠️ recovery request failed: {e}")
 
@@ -1002,6 +1048,38 @@ def wal_append(entry):
 
     except Exception as e:
         print(f"🔥 [{NODE_NAME}] WAL write failed: {e}")
+
+def replica_sync_loop():
+    global LAST_SYNC
+
+    while True:
+        time.sleep(SYNC_INTERVAL)
+
+        if RECOVERY_MODE:
+            continue
+
+        for peer in PEERS:
+            if not peer or peer == NODE_NAME:
+                continue
+
+            try:
+                r = requests.get(f"http://{peer}:5000/state/digest", timeout=2)
+                digest = r.json()
+
+                peer_version = digest.get("version", 0)
+
+                if peer_version > STATE_VERSION:
+                    print(f"🔄 [{NODE_NAME}] pulling newer state from {peer}")
+
+                    snap = requests.get(
+                        f"http://{peer}:5000/state/snapshot",
+                        timeout=3
+                    ).json()
+
+                    merge_state(snap)
+
+            except Exception as e:
+                print(f"⚠️ [{NODE_NAME}] replica sync failed from {peer}: {e}")
 
 def wal_compact():
     if len(EVENT_LOG) < 20:
@@ -1020,6 +1098,112 @@ def wal_compact():
     except Exception as e:
         print(f"🔥 WAL compact failed: {e}")
 
+def select_quorum_snapshot(snaps):
+    if not snaps:
+        return None
+
+    # Sort by timestamp (newest first)
+    snaps = sorted(snaps, key=lambda x: x.get("timestamp", 0), reverse=True)
+
+    # Count similar snapshots by trust hash
+    counts = {}
+
+    for s in snaps:
+        key = json.dumps(s.get("trust", {}), sort_keys=True)
+        counts.setdefault(key, []).append(s)
+
+    # Find majority
+    required = max(1, (len(PEERS) // 2))
+
+    for group in counts.values():
+        if len(group) >= required:
+            print(f"🧬 [{NODE_NAME}] quorum snapshot selected")
+            return group[0]
+
+    # fallback: newest
+    print(f"🧬 [{NODE_NAME}] no quorum match, using newest snapshot")
+    return snaps[0]
+
+def quorum_restore():
+    global RESTORE_IN_PROGRESS, RECOVERY_MODE
+
+    print(f"🧬 [{NODE_NAME}] attempting peer quorum restore")
+
+    snaps = fetch_peer_snapshots()
+    snap = select_quorum_snapshot(snaps)
+
+    if not snap:
+        print(f"⚠️ [{NODE_NAME}] no peer snapshots available")
+        return False
+
+    RESTORE_IN_PROGRESS = True
+
+    try:
+        trust_scores.clear()
+        trust_scores.update(snap.get("trust", {}))
+
+        STRIKES.clear()
+        STRIKES.update(snap.get("strikes", {}))
+
+        QUARANTINED.clear()
+        QUARANTINED.update(snap.get("quarantined", {}))
+
+        # never keep self quarantined after recovery
+        QUARANTINED.setdefault(NODE_NAME, {"active": False, "until": 0})
+        QUARANTINED[NODE_NAME]["active"] = False
+        QUARANTINED[NODE_NAME]["until"] = 0
+
+        node_stats.clear()
+        node_stats.update(snap.get("node_stats", {}))
+
+        reputation.records = {}
+        reputation.load_from_snapshot(snap.get("reputation", {}))
+
+        EVENT_LOG.clear()
+        EVENT_LOG.extend(snap.get("events", []))
+
+        LAST_TRUST_UPDATE.clear()
+        LAST_TRUST_UPDATE.update(snap.get("last_trust_update", {}))
+        
+        save_trust()
+
+        print(f"🩺 [{NODE_NAME}] quorum restore successful")
+        return True
+
+    finally:
+        RESTORE_IN_PROGRESS = False
+        RECOVERY_MODE = False
+
+def merge_state(remote):
+    global RESTORE_IN_PROGRESS
+
+    RESTORE_IN_PROGRESS = True
+
+    try:
+        for node, t in remote.get("trust", {}).items():
+            trust_scores[node] = max(trust_scores.get(node, MIN_TRUST), t)
+
+        for node, s in remote.get("strikes", {}).items():
+            STRIKES[node] = max(STRIKES.get(node, 0), s)
+
+        for node, q in remote.get("quarantined", {}).items():
+            QUARANTINED[node] = q
+
+        for node, stats in remote.get("node_stats", {}).items():
+            node_stats.setdefault(node, stats)
+
+        reputation.load_from_snapshot(remote.get("reputation", {}))
+
+        EVENT_LOG.extend(remote.get("events", []))
+        EVENT_LOG[:] = EVENT_LOG[-MAX_EVENTS:]
+
+        save_trust()
+
+        print(f"🔄 [{NODE_NAME}] state merged from peer")
+
+    finally:
+        RESTORE_IN_PROGRESS = False
+
 
 # ==================================================
 # START THREAD + SERVER
@@ -1030,6 +1214,7 @@ threading.Thread(target=trust_decay_loop,daemon=True).start()
 threading.Thread(target=quarantine_watchdog, daemon=True).start()
 threading.Thread(target=attacker_spam_loop, daemon=True).start()
 threading.Thread(target=self_recovery_loop, daemon=True).start()
+threading.Thread(target=replica_sync_loop, daemon=True).start()
 
 
 print("🌐 Starting HTTP server...")
