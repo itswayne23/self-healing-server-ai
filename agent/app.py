@@ -76,6 +76,8 @@ LAB_FREEZE_TRUST = False
 BOOT_TIME = time.time()
 BOOTSTRAP_GRACE = 25  # seconds
 
+WAL_FILE = "/data/wal.log"
+
 # -------------------------------
 # PERSISTENCE HELPERS
 # -------------------------------
@@ -116,6 +118,58 @@ def load_trust():
 
     except FileNotFoundError:
         print(f"📂 [{NODE_NAME}] no prior trust file, starting fresh")
+
+def wal_replay():
+    global RECOVERY_MODE
+    RECOVERY_MODE = True
+
+    if not os.path.exists(WAL_FILE):
+        RECOVERY_MODE = False
+        return
+
+    print(f"📜 [{NODE_NAME}] replaying WAL")
+
+    try:
+        with open(WAL_FILE, "r") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+
+                entry = json.loads(line)
+                etype = entry.get("type")
+
+                if etype == "trust_update":
+                    trust_scores[entry["node"]] = entry["value"]
+
+                elif etype == "strike_update":
+                    STRIKES[entry["node"]] = entry["value"]
+
+                elif etype == "event":
+                    EVENT_LOG.append(entry["data"])
+
+                elif etype == "pending_case":
+                    cid = entry["case_id"]
+                    pending_cases[cid] = entry["data"]
+
+                    # ensure self vote exists after crash recovery
+                    pending_cases[cid].setdefault("votes", {})
+                    pending_cases[cid]["votes"].setdefault(NODE_NAME, True)
+                    pending_cases[cid].setdefault("start", time.time())
+
+        # ✅ WAL replay safety cap
+        EVENT_LOG[:] = EVENT_LOG[-MAX_EVENTS:]
+
+        now = time.time()
+        for cid in list(pending_cases.keys()):
+            start = pending_cases[cid].get("start", now)
+            if now - start > VOTE_TIMEOUT:
+                pending_cases.pop(cid, None)
+
+    except Exception as e:
+        print(f"🔥 [{NODE_NAME}] WAL replay failed: {e}")
+    save_trust()
+    RECOVERY_MODE = False
+
 
 
 def save_trust():
@@ -170,6 +224,13 @@ def apply_trust_update(node, raw_delta):
 
     trust_scores[node] = new_trust
     LAST_TRUST_UPDATE[node] = now
+    wal_append({
+        "type": "trust_update",
+        "node": node,
+        "value": new_trust,
+        "time": now
+    })
+
 
     print(
         f"🧮 [{NODE_NAME}] trust update {node}: "
@@ -217,6 +278,7 @@ ATTACK_PROFILE.update({
 
 # Load persisted memory after defaults
 load_trust()
+wal_replay()
 
 for node in trust_scores:
     if node not in QUARANTINED:
@@ -292,6 +354,12 @@ def receive_alert():
         if not LAB_FREEZE_TRUST:
             STRIKES[proposer] = STRIKES.get(proposer, 0) + 1
 
+    wal_append({
+        "type": "strike_update",
+        "node": proposer,
+        "value": STRIKES[proposer],
+        "time": time.time()
+    })
 
 
 
@@ -438,6 +506,14 @@ def propose_to_peers(payload):
         "start": time.time(),
         "payload": payload
     }
+    wal_append({
+        "type": "pending_case",
+        "case_id": case_id,
+        "data": pending_cases[case_id],
+        "time": time.time()
+    })
+
+
 
     payload["case_id"] = case_id
     payload["start_time"] = pending_cases[case_id]["start"]
@@ -724,11 +800,25 @@ def monitor_loop():
                             "time": time.time(),
                             "start_time": pending_cases[case_id]["start"]
                         })
+                        wal_append({
+                            "type": "event",
+                            "data": EVENT_LOG[-1],
+                            "time": time.time()
+                        })
+
+
                     else:
                         # Penalty for false alarm
                         print(f"❌ [{NODE_NAME}] weighted threshold NOT reached for {case_id}")
                         if not LAB_FREEZE_TRUST:
                             STRIKES[NODE_NAME] = STRIKES.get(NODE_NAME, 0) + 1
+                        wal_append({
+                            "type": "strike_update",
+                            "node": NODE_NAME,
+                            "value": STRIKES[NODE_NAME],
+                            "time": time.time()
+                        })
+
 
                         apply_trust_update(NODE_NAME, -TRUST_PENALTY)
                         evaluate_quarantine(NODE_NAME)
@@ -751,10 +841,17 @@ def monitor_loop():
                             "time": time.time(),
                             "start_time": pending_cases[case_id]["start"]
                         })
+                        wal_append({
+                            "type": "event",
+                            "data": EVENT_LOG[-1],
+                            "time": time.time()
+                        })
+
 
                     # Cleanup
                     pending_cases.pop(case_id, None)
                     EVENT_LOG[:] = EVENT_LOG[-MAX_EVENTS:]
+                    wal_compact()
 
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 pass
@@ -895,6 +992,33 @@ def self_recovery_loop():
                 )
             except Exception as e:
                 print(f"⚠️ recovery request failed: {e}")
+
+def wal_append(entry):
+    try:
+        os.makedirs(os.path.dirname(WAL_FILE), exist_ok=True)
+
+        with open(WAL_FILE, "a") as f:
+            f.write(json.dumps(entry) + "\n")
+
+    except Exception as e:
+        print(f"🔥 [{NODE_NAME}] WAL write failed: {e}")
+
+def wal_compact():
+    if len(EVENT_LOG) < 20:
+        return
+
+    try:
+        with open(WAL_FILE, "w") as f:
+            for e in EVENT_LOG[-50:]:
+                f.write(json.dumps({
+                    "type": "event",
+                    "data": e
+                }) + "\n")
+
+        print(f"🧹 [{NODE_NAME}] WAL compacted")
+
+    except Exception as e:
+        print(f"🔥 WAL compact failed: {e}")
 
 
 # ==================================================
