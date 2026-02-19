@@ -65,6 +65,8 @@ WHITELIST = ["apt", "apt-get", "dpkg", "curl", "pip"]
 
 reputation = ReputationEngine()
 
+RESTORE_IN_PROGRESS = False
+
 
 # -------------------------------
 # PERSISTENCE HELPERS
@@ -109,6 +111,10 @@ def load_trust():
 
 
 def save_trust():
+    global RESTORE_IN_PROGRESS
+
+    if RESTORE_IN_PROGRESS:
+        return
     try:
         os.makedirs(os.path.dirname(TRUST_FILE), exist_ok=True)
 
@@ -514,6 +520,49 @@ def state_snapshot():
         "events": EVENT_LOG[-20:],   # last 20 events only
         "timestamp": time.time()
     })
+
+@app.route("/state/restore", methods=["POST"])
+def state_restore():
+    global RESTORE_IN_PROGRESS, reputation
+
+    data = request.json
+
+    if not data:
+        return jsonify({"status": "no_data"}), 400
+
+    print(f"🧬 [{NODE_NAME}] restoring state from controller")
+
+    RESTORE_IN_PROGRESS = True
+    print("engine before restore:", reputation.snapshot())
+
+    try:
+        trust_scores.clear()
+        trust_scores.update(data.get("trust", {}))
+
+        STRIKES.clear()
+        STRIKES.update(data.get("strikes", {}))
+
+        QUARANTINED.clear()
+        QUARANTINED.update(data.get("quarantined", {}))
+
+        node_stats.clear()
+        node_stats.update(data.get("node_stats", {}))
+
+        rep = data.get("reputation", {})
+        reputation.records = {}
+        if rep:
+            reputation.load_from_snapshot(rep)
+
+        # restore events safely
+        EVENT_LOG.clear()
+        EVENT_LOG.extend(data.get("events", []))
+
+        save_trust()
+
+    finally:
+        RESTORE_IN_PROGRESS = False
+
+    return jsonify({"status": "restored"}), 200
 
 
 # ==================================================

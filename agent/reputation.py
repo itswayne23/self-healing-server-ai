@@ -48,5 +48,5 @@ class ReputationEngine:
         if not snapshot:
             return
 
-        self.engine = snapshot
+        self.stats = snapshot
 

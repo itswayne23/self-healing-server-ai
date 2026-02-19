@@ -696,12 +696,95 @@ def governance_feedback(peer, severity):
     if penalty > 0:
         broadcast_penalty(peer, penalty)
 
+def replica_sync_loop():
+    while True:
+        time.sleep(10)
+
+        if not CLUSTER_SNAPSHOTS:
+            continue
+
+        for node, snap in CLUSTER_SNAPSHOTS.items():
+
+            if "error" in snap:
+                continue
+
+            # ---- detect amnesia ----
+            is_amnesiac = (
+                not snap.get("node_stats") or
+                not snap.get("reputation") or
+                len(snap.get("events", [])) == 0
+            )
+
+            if not is_amnesiac:
+                continue
+
+            print(f"🧠 {node} detected amnesia")
+
+            # ---- select donor ----
+            donor_node = None
+            best_health = 0
+
+            for peer in NODES:
+                if peer == node:
+                    continue
+
+                peer_snap = CLUSTER_SNAPSHOTS.get(peer)
+
+                if not peer_snap or "error" in peer_snap:
+                    continue
+
+                # donor must have real memory
+                if (
+                    not peer_snap.get("node_stats") or
+                    len(peer_snap.get("events", [])) == 0
+                ):
+                    continue
+
+                peer_status = CLUSTER_STATUS.get(peer, {})
+                h = peer_status.get("health", 0)
+
+                # ---- trust guard ----
+                peer_trust_map = peer_status.get("trust", {})
+
+                avg_trust = (
+                    sum(peer_trust_map.values()) / len(peer_trust_map)
+                    if peer_trust_map else 1.0
+                )
+
+                # require healthy AND trusted donor
+                if h < 0.6 or avg_trust < 0.6:
+                    continue
+
+                # select best donor by health
+                if h > best_health:
+                    donor_node = peer
+                    best_health = h
+
+
+            if not donor_node:
+                print(f"⚠️ no valid donor for {node}")
+                continue
+
+            donor = CLUSTER_SNAPSHOTS[donor_node]
+
+            try:
+                r = requests.post(
+                    f"http://{node}:5000/state/restore",
+                    json=donor,
+                    timeout=3
+                )
+                print(f"🧬 restored {node} from {donor_node} status={r.status_code}")
+            except Exception as e:
+                print(f"❌ restore failed {node}: {e}")
+
+
 
 init_db()
 CLUSTER_EVENTS[:] = load_recent_events()
 
 threading.Thread(target=poll_nodes, daemon=True).start()
 threading.Thread(target=anomaly_watchdog, daemon=True).start()
+threading.Thread(target=replica_sync_loop, daemon=True).start()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=7000)
