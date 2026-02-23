@@ -82,6 +82,11 @@ STATE_VERSION = 0
 LAST_SYNC = 0
 SYNC_INTERVAL = 5
 
+WARM_START = False
+RECOVERY_CONFIDENCE = 0.0
+CONFIDENCE_THRESHOLD = 0.7
+MIN_PEER_STATE = 1
+
 # -------------------------------
 # PERSISTENCE HELPERS
 # -------------------------------
@@ -125,6 +130,32 @@ def load_trust():
 
     except FileNotFoundError:
         print(f"📂 [{NODE_NAME}] no prior trust file, starting fresh")
+
+def calculate_recovery_confidence():
+    global RECOVERY_CONFIDENCE, WARM_START
+
+    prev = WARM_START
+
+    trust_ok = any(v != DEFAULT_TRUST for v in trust_scores.values())
+    rep_ok = bool(reputation.snapshot())
+    stats_ok = bool(node_stats)
+    events_ok = bool(EVENT_LOG)
+
+    score = 0.0
+    score += 0.25 if trust_ok else 0
+    score += 0.25 if rep_ok else 0
+    score += 0.25 if stats_ok else 0
+    score += 0.25 if events_ok else 0
+
+    RECOVERY_CONFIDENCE = score
+
+    if score >= CONFIDENCE_THRESHOLD:
+        WARM_START = True
+        if not prev:
+            print(f"🔥 [{NODE_NAME}] warm start enabled (confidence={score:.2f})")
+    else:
+        WARM_START = False
+        print(f"🧊 [{NODE_NAME}] cold start (confidence={score:.2f})")
 
 def wal_replay():
     global RECOVERY_MODE
@@ -289,6 +320,7 @@ ATTACK_PROFILE.update({
 # Load persisted memory after defaults
 load_trust()
 wal_replay()
+calculate_recovery_confidence()
 
 for node in trust_scores:
     if node not in QUARANTINED:
@@ -392,7 +424,7 @@ def receive_alert():
 
 @app.route("/propose", methods=["POST"])
 def receive_proposal():
-    if RECOVERY_MODE:
+    if RECOVERY_MODE and not WARM_START:
         print(f"🧬 [{NODE_NAME}] ignoring proposal (recovery mode)")
         return jsonify({"status": "recovery_mode"}), 200
 
@@ -432,7 +464,7 @@ def receive_proposal():
 
 @app.route("/vote", methods=["POST"])
 def receive_vote():
-    if RECOVERY_MODE:
+    if RECOVERY_MODE and not WARM_START:
         print(f"🧬 [{NODE_NAME}] ignoring vote (recovery mode)")
         return jsonify({"status": "recovery_mode"}), 200
     if QUARANTINED.get(NODE_NAME, {}).get("active"):
@@ -556,6 +588,8 @@ def status():
         "active_cases": len(pending_cases),
         "quarantined": QUARANTINED,
         "adaptive_quorum": get_adaptive_threshold(),
+        "warm_start": WARM_START,
+        "recovery_confidence": RECOVERY_CONFIDENCE,
     })
 
 @app.route("/events")
@@ -675,6 +709,7 @@ def state_restore():
         EVENT_LOG.extend(data.get("events", []))
 
         save_trust()
+        calculate_recovery_confidence()
 
     finally:
         RESTORE_IN_PROGRESS = False
@@ -1016,7 +1051,7 @@ def self_recovery_loop():
 
         bootstrap_phase = (time.time() - BOOT_TIME) < BOOTSTRAP_GRACE
 
-        if not bootstrap_phase and (trust_empty or rep_empty):
+        if not bootstrap_phase and not WARM_START and (trust_empty or rep_empty):
 
             print(f"🆘 [{NODE_NAME}] state corruption detected, requesting recovery")
 
@@ -1166,6 +1201,7 @@ def quorum_restore():
         LAST_TRUST_UPDATE.update(snap.get("last_trust_update", {}))
         
         save_trust()
+        calculate_recovery_confidence()
 
         print(f"🩺 [{NODE_NAME}] quorum restore successful")
         return True
@@ -1198,6 +1234,7 @@ def merge_state(remote):
         EVENT_LOG[:] = EVENT_LOG[-MAX_EVENTS:]
 
         save_trust()
+        calculate_recovery_confidence()
 
         print(f"🔄 [{NODE_NAME}] state merged from peer")
 

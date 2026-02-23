@@ -5,7 +5,7 @@ services:
     environment:
       - NODE_NAME=node1
       - PEERS=node2,node3
-      - ATTACK_MODE=true
+      - ATTACK_MODE=false
     ports:
       - "5001:5000"
     volumes:
