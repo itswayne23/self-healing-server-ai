@@ -9,6 +9,7 @@ from flask import Flask, request, jsonify
 import json
 from reputation import ReputationEngine
 import random
+import hashlib
 
 # -------------------------------
 # GLOBAL STATE
@@ -157,6 +158,10 @@ def calculate_recovery_confidence():
         WARM_START = False
         print(f"🧊 [{NODE_NAME}] cold start (confidence={score:.2f})")
 
+def compute_hash(data):
+    canonical = json.dumps(data, sort_keys=True).encode()
+    return hashlib.sha256(canonical).hexdigest()
+
 def wal_replay():
     global RECOVERY_MODE
     RECOVERY_MODE = True
@@ -174,6 +179,10 @@ def wal_replay():
                     continue
 
                 entry = json.loads(line)
+                entry_hash = entry.pop("hash", None)
+                if entry_hash != compute_hash(entry):
+                    print(f"🛑 [{NODE_NAME}] WAL entry corrupted, skipping")
+                    continue
                 etype = entry.get("type")
 
                 if etype == "trust_update":
@@ -651,15 +660,20 @@ def governance_quarantine():
 
 @app.route("/state/snapshot")
 def state_snapshot():
-    return jsonify({
+    payload = {
         "node": NODE_NAME,
         "trust": trust_scores,
         "strikes": STRIKES,
         "quarantined": QUARANTINED,
         "reputation": reputation.snapshot(),
         "node_stats": node_stats,
-        "events": EVENT_LOG[-20:],   # last 20 events only
+        "events": EVENT_LOG[-20:],
         "timestamp": time.time()
+    }
+
+    return jsonify({
+        "payload": payload,
+        "hash": compute_hash(payload)
     })
 
 @app.route("/state/digest")
@@ -678,8 +692,22 @@ def state_restore():
 
     data = request.json
 
-    if not data:
-        return jsonify({"status": "no_data"}), 400
+    # 🔍 Validate structure
+    if not data or "payload" not in data or "hash" not in data:
+        return jsonify({"status": "invalid_format"}), 400
+
+    payload = data["payload"]
+    received_hash = data["hash"]
+
+    # 🔐 Verify integrity
+    local_hash = compute_hash(payload)
+
+    if local_hash != received_hash:
+        print(f"🛑 [{NODE_NAME}] snapshot integrity FAILED")
+        RECOVERY_MODE = True
+        return jsonify({"status": "hash_mismatch"}), 400
+
+    print(f"🔐 [{NODE_NAME}] snapshot integrity verified")
 
     print(f"🧬 [{NODE_NAME}] restoring state from controller")
 
@@ -687,26 +715,27 @@ def state_restore():
     print("engine before restore:", reputation.snapshot())
 
     try:
+        # ⚠️ Use payload instead of data from here
         trust_scores.clear()
-        trust_scores.update(data.get("trust", {}))
+        trust_scores.update(payload.get("trust", {}))
 
         STRIKES.clear()
-        STRIKES.update(data.get("strikes", {}))
+        STRIKES.update(payload.get("strikes", {}))
 
         QUARANTINED.clear()
-        QUARANTINED.update(data.get("quarantined", {}))
+        QUARANTINED.update(payload.get("quarantined", {}))
 
         node_stats.clear()
-        node_stats.update(data.get("node_stats", {}))
+        node_stats.update(payload.get("node_stats", {}))
 
-        rep = data.get("reputation", {})
+        rep = payload.get("reputation", {})
         reputation.records = {}
         if rep:
             reputation.load_from_snapshot(rep)
 
         # restore events safely
         EVENT_LOG.clear()
-        EVENT_LOG.extend(data.get("events", []))
+        EVENT_LOG.extend(payload.get("events", []))
 
         save_trust()
         calculate_recovery_confidence()
@@ -1026,7 +1055,8 @@ def fetch_peer_snapshots():
             r = requests.get(f"http://{peer}:5000/state/snapshot", timeout=2)
             snap = r.json()
 
-            if snap.get("trust"):
+            payload = snap.get("payload", {})
+            if payload.get("trust"):
                 snapshots.append(snap)
 
         except Exception as e:
@@ -1078,8 +1108,12 @@ def wal_append(entry):
     try:
         os.makedirs(os.path.dirname(WAL_FILE), exist_ok=True)
 
+        # attach integrity hash
+        entry_copy = dict(entry)
+        entry_copy["hash"] = compute_hash(entry)
+
         with open(WAL_FILE, "a") as f:
-            f.write(json.dumps(entry) + "\n")
+            f.write(json.dumps(entry_copy) + "\n")
 
     except Exception as e:
         print(f"🔥 [{NODE_NAME}] WAL write failed: {e}")
@@ -1123,10 +1157,12 @@ def wal_compact():
     try:
         with open(WAL_FILE, "w") as f:
             for e in EVENT_LOG[-50:]:
-                f.write(json.dumps({
+                entry = {
                     "type": "event",
                     "data": e
-                }) + "\n")
+                }
+                entry["hash"] = compute_hash(entry)
+                f.write(json.dumps(entry) + "\n")
 
         print(f"🧹 [{NODE_NAME}] WAL compacted")
 
@@ -1144,7 +1180,8 @@ def select_quorum_snapshot(snaps):
     counts = {}
 
     for s in snaps:
-        key = json.dumps(s.get("trust", {}), sort_keys=True)
+        payload = s.get("payload", {})
+        key = json.dumps(payload.get("trust", {}), sort_keys=True)
         counts.setdefault(key, []).append(s)
 
     # Find majority
@@ -1174,14 +1211,20 @@ def quorum_restore():
     RESTORE_IN_PROGRESS = True
 
     try:
+        payload = snap.get("payload", {})
+        received_hash = snap.get("hash")
+
+        if compute_hash(payload) != received_hash:
+            print(f"🛑 [{NODE_NAME}] quorum snapshot hash mismatch, aborting")
+            return False
         trust_scores.clear()
-        trust_scores.update(snap.get("trust", {}))
+        trust_scores.update(payload.get("trust", {}))
 
         STRIKES.clear()
-        STRIKES.update(snap.get("strikes", {}))
+        STRIKES.update(payload.get("strikes", {}))
 
         QUARANTINED.clear()
-        QUARANTINED.update(snap.get("quarantined", {}))
+        QUARANTINED.update(payload.get("quarantined", {}))
 
         # never keep self quarantined after recovery
         QUARANTINED.setdefault(NODE_NAME, {"active": False, "until": 0})
@@ -1189,16 +1232,16 @@ def quorum_restore():
         QUARANTINED[NODE_NAME]["until"] = 0
 
         node_stats.clear()
-        node_stats.update(snap.get("node_stats", {}))
+        node_stats.update(payload.get("node_stats", {}))
 
         reputation.records = {}
-        reputation.load_from_snapshot(snap.get("reputation", {}))
+        reputation.load_from_snapshot(payload.get("reputation", {}))
 
         EVENT_LOG.clear()
-        EVENT_LOG.extend(snap.get("events", []))
+        EVENT_LOG.extend(payload.get("events", []))
 
         LAST_TRUST_UPDATE.clear()
-        LAST_TRUST_UPDATE.update(snap.get("last_trust_update", {}))
+        LAST_TRUST_UPDATE.update(payload.get("last_trust_update", {}))
         
         save_trust()
         calculate_recovery_confidence()
@@ -1240,6 +1283,7 @@ def merge_state(remote):
 
     finally:
         RESTORE_IN_PROGRESS = False
+
 
 
 # ==================================================
