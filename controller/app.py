@@ -6,6 +6,7 @@ import sqlite3
 from pathlib import Path
 from flask_cors import CORS
 import subprocess
+import json
 
 
 NODES = ["node1", "node2", "node3"]
@@ -93,7 +94,17 @@ def init_db():
     )
     """)
     cur.execute("CREATE INDEX IF NOT EXISTS idx_metrics_case ON metrics(case_id)")
-
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS audit (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            action TEXT,
+            actor TEXT,
+            target TEXT,
+            case_id TEXT,
+            metadata TEXT,
+            time REAL
+        )
+    """)
     conn.commit()
     conn.close()
 
@@ -186,6 +197,24 @@ def update_metric_consensus(case_id, consensus_time, result):
     conn.commit()
     conn.close()
 
+def insert_audit(action, actor=None, target=None, case_id=None, metadata=None):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+        INSERT INTO audit (action, actor, target, case_id, metadata, time)
+        VALUES (?, ?, ?, ?, ?, ?)
+    """, (
+        action,
+        actor,
+        target,
+        case_id,
+        json.dumps(metadata or {}),
+        time.time()
+    ))
+
+    conn.commit()
+    conn.close()
 
 def discover_nodes():
     try:
@@ -279,6 +308,16 @@ def poll_nodes():
                             insert_metric_start(e["case_id"], e["node"], start_time)
 
                         insert_event(e)
+
+                        insert_audit(
+                            action="consensus_result",
+                            actor=e["node"],
+                            case_id=e["case_id"],
+                            metadata={
+                                "result": e["result"],
+                                "weighted": e["weighted"]
+                            }
+                        )
 
                         # 🔹 Metric consensus if final
                         if e["result"] in ("terminated", "rejected"):
@@ -416,9 +455,21 @@ def cluster_anomalies_internal():
 
                 if severity == "high":
                     broadcast_penalty(peer, 0.15)
+                    insert_audit(
+                        action="penalty",
+                        actor=node,
+                        target=peer,
+                        metadata={"severity": "high", "penalty": 0.15}
+                    )
 
                 if severity == "critical":
                     broadcast_penalty(peer, 0.25)
+                    insert_audit(
+                        action="penalty",
+                        actor=node,
+                        target=peer,
+                        metadata={"severity": "critical", "penalty": 0.25}
+                    )
 
                 GOVERNANCE_ACTIONS[peer] = now
 
@@ -530,6 +581,11 @@ def force_quarantine(node):
             )
         except:
             pass
+    insert_audit(
+        action="quarantine",
+        actor="controller",
+        target=node
+    )
 
 def spawn_replacement(node_name):
     new_node = f"{node_name}_r{int(time.time())}"
@@ -775,6 +831,11 @@ def cluster_recover():
         return jsonify({"status": "unknown_node"}), 404
 
     print(f"🩺 recovery requested by {node}")
+    insert_audit(
+        action="recovery_start",
+        actor="controller",
+        target=node
+    )
 
     # Pick healthiest donor
     donor = None
@@ -794,12 +855,119 @@ def cluster_recover():
         )
     except:
         pass
-
+    insert_audit(
+        action="recovery_complete",
+        actor="controller",
+        target=node
+    )
     return jsonify({"status": "recovery_sent"})
 
 @app.route("/cluster/dead")
 def cluster_dead():
     return jsonify(dead_nodes)
+
+@app.route("/cluster/audit")
+def audit_all():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    rows = cur.execute("""
+        SELECT action, actor, target, case_id, metadata, time
+        FROM audit
+        ORDER BY id DESC
+        LIMIT 500
+    """).fetchall()
+
+    conn.close()
+
+    return jsonify([
+        {
+            "action": r[0],
+            "actor": r[1],
+            "target": r[2],
+            "case_id": r[3],
+            "metadata": json.loads(r[4]),
+            "time": r[5]
+        }
+        for r in rows
+    ])
+
+@app.route("/cluster/audit/node/<node>")
+def audit_node(node):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    rows = cur.execute("""
+        SELECT action, actor, target, case_id, metadata, time
+        FROM audit
+        WHERE actor = ? OR target = ?
+        ORDER BY id DESC
+        LIMIT 200
+    """, (node, node)).fetchall()
+
+    conn.close()
+
+    return jsonify([
+        {
+            "action": r[0],
+            "actor": r[1],
+            "target": r[2],
+            "case_id": r[3],
+            "metadata": json.loads(r[4]),
+            "time": r[5]
+        }
+        for r in rows
+    ])
+
+@app.route("/cluster/audit/case/<case_id>")
+def audit_case(case_id):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    rows = cur.execute("""
+        SELECT action, actor, target, metadata, time
+        FROM audit
+        WHERE case_id = ?
+        ORDER BY time ASC
+    """, (case_id,)).fetchall()
+
+    conn.close()
+
+    return jsonify([
+        {
+            "time": r[4],
+            "event": r[0],
+            "actor": r[1],
+            "target": r[2],
+            "metadata": json.loads(r[3])
+        }
+        for r in rows
+    ])
+
+@app.route("/cluster/timeline/<node>")
+def node_timeline(node):
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    rows = cur.execute("""
+        SELECT action, actor, target, metadata, time
+        FROM audit
+        WHERE actor = ? OR target = ?
+        ORDER BY time ASC
+    """, (node, node)).fetchall()
+
+    conn.close()
+
+    return jsonify([
+        {
+            "time": r[4],
+            "event": r[0],
+            "actor": r[1],
+            "target": r[2],
+            "metadata": json.loads(r[3])
+        }
+        for r in rows
+    ])
 
 # -----------------------------------------------------------------
 def anomaly_severity(a):
