@@ -9,4 +9,8 @@ RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 COPY app.py .
 
+RUN apt-get update && \
+    apt-get install -y docker.io && \
+    apt-get clean
+
 CMD ["python", "app.py"]

@@ -51,8 +51,9 @@ services:
       - node3
     volumes:
       - controller-data:/app
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
-    - cluster-net
+      - cluster-net
 
 volumes:
   node1-data:

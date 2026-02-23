@@ -5,7 +5,7 @@ import threading
 import sqlite3
 from pathlib import Path
 from flask_cors import CORS
-
+import subprocess
 
 
 NODES = ["node1", "node2", "node3"]
@@ -18,6 +18,9 @@ CORS(app)
 
 CLUSTER_STATUS = {}
 CLUSTER_EVENTS = []
+
+MAX_LATENCY = 1.0
+MAX_ACTIVE_CASES = 5
 
 POLL_INTERVAL = 3
 MAX_EVENTS = 200
@@ -38,6 +41,16 @@ RECOVERY_CANDIDATES = {}
 
 CLUSTER_SNAPSHOTS = {}
 SNAPSHOT_VERSION = 0
+
+DEAD_HEALTH_THRESHOLD = 0.25
+MAX_QUARANTINE_TIME = 180
+dead_nodes = {}
+
+AUTO_REPLACE = True
+REPLACEMENT_COOLDOWN = 30
+last_replacement = {}
+
+excluded_nodes = set()
 
 DB_PATH = "/app/events.db"
 
@@ -134,7 +147,8 @@ def load_recent_events(limit=200):
     ]
 
 def broadcast_penalty(node, penalty):
-    for target in NODES:
+    targets = list(set(NODES + list(CLUSTER_STATUS.keys())))
+    for target in targets:
         try:
             requests.post(
                 f"http://{target}:5000/governance/penalize",
@@ -173,10 +187,34 @@ def update_metric_consensus(case_id, consensus_time, result):
     conn.close()
 
 
+def discover_nodes():
+    try:
+        result = subprocess.run(
+            ["docker", "ps", "--format", "{{.Names}}"],
+            capture_output=True,
+            text=True
+        )
+
+        containers = result.stdout.strip().split("\n")
+
+        dynamic = [
+            name for name in containers
+            if name.startswith("node")
+        ]
+
+        return dynamic
+
+    except Exception as e:
+        print(f"⚠️ node discovery failed: {e}")
+        return []
+
 def poll_nodes():
 
     while True:
-        for node in NODES:
+        current_nodes = list(set(NODES + discover_nodes()))
+        for node in current_nodes:
+            if node in excluded_nodes:
+                continue
             try:
                 base = f"http://{node}:5000"
 
@@ -253,13 +291,58 @@ def poll_nodes():
                 # ✅ compute health + run policy
                 if "error" not in CLUSTER_STATUS[node]:
                     health = compute_node_health(node, CLUSTER_STATUS[node])
-                    CLUSTER_STATUS[node]["health"] = health
-
-                    evaluate_policy(node, health)
                 else:
-                    CLUSTER_STATUS[node]["health"] = 0.0
+                    health = 0.0
 
+                CLUSTER_STATUS[node]["health"] = health
 
+                # 🧬 Identity override: quarantine original if replacement exists
+                if node in dead_nodes:
+                    replacement_alive = any(
+                        n.startswith(f"{node}_r")
+                        and n in CLUSTER_STATUS
+                        and "error" not in CLUSTER_STATUS[n]
+                        and CLUSTER_STATUS[n].get("health", 0) > 0.5
+                        for n in CLUSTER_STATUS.keys()
+                    )
+
+                    if replacement_alive:
+                        print(f"🧷 Quarantining returning original {node} (replacement active)")
+                        force_quarantine(node)
+                        excluded_nodes.add(node)
+                        continue
+
+                # run policy only if online
+                if "error" not in CLUSTER_STATUS[node]:
+                    evaluate_policy(node, health)
+
+                # 💀 death detection (always run)
+                q = CLUSTER_STATUS[node].get("quarantined", {}).get(node, {})
+                quarantined = q.get("active", False)
+                until = q.get("until", 0)
+
+                too_long = quarantined and time.time() > (until + MAX_QUARANTINE_TIME)
+
+                # skip death logic for replacements
+                is_replacement = "_r" in node
+
+                if not is_replacement and (health < DEAD_HEALTH_THRESHOLD or too_long):
+                    if node not in dead_nodes:
+                        reason = "low_health" if health < DEAD_HEALTH_THRESHOLD else "stuck_quarantine"
+
+                        dead_nodes[node] = {
+                            "time": time.time(),
+                            "reason": reason
+                        }
+
+                        excluded_nodes.add(node)
+
+                        print(f"💀 Node marked dead: {node} reason={reason}")
+
+                        if AUTO_REPLACE:
+                            last = last_replacement.get(node, 0)
+                            if time.time() - last >= REPLACEMENT_COOLDOWN:
+                                spawn_replacement(node)
 
             except Exception as e:
                 CLUSTER_STATUS[node] = {
@@ -283,6 +366,8 @@ def cluster_anomalies_internal():
     anomalies = {}
 
     for node, data in CLUSTER_STATUS.items():
+        if node in excluded_nodes:
+            continue
 
         rep = data.get("reputation", {})
         engine = rep.get("engine", {})
@@ -363,9 +448,6 @@ def generate_explanation(event):
         f"that the behavior was malicious."
     )
 
-MAX_LATENCY = 1.0
-MAX_ACTIVE_CASES = 5
-
 def compute_node_health(node, data):
     trust_map = data.get("trust", {})
     rep_engine = data.get("reputation", {}).get("engine", {})
@@ -408,7 +490,7 @@ def compute_node_health(node, data):
         if offline_time > 10:
             health = 0.0
 
-
+    health = max(0.0, min(1.0, health))
     return round(health, 3)
 
 def evaluate_policy(node, health):
@@ -437,7 +519,9 @@ def evaluate_policy(node, health):
     LAST_POLICY_ACTION[node] = now
    
 def force_quarantine(node):
-    for target in NODES:
+    targets = list(set(NODES + list(CLUSTER_STATUS.keys())))
+
+    for target in targets:
         try:
             requests.post(
                 f"http://{target}:5000/governance/quarantine",
@@ -446,6 +530,32 @@ def force_quarantine(node):
             )
         except:
             pass
+
+def spawn_replacement(node_name):
+    new_node = f"{node_name}_r{int(time.time())}"
+
+    print(f"♻️ Spawning replacement for {node_name} → {new_node}")
+
+    # determine image + volume from original node name
+    image = f"self-healing-server-{node_name}"
+    volume = f"self-healing-server_{node_name}-data:/data"
+    peers = ",".join(list(set(NODES + list(CLUSTER_STATUS.keys()))))
+
+    try:
+        subprocess.run([
+            "docker", "run", "-d",
+            "--name", new_node,
+            "--network", "self-healing-server_cluster-net",
+            "--label", "com.docker.compose.project=self-healing-server",
+            "-e", f"NODE_NAME={new_node}",
+            "-e", f"PEERS={peers}",
+            "-v", volume,
+            image
+        ])
+    except Exception as e:
+        print(f"❌ spawn failed for {node_name}: {e}")
+
+    last_replacement[node_name] = time.time()
 
 
 @app.route("/cluster/status")
@@ -542,6 +652,8 @@ def cluster_trust():
     snapshot = {}
 
     for node, data in CLUSTER_STATUS.items():
+        if node in excluded_nodes:
+            continue
         snapshot[node] = {
             "trust": data.get("trust"),
             "strikes": data.get("strikes"),
@@ -555,6 +667,8 @@ def cluster_quarantine():
     snap = {}
 
     for node, data in CLUSTER_STATUS.items():
+        if node in excluded_nodes:
+            continue
         snap[node] = data.get("quarantined", {})
 
     return jsonify(snap)
@@ -566,6 +680,8 @@ def cluster_quarantine_timers():
     now = time.time()
 
     for node, data in CLUSTER_STATUS.items():
+        if node in excluded_nodes:
+            continue
         q = data.get("quarantined", {})
         timers[node] = {}
 
@@ -585,6 +701,8 @@ def cluster_reputation():
     snap = {}
 
     for node, data in CLUSTER_STATUS.items():
+        if node in excluded_nodes:
+            continue
         snap[node] = data.get("reputation", {})
 
     return jsonify(snap)
@@ -627,6 +745,8 @@ def cluster_health():
     health_map = {}
 
     for node, data in CLUSTER_STATUS.items():
+        if node in excluded_nodes:
+            continue
         if "error" in data:
             health_map[node] = 0.0
             continue
@@ -651,14 +771,14 @@ def cluster_recover():
     data = request.json
     node = data.get("node")
 
-    if node not in CLUSTER_SNAPSHOTS.get("nodes", {}):
+    if node not in CLUSTER_SNAPSHOTS:
         return jsonify({"status": "unknown_node"}), 404
 
     print(f"🩺 recovery requested by {node}")
 
     # Pick healthiest donor
     donor = None
-    for peer, snap in CLUSTER_SNAPSHOTS["nodes"].items():
+    for peer, snap in CLUSTER_SNAPSHOTS.items():
         if peer != node and snap.get("trust"):
             donor = snap
             break
@@ -677,6 +797,9 @@ def cluster_recover():
 
     return jsonify({"status": "recovery_sent"})
 
+@app.route("/cluster/dead")
+def cluster_dead():
+    return jsonify(dead_nodes)
 
 # -----------------------------------------------------------------
 def anomaly_severity(a):
@@ -756,7 +879,7 @@ def replica_sync_loop():
             donor_node = None
             best_health = 0
 
-            for peer in NODES:
+            for peer in CLUSTER_STATUS.keys():
                 if peer == node:
                     continue
 
