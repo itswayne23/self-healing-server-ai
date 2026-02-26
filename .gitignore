@@ -7,3 +7,14 @@ build/
 *.log
 snap.json
 tampered.json
+benign_run_1_events.json
+benign_run_1_metrics.json
+benign_run_1_node1.json
+benign_run_1_node2.json
+benign_run_1_node3.json
+benign_run_1_reputation.json
+collect_results.py
+experiments/
+miner_sim.py
+results/
+run_experiment.sh
