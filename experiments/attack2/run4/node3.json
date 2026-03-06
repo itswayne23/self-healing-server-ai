@@ -1,0 +1,1 @@
+{"active_cases":1,"adaptive_quorum":1.976,"node":"node3","quarantined":{"node1":{"active":false,"until":0},"node2":{"active":false,"until":0},"node3":{"active":true,"until":1772700525.585739}},"recovery_confidence":1.0,"strikes":{"node1":0,"node2":0,"node3":3},"trust":{"node1":1.024,"node2":1.0,"node3":0.904},"warm_start":true}
