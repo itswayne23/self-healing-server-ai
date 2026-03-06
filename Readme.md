@@ -1,218 +1,252 @@
-📘 README.md — Distributed Self-Healing Server with Cooperative Intrusion Response
-🛡️ Project Title
+Self-Healing AI Security Cluster with Byzantine-Resilient Consensus, Adaptive Trust, and Autonomous Recovery
 
-Distributed Self-Healing Server System with Quorum-Based Intrusion Response and Adaptive Trust
+1. High-Level Vision
+ 
+Modern distributed systems face a paradox. As they scale horizontally, their attack surface expands vertically. A single compromised node can inject false alerts, suppress real incidents, poison trust models, or disrupt consensus. Insider threats, alert flooding, unreliable static trust scores, and the absence of autonomous recovery mechanisms make traditional cluster security reactive rather than resilient.
+Most systems still rely on manual intervention when a node becomes unreliable. This introduces detection delays, human error, and service downtime. In adversarial environments, particularly zero-trust networks and edge deployments, manual recovery is not viable.
 
-📌 Problem Statement
+This project introduces a self-healing distributed security cluster composed of autonomous peer nodes that collaboratively:
+·	monitor system processes
+·	propose security incidents
+·	vote using trust-weighted consensus
+·	quarantine malicious or unreliable peers
+·	dynamically adapt quorum thresholds
+·	detect behavioral anomalies
+·	replicate state across the cluster
+·	recover corrupted nodes automatically
+·	maintain a complete forensic audit trail
 
-Modern server infrastructures face frequent attacks such as Denial-of-Service (DoS), resource exhaustion, and malicious processes.
-Traditional systems either:
+The system continues operating without human intervention during attacks, preserving availability, integrity, and accountability.
 
-• rely on centralized monitoring
-• react locally without coordination
-• generate false positives
-• cannot adapt to unreliable nodes
-• lose state after crashes
+2. System Architecture
 
-This project addresses these limitations by designing a distributed, cooperative, and adaptive self-healing system where:
+The system is organized into three logical layers.
+2.1 Agent Nodes
+Each agent node is both a sensor and a decision participant. It runs:
+·	a process monitor using CPU anomaly detection
+·	an incident proposer that broadcasts suspicious activity
+·	a vote receiver and voter
+·	a trust engine using EMA smoothing
+·	a reputation engine tracking decision accuracy
+·	quarantine enforcement logic
+·	adaptive quorum calculation
+·	Write-Ahead Logging (WAL) for crash recovery
+·	state snapshot and restore APIs
 
-Nodes independently detect suspicious activity, consult peers, reach quorum, execute remediation, learn from past outcomes, and persist reputation across restarts.
+Nodes communicate via REST endpoints:
+·	/propose → broadcast incident proposals
+·	/vote → exchange consensus votes
+·	/alert → share final remediation outcomes
+·	/state/snapshot → export full node state
+·	/state/restore → recover from a healthy peer
+This peer-to-peer model removes single points of failure.
 
-🧠 Core Idea
+2.2 Controller Layer
 
-Each node runs a security agent that:
+The controller is not a decision authority. It provides observability, governance, and recovery coordination.
+It:
+·	aggregates node status
+·	stores consensus events in SQLite
+·	computes behavioral anomalies
+·	enforces governance penalties
+·	triggers node recovery workflows
+·	calculates health scores
+·	tracks metrics such as latency, trust, and accuracy
+·	stores immutable audit logs
+·	reconstructs incident timelines
+All remediation decisions remain within the peer consensus layer.
 
-1️⃣ monitors local processes
-2️⃣ proposes incidents to peers
-3️⃣ collects votes
-4️⃣ applies weighted quorum
-5️⃣ performs remediation
-6️⃣ broadcasts results
-7️⃣ updates trust and strike counters
-8️⃣ decays reputation over time
-9️⃣ persists state to disk
+2.3 Data Persistence Layer
 
-No single node has unilateral control.
+The persistence model ensures durability and recoverability:
+·	trust.json → long-term trust, strikes, quarantine, and reputation state
+·	WAL log → crash-safe incremental updates
+·	in-memory event log → recent consensus history
+·	controller audit database → forensic record
+This hybrid design balances performance with durability.
 
-The cluster behaves like a collective immune system.
+3. Consensus Mechanism
 
-🏗️ System Architecture
-🔷 High-Level Components
+The consensus workflow is:
+1.	A node detects a suspicious process
+2.	It generates a unique case_id
+3.	The proposal is broadcast to peers
+4.	Each peer votes
+5.	Votes are weighted by:
+    ·	trust score
+    ·	reputation accuracy
+    ·	quarantine status (quarantined nodes are ignored)
+6.	The weighted sum is compared to an adaptive quorum threshold
+7.	If the threshold is reached, the process is terminated
+8.	The final result is broadcast to all nodes
 
-• Agent Service (per node)
-• Flask API Server
-• Monitoring Engine (psutil)
-• Quorum & Voting Module
-• Trust & Strike Manager
-• Persistence Layer (trust.json)
-• Attack Simulator Scripts
-• Docker Multi-Node Testbed
+This mechanism resists:
+·	malicious voters through trust weighting
+·	delayed votes via bounded voting windows
+·	flipped votes through reputation penalties
+·	skipped votes by quorum requirements
+No single node can force remediation.
 
-📊 Architecture Diagram
-                    ┌───────────────────────────┐
-                    │        Docker Network      │
-                    │        (cluster-net)       │
-                    └───────────────────────────┘
+4. Trust and Reputation Model
 
- ┌────────────┐        ┌────────────┐        ┌────────────┐
- │   Node1    │◀──────▶│   Node2    │◀──────▶│   Node3    │
- └────────────┘        └────────────┘        └────────────┘
- │ Agent App  │        │ Agent App  │        │ Agent App  │
- │ Flask API  │        │ Flask API  │        │ Flask API  │
- │ Monitor    │        │ Monitor    │        │ Monitor    │
- │ Trust DB   │        │ Trust DB   │        │ Trust DB   │
- └─────┬──────┘        └─────┬──────┘        └─────┬──────┘
-       │                       │                       │
-       ▼                       ▼                       ▼
- Process Scan           Peer Verification        Peer Verification
- CPU/Memory             Vote Aggregation         Vote Aggregation
+Trust
+Trust is a continuous value:
+·	smoothed using EMA
+·	bounded between MIN_TRUST and MAX_TRUST
+·	updated with cooldown to prevent oscillation
+·	decays for inactive low performers
+·	penalized for false alerts
+·	rewarded for correct remediation
 
-                   ───────── Decision Fabric ─────────
-                     Proposal → Vote → Quorum → Heal
+Reputation
+Reputation tracks:
+·	success count
+·	false count
+·	total decisions
+·	accuracy score
+Voting weight is:
+trust × accuracy
+This couples historical reliability with recent behavior.
 
-🧱 Development Stages
-✅ Stage 1 — Single Node Healing
+5. Quarantine System
 
-• local monitoring
-• suspicious process detection
-• restart / kill
-• Dockerized node
+Nodes are quarantined when:
+·	trust drops below a threshold
+·	strike count exceeds a limit
+Quarantined nodes:
+·	cannot vote
+·	cannot propose incidents
+·	are excluded from quorum
+·	are automatically reintegrated after a timeout
+The controller can also enforce quarantine for governance violations.
 
-✅ Stage 2 — Cooperative Alerts
+6. Adversarial Simulation
 
-• multi-node cluster
-• peer communication
-• alert broadcasting
-• no unilateral action
+The system includes an attacker mode that simulates Byzantine behavior:
+·	vote flipping
+·	vote skipping
+·	delayed voting
+·	false incident proposals
+·	alert falsification
+·	proposal spamming
+This enables controlled resilience testing under hostile conditions.
 
-✅ Stage 3 — Quorum Remediation
+7. Adaptive Quorum
 
-• voting system
-• quorum enforcement
-• delayed action
-• cluster notifications
+Quorum is dynamically computed using:
+·	number of active non-quarantined nodes
+·	average cluster trust
+Low trust increases the quorum threshold.
+ High trust reduces it.
+This prevents unsafe actions in compromised clusters while maintaining responsiveness in healthy ones.
 
-✅ Stage 4 — Experimental Evaluation + Adaptive Trust
+8. Health Scoring and Recovery Candidates
 
-• weighted voting
-• trust scores
-• strike counters
-• trust decay
-• persistence across restarts
-• false-positive penalties
-• recovery metrics
-• attack simulation
+Each node receives a health score derived from:
+·	trust level
+·	reputation accuracy
+·	strike history
+·	quarantine status
+Nodes below a defined threshold become recovery candidates and are flagged for state restoration.
 
-🔜 Stage 5 (Planned)
+9. State Replication and Autonomous Recovery
 
-• ML-based anomaly detection
-• React dashboard
-• visualization
-• ROC curves
-• multi-host testing
+Nodes periodically expose state snapshots. The controller stores the latest snapshots.
+If a node detects state corruption, such as empty trust or reputation, it:
+1.	Enters recovery mode
+2.	Requests recovery from the controller
+3.	The controller selects the healthiest donor node
+4.	State is restored via /state/restore
+5.	The node exits recovery mode and rejoins consensus
+This process is fully automated.
 
-🧪 Testing Methodology
-🔬 Attack Types Simulated
+10. Write-Ahead Log (WAL)
 
-• CPU flood
-• fork bombs
-• infinite loops
-• port scans
-• process storms
-• fake alerts
-• node failure
+The WAL provides:
+·	crash safety
+·	replay of trust updates
+·	replay of strike changes
+·	restoration of pending cases
+·	reconstruction of recent events
+This prevents data loss during node failure.
 
-📈 Metrics Collected
+11. Integrity Validation
 
-• detection latency
-• quorum convergence time
-• remediation success rate
-• false positive count
-• trust evolution
-• strike counts
-• recovery duration
-• restart persistence
+Integrity is ensured through:
+·	snapshot hashing
+·	WAL hash validation
+·	mismatch detection
+·	automatic recovery triggers
+Corrupted state is never trusted.
 
-🔁 Example Tests
-TEST — Trust Decay
+12. Audit Trail and Forensics
 
-Wait 60s → trust decreases gradually.
+An immutable audit log records:
+·	governance penalties
+·	quarantines
+·	recoveries
+·	consensus outcomes
+·	policy actions
+Forensic APIs provide:
+·	per-node timelines
+·	per-case timelines
+·	full cluster audit history
+This enables post-incident analysis and compliance reporting.
 
-TEST — Strike Reset
+13. Security Properties
 
-Fail → strikes increase.
-Succeed → strikes reset.
+The system defends against:
+·	insider attacks through trust weighting and quarantine
+·	colluding nodes via reputation and adaptive quorum
+·	false alerts through penalty and accuracy tracking
+·	trust poisoning via bounded EMA updates
+·	data loss through WAL and snapshots
+·	node crashes via autonomous recovery
+·	slow or unresponsive nodes via voting windows
+Core guarantees:
+·	Byzantine-resilient consensus
+·	adaptive quorum safety
+·	autonomous healing
 
-TEST — Restart Persistence
+14. Experimental Evaluation (Conceptual)
 
-Restart node → trust.json restored.
+Evaluation scenarios include:
+·	simulated adversarial nodes
+·	trust convergence over time
+·	consensus latency measurement
+·	recovery latency after state loss
+·	false positive and false negative rates
+·	system availability under compromise
+These metrics demonstrate resilience and stability.
 
-📊 Results (Summary)
+15. Real-World Applications
 
-Observed during local Docker experiments:
+Potential deployments include:
+·	SOC automation platforms
+·	zero-trust security clusters
+·	autonomous SIEM nodes
+·	edge security swarms
+·	distributed IDS/IPS systems
+·	critical infrastructure monitoring
 
-✔ quorum prevents false alarms
-✔ adaptive trust reduces noisy nodes
-✔ decay prevents stale reputations
-✔ state survives restarts
-✔ cluster remains stable under DoS
-✔ peers continue voting when one node is overloaded
+16. Future Work
 
-Graphs and CSV metrics are stored in /experiments/.
+Planned enhancements:
+·	machine learning-based anomaly scoring
+·	graph-based collusion detection
+·	cryptographic vote signing
+·	secure gossip communication
+·	blockchain-anchored audit trails
 
-<!-- 📸 Screenshots (Coming Soon) -->
+17. Conclusion
 
-⚠️ Limitations
+This system demonstrates that distributed AI agents can:
+·	detect attacks
+·	reach trustworthy consensus
+·	isolate malicious peers
+·	recover lost state
+·	maintain forensic accountability
+without human intervention.
 
-Current version:
+It represents a step toward autonomous, cyber-resilient infrastructure capable of operating safely in adversarial environments.
 
-• runs on local Docker hosts
-• trust divergence possible between nodes
-• no cryptographic signing yet
-• Flask dev server only
-• no ML detector yet
-• no UI dashboard yet
-• no cross-VM deployment
-
-🚀 Future Work
-
-Planned upgrades:
-
-• cluster-wide reputation synchronization
-• TLS between agents
-• signed alerts
-• Byzantine fault tolerance
-• Raft-based state replication
-• ML anomaly detection
-• React monitoring dashboard
-• Kubernetes deployment
-• WAN latency experiments
-• auto-scaling
-• Prometheus + Grafana integration
-
-🏁 How to Run
-docker compose build
-docker compose up
-
-
-Check logs:
-
-docker logs -f node1
-
-
-Inspect trust state:
-
-docker exec -it node1 cat /app/trust.json
-
-🎯 Why This Project Matters
-
-This system demonstrates:
-
-✔ distributed consensus
-✔ fault tolerance
-✔ adaptive reputation
-✔ intrusion response
-✔ self-healing orchestration
-✔ experimental methodology
-
-It bridges cybersecurity, distributed systems, and autonomic computing.
