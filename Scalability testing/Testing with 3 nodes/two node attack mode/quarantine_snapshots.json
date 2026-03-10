@@ -1,0 +1,5642 @@
+[
+  {
+    "timestamp": 1773124927.064233,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124932.1242616,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124937.1827395,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124942.2206466,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124947.2557373,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124952.2867808,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124957.3126369,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124962.335062,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124967.3747187,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124972.4034324,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124977.438716,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124982.4685032,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124987.486893,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124992.5058029,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124997.5243094,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125002.5631478,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125007.5899596,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125012.6315613,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125017.6677084,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125022.6945384,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125027.736335,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125032.7729628,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125037.817459,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125042.8528156,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125047.8864005,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125052.9127915,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125057.951558,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125062.9726615,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125068.011001,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125073.0279737,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125078.0750496,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125083.12603,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125088.180347,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125093.1969297,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125098.2229967,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125103.2731223,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125108.309702,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125113.3388314,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125118.3718863,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125123.4053383,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125128.4453578,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125133.4860084,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125138.5019932,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125143.5411272,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125148.5548527,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125153.5885978,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125158.626189,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125163.6791582,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125168.7075024,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125134.7150326
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125173.7767057,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125178.7935996,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125183.8234246,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125153.8135357
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125188.8589976,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125193.9169874,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125198.9701018,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125204.020539,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125209.0557885,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125214.1246476,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125219.18037,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125224.2316637,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125229.2678692,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125234.3173382,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125239.3628628,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125244.3886313,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125249.4214113,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125254.463455,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125259.5005736,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125264.5296159,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125269.5682082,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125274.6124866,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125279.6820736,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125284.7377772,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125289.7813325,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125294.8115437,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125299.8594077,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125304.908299,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125309.9525645,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125315.011487,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125320.0607028,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125325.0989857,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125330.1291459,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125335.1811306,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125340.225893,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125345.2648814,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125350.2987473,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125355.3555303,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125360.396776,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125365.4316633,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125370.4597955,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125375.4912338,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125380.5211926,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 1773125350.6586573
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125385.5453568,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125390.570721,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125395.6163404,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125400.6439738,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125405.6765654,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125410.7215173,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125415.7582264,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 1773125365.1487532
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125420.7817187,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125425.8201766,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125430.8762736,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125435.928192,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125440.9495208,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125445.9825776,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125451.011655,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125456.0406046,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125461.0642114,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125466.099236,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125471.113603,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125476.1492374,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125481.2081707,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125486.2519886,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125491.2801914,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125496.3159223,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125501.3331878,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125506.3730817,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125511.3938885,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125516.440892,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125521.4665961,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": true,
+          "until": 1773125700.6884828
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125526.5067039,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": true,
+          "until": 1773125595.0238774
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": true,
+          "until": 1773125700.6884828
+        },
+        "node2": {
+          "active": true,
+          "until": 1773125562.0772874
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  }
+]

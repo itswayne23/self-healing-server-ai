@@ -1,0 +1,5282 @@
+[
+  {
+    "timestamp": 1773124927.064233,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124932.1242616,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 0.968,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124937.1827395,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 0.968,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124942.2206466,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 0.968,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124947.2557373,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 2,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 0.9359999999999999,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124952.2867808,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 3,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 2,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 0.9359999999999999,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124957.3126369,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 3,
+        "strikes": {
+          "node1": 1,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124962.335062,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 1,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124967.3747187,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 3,
+        "strikes": {
+          "node1": 2,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124972.4034324,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 5,
+        "strikes": {
+          "node1": 2,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124977.438716,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124982.4685032,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124987.486893,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.028,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124992.5058029,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773124997.5243094,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125002.5631478,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125007.5899596,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125012.6315613,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125017.6677084,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 1.008,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125022.6945384,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125027.736335,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125032.7729628,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125037.817459,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125042.8528156,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125047.8864005,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.988,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125052.9127915,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125057.951558,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125062.9726615,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125068.011001,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.956,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125073.0279737,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.956,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125078.0750496,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.956,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125083.12603,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.968,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.956,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125088.180347,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.988,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.948,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125093.1969297,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.988,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.948,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125098.2229967,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.988,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.948,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125103.2731223,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.988,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.948,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125108.309702,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.976,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125113.3388314,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.976,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125118.3718863,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.976,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125123.4053383,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.976,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125128.4453578,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.964,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9119999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125133.4860084,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.964,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9119999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125138.5019932,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.964,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9119999999999999,
+          "node2": 1.0,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125143.5411272,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.944,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9239999999999999,
+          "node2": 0.904,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9119999999999999,
+          "node2": 0.98,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125148.5548527,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.944,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9039999999999999,
+          "node2": 0.8720000000000001,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.98,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125153.5885978,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.944,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9039999999999999,
+          "node2": 0.8720000000000001,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.98,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125158.626189,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 4,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.944,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 2,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9039999999999999,
+          "node2": 0.8400000000000001,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.98,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125163.6791582,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9359999999999999,
+          "node2": 0.944,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 2,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.9039999999999999,
+          "node2": 0.8400000000000001,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.98,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125168.7075024,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 5,
+        "strikes": {
+          "node1": 1,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.904,
+          "node2": 0.944,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 2,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.8400000000000001,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8799999999999999,
+          "node2": 0.98,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125173.7767057,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 1,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.904,
+          "node2": 0.9119999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8799999999999999,
+          "node2": 0.948,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125178.7935996,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 1,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.904,
+          "node2": 0.9119999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8799999999999999,
+          "node2": 0.948,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125183.8234246,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 2,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.9119999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8799999999999999,
+          "node2": 0.948,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125188.8589976,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.9119999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8919999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8679999999999999,
+          "node2": 0.948,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125193.9169874,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.9119999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8599999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8679999999999999,
+          "node2": 0.948,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125198.9701018,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.9119999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8599999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8679999999999999,
+          "node2": 0.948,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125204.020539,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8799999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8599999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8679999999999999,
+          "node2": 0.9159999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125209.0557885,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8799999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8399999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8479999999999999,
+          "node2": 0.9159999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125214.1246476,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8799999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8399999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8479999999999999,
+          "node2": 0.9159999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125219.18037,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8799999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8399999999999999,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8479999999999999,
+          "node2": 0.9159999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125224.2316637,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8799999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8079999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8159999999999998,
+          "node2": 0.9159999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125229.2678692,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8799999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8079999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8159999999999998,
+          "node2": 0.9159999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125234.3173382,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8479999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8079999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8159999999999998,
+          "node2": 0.884,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125239.3628628,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8479999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7879999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7959999999999998,
+          "node2": 0.884,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125244.3886313,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8479999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7879999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7959999999999998,
+          "node2": 0.884,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125249.4214113,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8479999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7879999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7839999999999998,
+          "node2": 0.884,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125254.463455,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8479999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7559999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7839999999999998,
+          "node2": 0.884,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125259.5005736,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8479999999999999,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7559999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7839999999999998,
+          "node2": 0.884,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125264.5296159,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8159999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7559999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7839999999999998,
+          "node2": 0.8520000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125269.5682082,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8159999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7359999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7719999999999998,
+          "node2": 0.8520000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125274.6124866,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8159999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7359999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7719999999999998,
+          "node2": 0.8520000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125279.6820736,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8159999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7359999999999998,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7719999999999998,
+          "node2": 0.8520000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125284.7377772,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8159999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7039999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7399999999999998,
+          "node2": 0.8520000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125289.7813325,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.8159999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7039999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7399999999999998,
+          "node2": 0.8520000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125294.8115437,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7839999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7039999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7399999999999998,
+          "node2": 0.8200000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125299.8594077,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7839999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6839999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7199999999999998,
+          "node2": 0.8200000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125304.908299,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7839999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6839999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7199999999999998,
+          "node2": 0.8200000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125309.9525645,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7719999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6839999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.7199999999999998,
+          "node2": 0.8200000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125315.011487,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7719999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6519999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6879999999999997,
+          "node2": 0.8200000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125320.0607028,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7719999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6519999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6879999999999997,
+          "node2": 0.8200000000000001,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125325.0989857,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7399999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6519999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6879999999999997,
+          "node2": 0.788,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125330.1291459,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7399999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6399999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6759999999999997,
+          "node2": 0.788,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125335.1811306,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7399999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6399999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6759999999999997,
+          "node2": 0.788,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125340.225893,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7399999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6399999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6759999999999997,
+          "node2": 0.788,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125345.2648814,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7399999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6079999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6439999999999997,
+          "node2": 0.788,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125350.2987473,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7279999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6079999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6439999999999997,
+          "node2": 0.788,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125355.3555303,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7279999999999998,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6079999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6439999999999997,
+          "node2": 0.756,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125360.396776,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7079999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6079999999999997,
+          "node2": 0.808,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6439999999999997,
+          "node2": 0.756,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125365.4316633,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7079999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5879999999999996,
+          "node2": 0.776,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6239999999999997,
+          "node2": 0.756,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125370.4597955,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7079999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5879999999999996,
+          "node2": 0.776,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.6239999999999997,
+          "node2": 0.756,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125375.4912338,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7079999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 1,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5559999999999996,
+          "node2": 0.776,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5919999999999996,
+          "node2": 0.756,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125380.5211926,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8720000000000001,
+          "node2": 0.7079999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 2,
+        "strikes": {
+          "node1": 0,
+          "node2": 2,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5559999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5919999999999996,
+          "node2": 0.756,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125385.5453568,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8600000000000001,
+          "node2": 0.6759999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5559999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5799999999999996,
+          "node2": 0.724,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125390.570721,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 6,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8600000000000001,
+          "node2": 0.6759999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5559999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5799999999999996,
+          "node2": 0.724,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125395.6163404,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8600000000000001,
+          "node2": 0.6759999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5359999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5799999999999996,
+          "node2": 0.724,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125400.6439738,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8600000000000001,
+          "node2": 0.6759999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5359999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5799999999999996,
+          "node2": 0.724,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125405.6765654,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 1,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8280000000000001,
+          "node2": 0.6759999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5039999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5479999999999996,
+          "node2": 0.724,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125410.7215173,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 2,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8280000000000001,
+          "node2": 0.6639999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5039999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5479999999999996,
+          "node2": 0.724,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125415.7582264,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 8,
+        "strikes": {
+          "node1": 2,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.8280000000000001,
+          "node2": 0.6639999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5039999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5479999999999996,
+          "node2": 0.692,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125420.7817187,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6439999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5039999999999996,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5479999999999996,
+          "node2": 0.692,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125425.8201766,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6439999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.48399999999999954,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5279999999999996,
+          "node2": 0.692,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125430.8762736,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6439999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.48399999999999954,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.5279999999999996,
+          "node2": 0.692,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125435.928192,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6439999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.49599999999999955,
+          "node2": 0.692,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125440.9495208,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6439999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.49599999999999955,
+          "node2": 0.692,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125445.9825776,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6119999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.49599999999999955,
+          "node2": 0.6599999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125451.011655,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6119999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.48399999999999954,
+          "node2": 0.6599999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125456.0406046,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6119999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.43199999999999955,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.48399999999999954,
+          "node2": 0.6599999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125461.0642114,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.6119999999999997,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.43199999999999955,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.48399999999999954,
+          "node2": 0.6599999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125466.099236,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5999999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.3999999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.6599999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125471.113603,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5999999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.3999999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.6599999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125476.1492374,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5999999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.3999999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.6279999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125481.2081707,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5799999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.3999999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.4519999999999995,
+          "node2": 0.6079999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125486.2519886,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5799999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.37999999999999956,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.43199999999999955,
+          "node2": 0.6079999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125491.2801914,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5799999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.37999999999999956,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.43199999999999955,
+          "node2": 0.6079999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125496.3159223,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5799999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.37999999999999956,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.43199999999999955,
+          "node2": 0.6079999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125501.3331878,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5799999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.37999999999999956,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.43199999999999955,
+          "node2": 0.6079999999999999,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125506.3730817,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5479999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.36799999999999955,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.41999999999999954,
+          "node2": 0.5759999999999998,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125511.3938885,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5479999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.36799999999999955,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.41999999999999954,
+          "node2": 0.5759999999999998,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125516.440892,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5279999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.36799999999999955,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.41999999999999954,
+          "node2": 0.5559999999999998,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125521.4665961,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5279999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.3359999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.38799999999999957,
+          "node2": 0.5559999999999998,
+          "node3": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773125526.5067039,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 7,
+        "strikes": {
+          "node1": 3,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.796,
+          "node2": 0.5279999999999996,
+          "node3": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 1,
+        "strikes": {
+          "node1": 0,
+          "node2": 3,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.3359999999999995,
+          "node2": 0.744,
+          "node3": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0
+        },
+        "trust": {
+          "node1": 0.38799999999999957,
+          "node2": 0.5559999999999998,
+          "node3": 1.0
+        }
+      }
+    }
+  }
+]

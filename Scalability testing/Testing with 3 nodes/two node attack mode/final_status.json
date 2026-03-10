@@ -1,0 +1,193 @@
+{
+  "node1": {
+    "active_cases": 7,
+    "adaptive_quorum": 2,
+    "health": 0.508,
+    "node": "node1",
+    "quarantined": {
+      "node1": {
+        "active": true,
+        "until": 1773125595.0238774
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 1.0,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 0.0,
+          "false": 9,
+          "last_activity": 1773125415.0243924,
+          "success": 0,
+          "total": 9
+        },
+        "node2": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773124929.8218815,
+          "success": 0,
+          "total": 0
+        },
+        "node3": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773124944.2484438,
+          "success": 0,
+          "total": 0
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773125415.0243936,
+          "votes": 0
+        },
+        "node2": {
+          "last_activity": 1773125168.9878225,
+          "votes": 8
+        },
+        "node3": {
+          "last_activity": 1773125416.1612463,
+          "votes": 18
+        }
+      }
+    },
+    "strikes": {
+      "node1": 3,
+      "node2": 0,
+      "node3": 0
+    },
+    "trust": {
+      "node1": 0.796,
+      "node2": 0.5159999999999996,
+      "node3": 1.0
+    },
+    "warm_start": true
+  },
+  "node2": {
+    "active_cases": 1,
+    "adaptive_quorum": 1,
+    "health": 0.557,
+    "node": "node2",
+    "quarantined": {
+      "node1": {
+        "active": true,
+        "until": 1773125700.6884828
+      },
+      "node2": {
+        "active": true,
+        "until": 1773125562.0772874
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 1.0,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773124944.251004,
+          "success": 2,
+          "total": 2
+        },
+        "node2": {
+          "accuracy": 0.0,
+          "false": 9,
+          "last_activity": 1773125382.0776556,
+          "success": 0,
+          "total": 9
+        },
+        "node3": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773125138.8213434,
+          "success": 0,
+          "total": 0
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773125376.0704062,
+          "votes": 6
+        },
+        "node2": {
+          "last_activity": 1773125382.0776565,
+          "votes": 0
+        },
+        "node3": {
+          "last_activity": 1773125381.0756826,
+          "votes": 10
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 3,
+      "node3": 0
+    },
+    "trust": {
+      "node1": 0.3359999999999995,
+      "node2": 0.744,
+      "node3": 1.0
+    },
+    "warm_start": true
+  },
+  "node3": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.7040000000000006,
+    "health": 0.858,
+    "node": "node3",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773124944.2546694,
+          "success": 2,
+          "total": 2
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773124944.2546606,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0
+    },
+    "trust": {
+      "node1": 0.38799999999999957,
+      "node2": 0.5559999999999998,
+      "node3": 1.0
+    },
+    "warm_start": true
+  }
+}

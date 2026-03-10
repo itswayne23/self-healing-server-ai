@@ -1,0 +1,2826 @@
+[
+  {
+    "timestamp": 1773124927.064233,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773124932.1242616,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773124937.1827395,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773124942.2206466,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773124947.2557373,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773124952.2867808,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773124957.3126369,
+    "anomalies": {
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124962.335062,
+    "anomalies": {
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124967.3747187,
+    "anomalies": {
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124972.4034324,
+    "anomalies": {
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124977.438716,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124982.4685032,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124987.486893,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124992.5058029,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773124997.5243094,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125002.5631478,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125007.5899596,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125012.6315613,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125017.6677084,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125022.6945384,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125027.736335,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125032.7729628,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125037.817459,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125042.8528156,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125047.8864005,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125052.9127915,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125057.951558,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125062.9726615,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125068.011001,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125073.0279737,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125078.0750496,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125083.12603,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125088.180347,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125093.1969297,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125098.2229967,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125103.2731223,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125108.309702,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125113.3388314,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125118.3718863,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125123.4053383,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125128.4453578,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125133.4860084,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125138.5019932,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125143.5411272,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125148.5548527,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 4
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125153.5885978,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 4
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125158.626189,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 5
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125163.6791582,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 3
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 5
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125168.7075024,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 4
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 5
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125173.7767057,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 4
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125178.7935996,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "medium",
+          "total_cases": 4
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125183.8234246,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 5
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125188.8589976,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125193.9169874,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125198.9701018,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125204.020539,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125209.0557885,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125214.1246476,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125219.18037,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125224.2316637,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125229.2678692,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125234.3173382,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125239.3628628,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125244.3886313,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125249.4214113,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125254.463455,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125259.5005736,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125264.5296159,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125269.5682082,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125274.6124866,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125279.6820736,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125284.7377772,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125289.7813325,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125294.8115437,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125299.8594077,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125304.908299,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125309.9525645,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125315.011487,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125320.0607028,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125325.0989857,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125330.1291459,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125335.1811306,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125340.225893,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125345.2648814,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125350.2987473,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125355.3555303,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125360.396776,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125365.4316633,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 7
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125370.4597955,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 7
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125375.4912338,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 7
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125380.5211926,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 8
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125385.5453568,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125390.570721,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125395.6163404,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125400.6439738,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 6
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125405.6765654,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "high",
+          "total_cases": 7
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125410.7215173,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 8
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125415.7582264,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 8
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125420.7817187,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125425.8201766,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125430.8762736,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125435.928192,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125440.9495208,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125445.9825776,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125451.011655,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125456.0406046,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125461.0642114,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125466.099236,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125471.113603,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125476.1492374,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125481.2081707,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125486.2519886,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125491.2801914,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125496.3159223,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125501.3331878,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125506.3730817,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125511.3938885,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125516.440892,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125521.4665961,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": 1773125526.5067039,
+    "anomalies": {
+      "node1": [
+        {
+          "accuracy": 0.0,
+          "node": "node1",
+          "peer": "node1",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ],
+      "node2": [
+        {
+          "accuracy": 0.0,
+          "node": "node2",
+          "peer": "node2",
+          "reason": "low_accuracy",
+          "severity": "critical",
+          "total_cases": 9
+        }
+      ]
+    }
+  }
+]

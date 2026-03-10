@@ -1,0 +1,351 @@
+{
+  "node1": {
+    "active_cases": 5,
+    "adaptive_quorum": 2.168,
+    "health": 0.554,
+    "node": "node1",
+    "quarantined": {
+      "node1": {
+        "active": true,
+        "until": 1773131840.2139666
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 1.0,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 0.0,
+          "false": 9,
+          "last_activity": 1773131660.214519,
+          "success": 0,
+          "total": 9
+        },
+        "node2": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131175.4121695,
+          "success": 0,
+          "total": 0
+        },
+        "node3": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131208.8978133,
+          "success": 0,
+          "total": 0
+        },
+        "node4": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131179.7834182,
+          "success": 0,
+          "total": 0
+        },
+        "node5": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131193.628552,
+          "success": 0,
+          "total": 0
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773131660.21452,
+          "votes": 0
+        },
+        "node2": {
+          "last_activity": 1773131654.1907845,
+          "votes": 19
+        },
+        "node3": {
+          "last_activity": 1773131654.1978843,
+          "votes": 19
+        },
+        "node4": {
+          "last_activity": 1773131659.211752,
+          "votes": 19
+        },
+        "node5": {
+          "last_activity": 1773131661.2181425,
+          "votes": 19
+        }
+      }
+    },
+    "strikes": {
+      "node1": 3,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.764,
+      "node2": 0.9159999999999999,
+      "node3": 0.9159999999999999,
+      "node4": 0.9159999999999999,
+      "node5": 0.9159999999999999
+    },
+    "warm_start": true
+  },
+  "node2": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.176,
+    "health": 0.964,
+    "node": "node2",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131638.9443145,
+          "success": 5,
+          "total": 5
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773131638.9443045,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.5599999999999996,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0
+    },
+    "warm_start": true
+  },
+  "node3": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.176,
+    "health": 0.964,
+    "node": "node3",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131638.9476047,
+          "success": 5,
+          "total": 5
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773131638.947597,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.5599999999999996,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0
+    },
+    "warm_start": true
+  },
+  "node4": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.176,
+    "health": 0.964,
+    "node": "node4",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131638.950784,
+          "success": 5,
+          "total": 5
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773131638.9507756,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.5599999999999996,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0
+    },
+    "warm_start": true
+  },
+  "node5": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.176,
+    "health": 0.964,
+    "node": "node5",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773131638.9546301,
+          "success": 5,
+          "total": 5
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773131638.9546216,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.5599999999999996,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0
+    },
+    "warm_start": true
+  }
+}

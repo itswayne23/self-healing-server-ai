@@ -1,0 +1,1082 @@
+[
+  {
+    "timestamp": 1773130861.812784,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130866.8702912,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130871.8982372,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130876.9358106,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.024,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.024,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.024,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.024,
+          "node3": 1.0,
+          "node4": 1.0,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130881.9731488,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.024,
+          "node3": 1.024,
+          "node4": 1.024,
+          "node5": 1.024
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.0,
+          "node3": 1.024,
+          "node4": 1.024,
+          "node5": 1.024
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.024,
+          "node3": 1.0,
+          "node4": 1.024,
+          "node5": 1.024
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.024,
+          "node3": 1.024,
+          "node4": 1.0,
+          "node5": 1.024
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.024,
+          "node2": 1.024,
+          "node3": 1.024,
+          "node4": 1.024,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130887.0042436,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.048,
+          "node3": 1.048,
+          "node4": 1.024,
+          "node5": 1.024
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.0,
+          "node3": 1.048,
+          "node4": 1.024,
+          "node5": 1.024
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.048,
+          "node3": 1.0,
+          "node4": 1.024,
+          "node5": 1.024
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.048,
+          "node3": 1.048,
+          "node4": 1.0,
+          "node5": 1.024
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.048,
+          "node3": 1.048,
+          "node4": 1.024,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130892.0267758,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.048,
+          "node3": 1.048,
+          "node4": 1.048,
+          "node5": 1.024
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.0,
+          "node3": 1.048,
+          "node4": 1.048,
+          "node5": 1.024
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.048,
+          "node3": 1.0,
+          "node4": 1.048,
+          "node5": 1.024
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.048,
+          "node3": 1.048,
+          "node4": 1.0,
+          "node5": 1.024
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.048,
+          "node2": 1.048,
+          "node3": 1.048,
+          "node4": 1.048,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130897.0489776,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.072,
+          "node3": 1.048,
+          "node4": 1.048,
+          "node5": 1.048
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.0,
+          "node3": 1.048,
+          "node4": 1.048,
+          "node5": 1.048
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.0,
+          "node4": 1.048,
+          "node5": 1.048
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.048,
+          "node4": 1.0,
+          "node5": 1.048
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.048,
+          "node4": 1.048,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130902.0782123,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.072,
+          "node3": 1.072,
+          "node4": 1.048,
+          "node5": 1.048
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.0,
+          "node3": 1.072,
+          "node4": 1.048,
+          "node5": 1.048
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.0,
+          "node4": 1.048,
+          "node5": 1.048
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.072,
+          "node4": 1.0,
+          "node5": 1.048
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.072,
+          "node4": 1.048,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130907.107946,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.072,
+          "node3": 1.072,
+          "node4": 1.072,
+          "node5": 1.072
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.0,
+          "node3": 1.072,
+          "node4": 1.072,
+          "node5": 1.072
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.0,
+          "node4": 1.072,
+          "node5": 1.072
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.072,
+          "node4": 1.0,
+          "node5": 1.072
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.072,
+          "node2": 1.072,
+          "node3": 1.072,
+          "node4": 1.072,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130912.1477215,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.096,
+          "node3": 1.072,
+          "node4": 1.072,
+          "node5": 1.072
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.0,
+          "node3": 1.072,
+          "node4": 1.072,
+          "node5": 1.072
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.096,
+          "node3": 1.0,
+          "node4": 1.072,
+          "node5": 1.072
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.096,
+          "node3": 1.072,
+          "node4": 1.0,
+          "node5": 1.072
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.096,
+          "node3": 1.072,
+          "node4": 1.072,
+          "node5": 1.0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773130917.1618934,
+    "trust_matrix": {
+      "node1": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.0,
+          "node2": 1.096,
+          "node3": 1.096,
+          "node4": 1.096,
+          "node5": 1.096
+        }
+      },
+      "node2": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.0,
+          "node3": 1.096,
+          "node4": 1.096,
+          "node5": 1.096
+        }
+      },
+      "node3": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.096,
+          "node3": 1.0,
+          "node4": 1.096,
+          "node5": 1.096
+        }
+      },
+      "node4": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.096,
+          "node3": 1.096,
+          "node4": 1.0,
+          "node5": 1.096
+        }
+      },
+      "node5": {
+        "active_cases": 0,
+        "strikes": {
+          "node1": 0,
+          "node2": 0,
+          "node3": 0,
+          "node4": 0,
+          "node5": 0
+        },
+        "trust": {
+          "node1": 1.096,
+          "node2": 1.096,
+          "node3": 1.096,
+          "node4": 1.096,
+          "node5": 1.0
+        }
+      }
+    }
+  }
+]
