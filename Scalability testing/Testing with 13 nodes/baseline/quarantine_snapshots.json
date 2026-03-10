@@ -1,0 +1,8486 @@
+[
+  {
+    "timestamp": 1773155523.1029735,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155528.1550446,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155533.2123353,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155538.2328856,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155543.2867286,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155548.3055747,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155553.3424666,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155558.395987,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155563.4307146,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155568.4728122,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155573.4956467,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  },
+  {
+    "timestamp": 1773155578.5391905,
+    "quarantine_status": {
+      "node1": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node10": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node11": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node12": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node13": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node2": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node3": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node4": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node5": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node6": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node7": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node8": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      },
+      "node9": {
+        "node1": {
+          "active": false,
+          "until": 0
+        },
+        "node10": {
+          "active": false,
+          "until": 0
+        },
+        "node11": {
+          "active": false,
+          "until": 0
+        },
+        "node12": {
+          "active": false,
+          "until": 0
+        },
+        "node13": {
+          "active": false,
+          "until": 0
+        },
+        "node2": {
+          "active": false,
+          "until": 0
+        },
+        "node3": {
+          "active": false,
+          "until": 0
+        },
+        "node4": {
+          "active": false,
+          "until": 0
+        },
+        "node5": {
+          "active": false,
+          "until": 0
+        },
+        "node6": {
+          "active": false,
+          "until": 0
+        },
+        "node7": {
+          "active": false,
+          "until": 0
+        },
+        "node8": {
+          "active": false,
+          "until": 0
+        },
+        "node9": {
+          "active": false,
+          "until": 0
+        }
+      }
+    }
+  }
+]

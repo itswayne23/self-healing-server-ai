@@ -1,0 +1,114 @@
+[
+  {
+    "case_id": "6f83126e-b31e-424f-9c77-743832d83967",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131660.2145207,
+    "weighted": 1.8319999999999999
+  },
+  {
+    "case_id": "df97875a-b1e0-49c8-a5cb-37745b2c3732",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131647.281216,
+    "weighted": 0.9159999999999999
+  },
+  {
+    "case_id": "dd1f91bd-cc3f-4265-9109-4872d3630048",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773131638.9561183,
+    "weighted": 2.7479999999999998
+  },
+  {
+    "case_id": "02ab156c-5da1-4bdb-8057-983059245136",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131636.6176224,
+    "weighted": 0.9159999999999999
+  },
+  {
+    "case_id": "570af325-ede1-4209-b8c3-1b04997045df",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773131628.2658598,
+    "weighted": 2.7479999999999998
+  },
+  {
+    "case_id": "857067d9-4191-42f1-8546-b0e0afb103eb",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131443.9623623,
+    "weighted": 0.952
+  },
+  {
+    "case_id": "d8e90abd-41bf-4419-9634-d97d2e24d98f",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131435.6321979,
+    "weighted": 0.0
+  },
+  {
+    "case_id": "9eba6f17-06b0-4ae0-8e48-567071b6e754",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131425.0008476,
+    "weighted": 0.0
+  },
+  {
+    "case_id": "3b1079c9-1cb2-46be-a921-d20d54b3d476",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131227.8393238,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "f5b264be-43b1-442f-a00f-f81775261652",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131214.9026945,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "5e4a62fb-5daf-41e2-afef-57727f96c43e",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773131204.2733493,
+    "weighted": 1.0
+  },
+  {
+    "case_id": "95652d5d-2d3a-40d5-b7f6-7c3ee65a8b8a",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773131193.648796,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "a15cf809-a7fd-43d2-8ca5-3cfa593184f2",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773131179.795057,
+    "weighted": 3.0
+  },
+  {
+    "case_id": "3a4271eb-88f4-4fea-94b2-c8c81095ce3e",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773131175.4291842,
+    "weighted": 2.0
+  }
+]

@@ -1,0 +1,482 @@
+[
+  {
+    "timestamp": 1773155708.4675102,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155713.5500631,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155718.5972836,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155723.6173806,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155728.6774766,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155733.729349,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155738.7861805,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155743.847618,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155748.886964,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155753.929523,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155758.9773147,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155764.0360165,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155769.064005,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155774.1206079,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155779.1634104,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155784.1998098,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155789.2588067,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155794.3085673,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155799.3457732,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155804.3875008,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155809.4422114,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155814.4974167,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155819.539573,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155824.5977738,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155829.612681,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155834.6727512,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155839.6944056,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155844.7415428,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155849.7976632,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155854.8414657,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155859.8814042,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155864.9409933,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155869.9863427,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155875.026863,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155880.0796182,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155885.1167884,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155890.1637752,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155895.2294292,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155900.2561657,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155905.3011043,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155910.3438132,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155915.4096272,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155920.470171,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155925.5065145,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155930.532476,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155935.5480063,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155940.5842135,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155945.6153264,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155950.6315243,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155955.6661358,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155960.7017004,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155965.7379236,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155970.7829041,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155975.8290844,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155980.8797817,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155985.8944106,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155990.9218035,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773155995.9799867,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156001.0477757,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156006.093393,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156011.1165025,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156016.1628132,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156021.2191494,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156026.2702665,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156031.324276,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156036.3546677,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156041.3721225,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156046.4199197,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156051.4349887,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156056.480744,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156061.519438,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156066.5724773,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156071.624172,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156076.640922,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156081.658553,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156086.7011526,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156091.7510793,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156096.8063986,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156101.8381333,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156106.8970969,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156111.935393,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156116.9797287,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156121.9944835,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156127.0093174,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156132.0312018,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156137.0596116,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156142.0806472,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156147.129053,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156152.163242,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156157.2184467,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156162.2402127,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156167.298449,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156172.3629618,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156177.412801,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156182.45967,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156187.5127728,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156192.5402048,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156197.5764928,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156202.5944276,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156207.6321454,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156212.6658933,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156217.7179873,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156222.7340934,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156227.7728436,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156232.8287861,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156237.8460398,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156242.8848987,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156247.9413228,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156252.9952073,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156258.0495102,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156263.1020505,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156268.1300056,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156273.1652699,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156278.181411,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156283.2186916,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156288.2326458,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156293.2639513,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156298.2813663,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156303.3364732,
+    "anomalies": {}
+  },
+  {
+    "timestamp": 1773156308.3601546,
+    "anomalies": {}
+  }
+]

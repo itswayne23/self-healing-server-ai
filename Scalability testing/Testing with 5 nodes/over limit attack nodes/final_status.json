@@ -1,0 +1,428 @@
+{
+  "node1": {
+    "active_cases": 7,
+    "adaptive_quorum": 2.3960000000000004,
+    "health": 0.514,
+    "node": "node1",
+    "quarantined": {
+      "node1": {
+        "active": true,
+        "until": 1773133666.387786
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 1.0,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 0.0,
+          "false": 9,
+          "last_activity": 1773133486.3883836,
+          "success": 0,
+          "total": 9
+        },
+        "node2": {
+          "accuracy": 0.667,
+          "false": 1,
+          "last_activity": 1773133427.2983618,
+          "success": 2,
+          "total": 3
+        },
+        "node3": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773132984.2609832,
+          "success": 0,
+          "total": 0
+        },
+        "node4": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133017.22469,
+          "success": 0,
+          "total": 0
+        },
+        "node5": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773132992.8945754,
+          "success": 0,
+          "total": 0
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773133486.388385,
+          "votes": 0
+        },
+        "node2": {
+          "last_activity": 1773133427.2983534,
+          "votes": 7
+        },
+        "node3": {
+          "last_activity": 1773133482.0301566,
+          "votes": 23
+        },
+        "node4": {
+          "last_activity": 1773133484.0360243,
+          "votes": 23
+        },
+        "node5": {
+          "last_activity": 1773133486.0403416,
+          "votes": 23
+        }
+      }
+    },
+    "strikes": {
+      "node1": 3,
+      "node2": 1,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.72,
+      "node2": 0.49599999999999955,
+      "node3": 0.9039999999999999,
+      "node4": 0.9039999999999999,
+      "node5": 0.9039999999999999
+    },
+    "warm_start": true
+  },
+  "node2": {
+    "active_cases": 5,
+    "adaptive_quorum": 2.402,
+    "health": 0.519,
+    "node": "node2",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": true,
+        "until": 1773133626.3245203
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 1.0,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 0.714,
+          "false": 2,
+          "last_activity": 1773133024.162876,
+          "success": 5,
+          "total": 7
+        },
+        "node2": {
+          "accuracy": 0.0,
+          "false": 9,
+          "last_activity": 1773133446.3252199,
+          "success": 0,
+          "total": 9
+        },
+        "node3": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773132983.9737961,
+          "success": 0,
+          "total": 0
+        },
+        "node4": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133220.1819115,
+          "success": 0,
+          "total": 0
+        },
+        "node5": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773132988.3113558,
+          "success": 0,
+          "total": 0
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773133024.1628659,
+          "votes": 7
+        },
+        "node2": {
+          "last_activity": 1773133446.325221,
+          "votes": 0
+        },
+        "node3": {
+          "last_activity": 1773133440.3049004,
+          "votes": 17
+        },
+        "node4": {
+          "last_activity": 1773133440.3098521,
+          "votes": 17
+        },
+        "node5": {
+          "last_activity": 1773133440.3187006,
+          "votes": 17
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 3,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.48399999999999954,
+      "node2": 0.808,
+      "node3": 0.9039999999999999,
+      "node4": 0.9039999999999999,
+      "node5": 0.9039999999999999
+    },
+    "warm_start": true
+  },
+  "node3": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.3376000000000006,
+    "health": 0.931,
+    "node": "node3",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133024.1659577,
+          "success": 7,
+          "total": 7
+        },
+        "node2": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133427.3028488,
+          "success": 3,
+          "total": 3
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773133024.1659517,
+          "votes": 0
+        },
+        "node2": {
+          "last_activity": 1773133427.3028402,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.5959999999999996,
+      "node2": 0.5599999999999996,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0
+    },
+    "warm_start": true
+  },
+  "node4": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.3456,
+    "health": 0.93,
+    "node": "node4",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133024.1684327,
+          "success": 7,
+          "total": 7
+        },
+        "node2": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133427.3126442,
+          "success": 3,
+          "total": 3
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773133024.1684265,
+          "votes": 0
+        },
+        "node2": {
+          "last_activity": 1773133427.3126316,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.5959999999999996,
+      "node2": 0.5399999999999996,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0
+    },
+    "warm_start": true
+  },
+  "node5": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.3456,
+    "health": 0.93,
+    "node": "node5",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133024.1713643,
+          "success": 7,
+          "total": 7
+        },
+        "node2": {
+          "accuracy": 1.0,
+          "false": 0,
+          "last_activity": 1773133427.3173451,
+          "success": 3,
+          "total": 3
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773133024.171356,
+          "votes": 0
+        },
+        "node2": {
+          "last_activity": 1773133427.3173375,
+          "votes": 0
+        }
+      }
+    },
+    "strikes": {
+      "node1": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0
+    },
+    "trust": {
+      "node1": 0.5959999999999996,
+      "node2": 0.5399999999999996,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0
+    },
+    "warm_start": true
+  }
+}

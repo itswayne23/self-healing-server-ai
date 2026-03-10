@@ -1,0 +1,1311 @@
+{
+  "node1": {
+    "active_cases": 22,
+    "adaptive_quorum": 2.0492307692307694,
+    "health": 0.59,
+    "node": "node1",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.75,
+    "reputation": {
+      "engine": {
+        "node1": {
+          "accuracy": 0.0,
+          "false": 1,
+          "last_activity": 1773155718.7988322,
+          "success": 0,
+          "total": 1
+        }
+      },
+      "node_stats": {
+        "node1": {
+          "last_activity": 1773155718.7988343,
+          "votes": 0
+        },
+        "node10": {
+          "last_activity": 1773156290.31816,
+          "votes": 22
+        },
+        "node11": {
+          "last_activity": 1773156290.322936,
+          "votes": 22
+        },
+        "node12": {
+          "last_activity": 1773156290.3276222,
+          "votes": 22
+        },
+        "node13": {
+          "last_activity": 1773156295.332889,
+          "votes": 22
+        },
+        "node2": {
+          "last_activity": 1773156290.279997,
+          "votes": 22
+        },
+        "node3": {
+          "last_activity": 1773156290.2844644,
+          "votes": 22
+        },
+        "node4": {
+          "last_activity": 1773156290.2889812,
+          "votes": 22
+        },
+        "node5": {
+          "last_activity": 1773156290.2937374,
+          "votes": 22
+        },
+        "node6": {
+          "last_activity": 1773156290.2983582,
+          "votes": 22
+        },
+        "node7": {
+          "last_activity": 1773156290.303362,
+          "votes": 22
+        },
+        "node8": {
+          "last_activity": 1773156290.3081763,
+          "votes": 22
+        },
+        "node9": {
+          "last_activity": 1773156290.313086,
+          "votes": 22
+        }
+      }
+    },
+    "strikes": {
+      "node1": 1,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6799999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": true
+  },
+  "node10": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node10",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node11": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node11",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node12": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node12",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node13": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node13",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node2": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node2",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node3": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node3",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node4": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node4",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node5": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node5",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node6": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node6",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node7": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node7",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node8": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node8",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  },
+  "node9": {
+    "active_cases": 0,
+    "adaptive_quorum": 2.0553846153846154,
+    "health": 0.988,
+    "node": "node9",
+    "quarantined": {
+      "node1": {
+        "active": false,
+        "until": 0
+      },
+      "node10": {
+        "active": false,
+        "until": 0
+      },
+      "node11": {
+        "active": false,
+        "until": 0
+      },
+      "node12": {
+        "active": false,
+        "until": 0
+      },
+      "node13": {
+        "active": false,
+        "until": 0
+      },
+      "node2": {
+        "active": false,
+        "until": 0
+      },
+      "node3": {
+        "active": false,
+        "until": 0
+      },
+      "node4": {
+        "active": false,
+        "until": 0
+      },
+      "node5": {
+        "active": false,
+        "until": 0
+      },
+      "node6": {
+        "active": false,
+        "until": 0
+      },
+      "node7": {
+        "active": false,
+        "until": 0
+      },
+      "node8": {
+        "active": false,
+        "until": 0
+      },
+      "node9": {
+        "active": false,
+        "until": 0
+      }
+    },
+    "recovery_confidence": 0.25,
+    "reputation": {
+      "engine": {},
+      "node_stats": {}
+    },
+    "strikes": {
+      "node1": 0,
+      "node10": 0,
+      "node11": 0,
+      "node12": 0,
+      "node13": 0,
+      "node2": 0,
+      "node3": 0,
+      "node4": 0,
+      "node5": 0,
+      "node6": 0,
+      "node7": 0,
+      "node8": 0,
+      "node9": 0
+    },
+    "trust": {
+      "node1": 0.6399999999999997,
+      "node10": 1.0,
+      "node11": 1.0,
+      "node12": 1.0,
+      "node13": 1.0,
+      "node2": 1.0,
+      "node3": 1.0,
+      "node4": 1.0,
+      "node5": 1.0,
+      "node6": 1.0,
+      "node7": 1.0,
+      "node8": 1.0,
+      "node9": 1.0
+    },
+    "warm_start": false
+  }
+}

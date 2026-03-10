@@ -1,0 +1,258 @@
+[
+  {
+    "case_id": "e9a131ef-0a22-469c-9998-1a1e3a161d34",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136679.8976643,
+    "weighted": 1.6879999999999997
+  },
+  {
+    "case_id": "cdb089f3-89c4-45c1-9f90-c5887a561bda",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136666.899722,
+    "weighted": 1.6879999999999997
+  },
+  {
+    "case_id": "f8d3725e-c280-432e-b798-0330615dcfbc",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136658.5196147,
+    "weighted": 2.5919999999999996
+  },
+  {
+    "case_id": "5641995b-13f3-4a2a-98be-3da84d15482d",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136656.245791,
+    "weighted": 0.46199999999999974
+  },
+  {
+    "case_id": "6897f706-1709-452d-b736-a8d2fc1598ed",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136645.1503897,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "416442a8-8ed6-43a4-b8e7-92945559d7b8",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136640.8825986,
+    "weighted": 1.6039999999999996
+  },
+  {
+    "case_id": "d19075bc-a1b0-4062-b60d-b66dd04f3865",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136623.3329356,
+    "weighted": 1.6039999999999996
+  },
+  {
+    "case_id": "3dccbc47-c44c-47ec-bb9a-1836fe26a160",
+    "node": "node2",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136610.4033241,
+    "weighted": 2.5679999999999996
+  },
+  {
+    "case_id": "3dca1829-c1f7-4ef1-9d0f-dd246360a1af",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136452.6032102,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "699d4621-c59f-4868-9cc8-6ebdbb12ac51",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136441.9692569,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "7ff38bd0-7704-4d9b-bc69-ff9b9bc88969",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136429.0288548,
+    "weighted": 2.98
+  },
+  {
+    "case_id": "c79b6182-51e1-4795-94c4-15ce8f704da9",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136405.331419,
+    "weighted": 1.928
+  },
+  {
+    "case_id": "7a510b67-b0ae-4db2-a109-cacb354b199b",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136394.6991522,
+    "weighted": 1.928
+  },
+  {
+    "case_id": "19c865cc-562c-4ff1-9f06-4830c8d2cfbb",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136384.0534108,
+    "weighted": 0.964
+  },
+  {
+    "case_id": "9ef1ad1c-4d42-4ceb-829e-d111f2b25b4c",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136227.1201296,
+    "weighted": 2.98
+  },
+  {
+    "case_id": "64b5b7c8-533c-40da-a22b-4a1c8a1117fa",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136218.7685144,
+    "weighted": 2.98
+  },
+  {
+    "case_id": "71e22329-3d6c-499d-a710-e9b8b3a63b8c",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136199.6920898,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "8765a96c-4fb9-4fbc-9ca7-18531cdc043c",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136191.375587,
+    "weighted": 1.0
+  },
+  {
+    "case_id": "e70cf7df-b32f-4ffb-bf78-84c7124f09af",
+    "node": "node1",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136188.9674711,
+    "weighted": 1.0
+  },
+  {
+    "case_id": "51d2618a-2b5f-46ef-866c-9e780531b324",
+    "node": "node2",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136183.035968,
+    "weighted": 3.0
+  },
+  {
+    "case_id": "df4a38ec-5a7e-4506-b57a-dc2ad0dd2dee",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136171.4219627,
+    "weighted": 5.0
+  },
+  {
+    "case_id": "d403cae6-9cc5-4b40-8da6-6594f4f1e4aa",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136169.4506505,
+    "weighted": 4.0
+  },
+  {
+    "case_id": "ab460e72-6003-4d68-b0be-eeb67cd5aa94",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136167.0585363,
+    "weighted": 3.0
+  },
+  {
+    "case_id": "890aa5d9-49a4-41b4-9a3b-092d06df3c4b",
+    "node": "node2",
+    "process": "python",
+    "result": "rejected",
+    "time": 1773136161.0747108,
+    "weighted": 4.0
+  },
+  {
+    "case_id": "627ef24d-132d-4a2e-8289-6de4cac1e25b",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136153.1349652,
+    "weighted": 3.312
+  },
+  {
+    "case_id": "2f20f109-abd7-47b2-b134-57d1108cb0d8",
+    "node": "node2",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136152.7315195,
+    "weighted": 4.0
+  },
+  {
+    "case_id": "2455b8db-aad5-4ae5-9df3-c281d4bd5cd3",
+    "node": "node2",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136150.342359,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "4eaeb4c4-52a1-4120-b1c4-57cbca4cddee",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136148.607194,
+    "weighted": 3.0
+  },
+  {
+    "case_id": "544d739a-9583-4346-93c6-190b98cd868f",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136141.9391744,
+    "weighted": 3.0
+  },
+  {
+    "case_id": "1093f28f-8b91-4374-a3bb-6488dc0970b2",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136137.2085319,
+    "weighted": 4.0
+  },
+  {
+    "case_id": "b7fecff3-66f0-4a25-8973-74f132454028",
+    "node": "node2",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136134.7290485,
+    "weighted": 2.0
+  },
+  {
+    "case_id": "15e8509c-e0bf-4ac9-a908-a03300b0e2f3",
+    "node": "node1",
+    "process": "python",
+    "result": "terminated",
+    "time": 1773136128.4492035,
+    "weighted": 4.0
+  }
+]
