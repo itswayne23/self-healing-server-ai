@@ -8,57 +8,50 @@ from flask_cors import CORS
 import subprocess
 import json
 
-
+# --- Configuration ---
 NODES = ["node1", "node2", "node3"]
 SEEN_CASES = set()
-
-
-app = Flask(__name__)
-CORS(app)
-
-
-CLUSTER_STATUS = {}
-CLUSTER_EVENTS = []
-
 MAX_LATENCY = 1.0
 MAX_ACTIVE_CASES = 5
-
 POLL_INTERVAL = 3
 MAX_EVENTS = 200
-
 SEEN_ANOMALIES = set()
 GOVERNANCE_ACTIONS = {}
 GOVERNANCE_COOLDOWN = 30  # seconds
-
 NODE_LATENCY = {}
 NODE_LAST_SEEN = {}
+POLICY_COOLDOWN = 30  # seconds
+LAST_POLICY_ACTION = {}
+RECOVERY_CANDIDATES = {}
+CLUSTER_SNAPSHOTS = {}
+SNAPSHOT_VERSION = 0
+DEAD_HEALTH_THRESHOLD = 0.25
+MAX_QUARANTINE_TIME = 180
+dead_nodes = {}
+AUTO_REPLACE = True
+REPLACEMENT_COOLDOWN = 30
+last_replacement = {}
+excluded_nodes = set()
+DB_PATH = "/app/events.db"
+
+# --- Thread Safety ---
+state_lock = threading.RLock()  # ✅ Re-entrant lock for nested state reads
+
+# --- Global State ---
+app = Flask(__name__)
+CORS(app)
+CLUSTER_STATUS = {}
+CLUSTER_EVENTS = []  # ✅ Explicitly initialize as list
+
+# Initialize node tracking
 for n in NODES:
     NODE_LAST_SEEN[n] = time.time()
     NODE_LATENCY[n] = 0.0
 
-POLICY_COOLDOWN = 30  # seconds
-LAST_POLICY_ACTION = {}
-RECOVERY_CANDIDATES = {}
-
-CLUSTER_SNAPSHOTS = {}
-SNAPSHOT_VERSION = 0
-
-DEAD_HEALTH_THRESHOLD = 0.25
-MAX_QUARANTINE_TIME = 180
-dead_nodes = {}
-
-AUTO_REPLACE = True
-REPLACEMENT_COOLDOWN = 30
-last_replacement = {}
-
-excluded_nodes = set()
-
-DB_PATH = "/app/events.db"
-
+# --- Database Helpers ---
 def init_db():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     cur.execute("""
     CREATE TABLE IF NOT EXISTS events (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -67,7 +60,7 @@ def init_db():
         process TEXT,
         result TEXT,
         weighted REAL,
-        time REAL
+        time REAL 
     )
     """)
     cur.execute("""
@@ -95,25 +88,22 @@ def init_db():
     """)
     cur.execute("CREATE INDEX IF NOT EXISTS idx_metrics_case ON metrics(case_id)")
     cur.execute("""
-        CREATE TABLE IF NOT EXISTS audit (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            action TEXT,
-            actor TEXT,
-            target TEXT,
-            case_id TEXT,
-            metadata TEXT,
-            time REAL
-        )
+    CREATE TABLE IF NOT EXISTS audit (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        action TEXT,
+        actor TEXT,
+        target TEXT,
+        case_id TEXT,
+        metadata TEXT,
+        time REAL
+    )
     """)
     conn.commit()
     conn.close()
 
-
 def insert_event(e):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
-
     cur.execute("""
     INSERT INTO events
     (case_id, node, process, result, weighted, time)
@@ -126,25 +116,20 @@ def insert_event(e):
         e["weighted"],
         e["time"]
     ))
-    
     conn.commit()
     conn.close()
-
 
 def load_recent_events(limit=200):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     cur.execute("""
-        SELECT case_id, node, process, result, weighted, time
-        FROM events
-        ORDER BY id DESC
-        LIMIT ?
+    SELECT case_id, node, process, result, weighted, time
+    FROM events
+    ORDER BY id DESC
+    LIMIT ?
     """, (limit,))
-
     rows = cur.fetchall()
     conn.close()
-
     return [
         {
             "case_id": r[0],
@@ -158,52 +143,46 @@ def load_recent_events(limit=200):
     ]
 
 def broadcast_penalty(node, penalty):
-    targets = list(set(NODES + list(CLUSTER_STATUS.keys())))
+    with state_lock:
+        targets = list(set(NODES + list(CLUSTER_STATUS.keys())))
+    
     for target in targets:
         try:
             requests.post(
                 f"http://{target}:5000/governance/penalize",
                 json={"node": node, "penalty": penalty},
-                timeout=2
+                timeout=5
             )
         except:
             pass
 
-
 def insert_metric_start(case_id, proposer, start_time):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     cur.execute("""
-        INSERT OR IGNORE INTO metrics (case_id, proposer, start_time)
-        VALUES (?, ?, ?)
+    INSERT OR IGNORE INTO metrics (case_id, proposer, start_time)
+    VALUES (?, ?, ?)
     """, (case_id, proposer, start_time))
-
     conn.commit()
     conn.close()
-
-
 
 def update_metric_consensus(case_id, consensus_time, result):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     cur.execute("""
-        UPDATE metrics
-        SET consensus_time = ?, result = ?
-        WHERE case_id = ?
+    UPDATE metrics
+    SET consensus_time = ?, result = ?
+    WHERE case_id = ?
     """, (consensus_time, result, case_id))
-
     conn.commit()
     conn.close()
 
 def insert_audit(action, actor=None, target=None, case_id=None, metadata=None):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     cur.execute("""
-        INSERT INTO audit (action, actor, target, case_id, metadata, time)
-        VALUES (?, ?, ?, ?, ?, ?)
+    INSERT INTO audit (action, actor, target, case_id, metadata, time)
+    VALUES (?, ?, ?, ?, ?, ?)
     """, (
         action,
         actor,
@@ -212,7 +191,6 @@ def insert_audit(action, actor=None, target=None, case_id=None, metadata=None):
         json.dumps(metadata or {}),
         time.time()
     ))
-
     conn.commit()
     conn.close()
 
@@ -223,172 +201,166 @@ def discover_nodes():
             capture_output=True,
             text=True
         )
-
         containers = result.stdout.strip().split("\n")
-
         dynamic = [
             name for name in containers
             if name.startswith("node")
         ]
-
         return dynamic
-
     except Exception as e:
         print(f"⚠️ node discovery failed: {e}")
         return []
 
 def poll_nodes():
-
     while True:
         current_nodes = list(set(NODES + discover_nodes()))
+        
         for node in current_nodes:
-            if node in excluded_nodes:
-                continue
+            with state_lock:
+                if node in excluded_nodes:
+                    continue
+
             try:
                 base = f"http://{node}:5000"
+                should_evaluate_policy = False
+                health = 0.0
 
                 # ---- STATUS ----
                 start = time.time()
+                status_data = {}
+                latency = MAX_LATENCY
+                online = False
+                rep_data = {}
+                snap_data = {}
+                events_data = []
+
                 try:
-                    resp = requests.get(f"{base}/status", timeout=2)
+                    resp = requests.get(f"{base}/status", timeout=5)
                     latency = time.time() - start
-
-                    status = resp.json()
-
-                    NODE_LATENCY[node] = latency
-                    NODE_LAST_SEEN[node] = time.time()
-                    CLUSTER_STATUS[node] = status
-
+                    status_data = resp.json()
+                    online = True
                 except Exception as e:
-                    CLUSTER_STATUS.setdefault(node, {})
-                    CLUSTER_STATUS[node]["error"] = str(e)
-                    CLUSTER_STATUS[node]["online"] = False
+                    status_data = {"error": str(e)}
+                    online = False
+                    latency = MAX_LATENCY
 
-                    NODE_LATENCY[node] = MAX_LATENCY
-
-                # ---- REPUTATION (Stage 8) ----
+                # ---- REPUTATION ----
                 try:
-                    rep = requests.get(
-                        f"{base}/reputation", timeout=2
-                    ).json()
-
-                    CLUSTER_STATUS[node]["reputation"] = rep
-
+                    rep_resp = requests.get(f"{base}/reputation", timeout=5)
+                    rep_data = rep_resp.json()
                 except Exception as e:
-                    CLUSTER_STATUS[node]["reputation_error"] = str(e)
+                    rep_data = {"reputation_error": str(e)}
 
-                # ---- STATE SNAPSHOT (Stage 16) ----
-                global SNAPSHOT_VERSION
-                SNAPSHOT_VERSION += 1
-
+                # ---- STATE SNAPSHOT ----
                 try:
-                    snap = requests.get(f"{base}/state/snapshot", timeout=2).json()
-                    CLUSTER_SNAPSHOTS[node] = snap
+                    snap_resp = requests.get(f"{base}/state/snapshot", timeout=5)
+                    snap_data = snap_resp.json()
                 except Exception as e:
-                    CLUSTER_SNAPSHOTS[node] = {"error": str(e)}
+                    snap_data = {"error": str(e)}
 
                 # ---- EVENTS ----
                 try:
-                    events = requests.get(
-                        f"{base}/events", timeout=2
-                    ).json()
+                    events_resp = requests.get(f"{base}/events", timeout=5)
+                    events_data = events_resp.json()
                 except:
-                    events = []
+                    events_data = []
 
+                # ✅ Acquire lock for ALL global updates
+                with state_lock:
+                    NODE_LATENCY[node] = latency
+                    NODE_LAST_SEEN[node] = time.time()
+                    
+                    CLUSTER_STATUS.setdefault(node, {})
+                    CLUSTER_STATUS[node].update(status_data)
+                    CLUSTER_STATUS[node]["online"] = online
+                    CLUSTER_STATUS[node]["reputation"] = rep_data
+                    
+                    global SNAPSHOT_VERSION
+                    SNAPSHOT_VERSION += 1
+                    CLUSTER_SNAPSHOTS[node] = snap_data
 
-                for e in events:
-                    key = f"{e['case_id']}:{e['node']}:{e['time']}"
+                    # Process Events ✅ FIXED: was "for e in events_"
+                    for e in events_data:
+                        key = f"{e['case_id']}:{e['node']}:{e['time']}"
+                        if key not in SEEN_CASES:
+                            SEEN_CASES.add(key)
+                            start_time = e.get("start_time")
+                            if start_time:
+                                insert_metric_start(e["case_id"], e["node"], start_time)
+                            insert_event(e)
+                            insert_audit(
+                                action="consensus_result",
+                                actor=e["node"],
+                                case_id=e["case_id"],
+                                metadata={
+                                    "result": e["result"],
+                                    "weighted": e["weighted"]
+                                }
+                            )
+                            if e["result"] in ("terminated", "rejected"):
+                                update_metric_consensus(e["case_id"], e["time"], e["result"])
+                            CLUSTER_EVENTS.append(e)
+                    
+                    CLUSTER_EVENTS[:] = CLUSTER_EVENTS[-MAX_EVENTS:]
 
-                    if key not in SEEN_CASES:
-                        SEEN_CASES.add(key)
+                    # Compute Health
+                    if "error" not in CLUSTER_STATUS[node]:
+                        health = compute_node_health(node, CLUSTER_STATUS[node])
+                    else:
+                        health = 0.0
+                    CLUSTER_STATUS[node]["health"] = health
 
-                        start_time = e.get("start_time")
-
-                        if start_time:
-                            insert_metric_start(e["case_id"], e["node"], start_time)
-
-                        insert_event(e)
-
-                        insert_audit(
-                            action="consensus_result",
-                            actor=e["node"],
-                            case_id=e["case_id"],
-                            metadata={
-                                "result": e["result"],
-                                "weighted": e["weighted"]
-                            }
+                    # Identity override logic
+                    if node in dead_nodes:
+                        replacement_alive = any(
+                            n.startswith(f"{node}_r")
+                            and n in CLUSTER_STATUS
+                            and "error" not in CLUSTER_STATUS[n]
+                            and CLUSTER_STATUS[n].get("health", 0) > 0.5
+                            for n in list(CLUSTER_STATUS.keys())
                         )
+                        if replacement_alive:
+                            print(f"🧷 Quarantining returning original {node} (replacement active)")
+                            excluded_nodes.add(node)
+                            continue
 
-                        # 🔹 Metric consensus if final
-                        if e["result"] in ("terminated", "rejected"):
-                            update_metric_consensus(e["case_id"], e["time"], e["result"])
+                    # Death detection
+                    q = CLUSTER_STATUS[node].get("quarantined", {}).get(node, {})
+                    quarantined = q.get("active", False)
+                    until = q.get("until", 0)
+                    too_long = quarantined and time.time() > (until + MAX_QUARANTINE_TIME)
+                    is_replacement = "_r" in node
 
-                        CLUSTER_EVENTS.append(e)
+                    if not is_replacement and (health < DEAD_HEALTH_THRESHOLD or too_long):
+                        if node not in dead_nodes:
+                            reason = "low_health" if health < DEAD_HEALTH_THRESHOLD else "stuck_quarantine"
+                            dead_nodes[node] = {
+                                "time": time.time(),
+                                "reason": reason
+                            }
+                            excluded_nodes.add(node)
+                            print(f"💀 Node marked dead: {node} reason={reason}")
 
-                CLUSTER_EVENTS[:] = CLUSTER_EVENTS[-MAX_EVENTS:]
+                    # Run Policy
+                    if "error" not in CLUSTER_STATUS[node]:
+                        should_evaluate_policy = True
 
-                # ✅ compute health + run policy
-                if "error" not in CLUSTER_STATUS[node]:
-                    health = compute_node_health(node, CLUSTER_STATUS[node])
-                else:
-                    health = 0.0
-
-                CLUSTER_STATUS[node]["health"] = health
-
-                # 🧬 Identity override: quarantine original if replacement exists
-                if node in dead_nodes:
-                    replacement_alive = any(
-                        n.startswith(f"{node}_r")
-                        and n in CLUSTER_STATUS
-                        and "error" not in CLUSTER_STATUS[n]
-                        and CLUSTER_STATUS[n].get("health", 0) > 0.5
-                        for n in CLUSTER_STATUS.keys()
-                    )
-
-                    if replacement_alive:
-                        print(f"🧷 Quarantining returning original {node} (replacement active)")
-                        force_quarantine(node)
-                        excluded_nodes.add(node)
-                        continue
-
-                # run policy only if online
-                if "error" not in CLUSTER_STATUS[node]:
+                if should_evaluate_policy:
                     evaluate_policy(node, health)
 
-                # 💀 death detection (always run)
-                q = CLUSTER_STATUS[node].get("quarantined", {}).get(node, {})
-                quarantined = q.get("active", False)
-                until = q.get("until", 0)
-
-                too_long = quarantined and time.time() > (until + MAX_QUARANTINE_TIME)
-
-                # skip death logic for replacements
-                is_replacement = "_r" in node
-
-                if not is_replacement and (health < DEAD_HEALTH_THRESHOLD or too_long):
-                    if node not in dead_nodes:
-                        reason = "low_health" if health < DEAD_HEALTH_THRESHOLD else "stuck_quarantine"
-
-                        dead_nodes[node] = {
-                            "time": time.time(),
-                            "reason": reason
-                        }
-
-                        excluded_nodes.add(node)
-
-                        print(f"💀 Node marked dead: {node} reason={reason}")
-
-                        if AUTO_REPLACE:
-                            last = last_replacement.get(node, 0)
-                            if time.time() - last >= REPLACEMENT_COOLDOWN:
-                                spawn_replacement(node)
+                # Spawn replacement outside lock
+                if node in dead_nodes and AUTO_REPLACE:
+                    last = last_replacement.get(node, 0)
+                    if time.time() - last >= REPLACEMENT_COOLDOWN:
+                        spawn_replacement(node)
 
             except Exception as e:
-                CLUSTER_STATUS[node] = {
-                    "node": node,
-                    "error": str(e),
-                    "online": False,
-                }
+                with state_lock:
+                    CLUSTER_STATUS[node] = {
+                        "node": node,
+                        "error": str(e),
+                        "online": False,
+                    }
 
         time.sleep(POLL_INTERVAL)
 
@@ -398,26 +370,25 @@ def anomaly_watchdog():
             _ = cluster_anomalies_internal()
         except Exception as e:
             print(f"anomaly watchdog error: {e}")
-
         time.sleep(5)
 
 def cluster_anomalies_internal():
     anomalies = {}
-
-    for node, data in CLUSTER_STATUS.items():
-        if node in excluded_nodes:
+    with state_lock:
+        status_copy = dict(CLUSTER_STATUS)
+        excluded_copy = set(excluded_nodes)
+    
+    for node, data in status_copy.items():
+        if node in excluded_copy:
             continue
 
         rep = data.get("reputation", {})
         engine = rep.get("engine", {})
-
         flags = []
 
         for peer, metrics in engine.items():
-
             total = metrics.get("total", 0)
             acc = metrics.get("accuracy", 1.0)
-
             if total < 3:
                 continue
 
@@ -425,177 +396,145 @@ def cluster_anomalies_internal():
                 "accuracy": acc,
                 "total_cases": total
             })
-
             if not severity:
                 continue
 
             anomaly_record = {
-                "node": node,          # observer node
-                "peer": peer,          # suspicious peer
+                "node": node,
+                "peer": peer,
                 "reason": "low_accuracy",
                 "severity": severity,
                 "accuracy": round(acc, 2),
                 "total_cases": total
             }
-
             flags.append(anomaly_record)
 
-            # 🗄️ DEDUP LOGGING (only log once per severity level)
             key = f"{node}:{peer}:{severity}"
+            penalty = None
+            
+            with state_lock:
+                if key not in SEEN_ANOMALIES:
+                    SEEN_ANOMALIES.add(key)
+                    insert_anomaly(anomaly_record)
 
-            if key not in SEEN_ANOMALIES:
-                SEEN_ANOMALIES.add(key)
-                insert_anomaly(anomaly_record)
+                now = time.time()
+                last = GOVERNANCE_ACTIONS.get(peer, 0)
+                if now - last > GOVERNANCE_COOLDOWN:
+                    if severity == "high":
+                        penalty = 0.15
+                    if severity == "critical":
+                        penalty = 0.25
+                    if penalty:
+                        GOVERNANCE_ACTIONS[peer] = now
 
-            # 🔥 GOVERNANCE ENFORCEMENT (cooldown controlled)
-            now = time.time()
-            last = GOVERNANCE_ACTIONS.get(peer, 0)
-
-            if now - last > GOVERNANCE_COOLDOWN:
-
-                if severity == "high":
-                    broadcast_penalty(peer, 0.15)
-                    insert_audit(
-                        action="penalty",
-                        actor=node,
-                        target=peer,
-                        metadata={"severity": "high", "penalty": 0.15}
-                    )
-
-                if severity == "critical":
-                    broadcast_penalty(peer, 0.25)
-                    insert_audit(
-                        action="penalty",
-                        actor=node,
-                        target=peer,
-                        metadata={"severity": "critical", "penalty": 0.25}
-                    )
-
-                GOVERNANCE_ACTIONS[peer] = now
+            if penalty:
+                broadcast_penalty(peer, penalty)
+                insert_audit(
+                    action="penalty",
+                    actor=node,
+                    target=peer,
+                    metadata={"severity": severity, "penalty": penalty}
+                )
 
         if flags:
             anomalies[node] = flags
-
     return anomalies
-
 
 def generate_explanation(event):
     node = event["node"]
     result = event["result"]
     weighted = event.get("weighted", 0)
-
     verdict = (
-        "The cluster reached consensus and terminated the process."
+        "The cluster reached consensus and terminated the process. "
         if result == "terminated"
-        else "The cluster rejected remediation due to insufficient trust-weighted votes."
+        else "The cluster rejected remediation due to insufficient trust-weighted votes. "
     )
-
     confidence = "high" if weighted >= 2 else "low"
-
     return (
-        f"Incident detected by {node}. "
-        f"{verdict} "
-        f"The weighted vote score was {weighted:.2f}, giving {confidence} confidence "
-        f"that the behavior was malicious."
+        f"Incident detected by {node}.  "
+        f"{verdict}  "
+        f"The weighted vote score was {weighted:.2f}, giving {confidence} confidence  "
+        f"that the behavior was malicious. "
     )
 
 def compute_node_health(node, data):
     trust_map = data.get("trust", {})
     rep_engine = data.get("reputation", {}).get("engine", {})
     active_cases = data.get("active_cases", 0)
-
-    # --- avg trust ---
+    
     avg_trust = (
         sum(trust_map.values()) / len(trust_map)
         if trust_map else 1.0
     )
-
-    # --- reputation accuracy ---
     accuracy = rep_engine.get(node, {}).get("accuracy", 1.0)
-
-    # --- latency score ---
-    latency = NODE_LATENCY.get(node, MAX_LATENCY)
+    
+    with state_lock:
+        latency = NODE_LATENCY.get(node, MAX_LATENCY)
+        last_seen = NODE_LAST_SEEN.get(node, 0)
+    
     latency_score = max(0.0, min(1.0, 1 - (latency / MAX_LATENCY)))
-
-    # --- stability score ---
-    stability_score = max(
-        0.0,
-        min(1.0, 1 - (active_cases / MAX_ACTIVE_CASES))
-    )
-
+    stability_score = max(0.0, min(1.0, 1 - (active_cases / MAX_ACTIVE_CASES)))
     health = (
         0.4 * avg_trust +
         0.3 * accuracy +
         0.2 * latency_score +
         0.1 * stability_score
     )
-
-    last_seen = NODE_LAST_SEEN.get(node, 0)
     offline_time = time.time() - last_seen
-
     is_offline = data.get("online") is False or "error" in data
-
     if is_offline:
         if offline_time > 5:
             health *= 0.5
         if offline_time > 10:
             health = 0.0
-
     health = max(0.0, min(1.0, health))
     return round(health, 3)
 
 def evaluate_policy(node, health):
     now = time.time()
-    last = LAST_POLICY_ACTION.get(node, 0)
+    with state_lock:
+        last = LAST_POLICY_ACTION.get(node, 0)
+        if now - last < POLICY_COOLDOWN:
+            return
+        LAST_POLICY_ACTION[node] = now
 
-    if now - last < POLICY_COOLDOWN:
-        return
-
-    # --- degraded ---
     if 0.65 > health >= 0.45:
         broadcast_penalty(node, 0.05)
-        RECOVERY_CANDIDATES[node] = "monitor"
-
-    # --- unhealthy ---
+        with state_lock:
+            RECOVERY_CANDIDATES[node] = "monitor"
     elif 0.45 > health >= 0.3:
         broadcast_penalty(node, 0.1)
-        RECOVERY_CANDIDATES[node] = "recover"
-
-    # --- critical ---
+        with state_lock:
+            RECOVERY_CANDIDATES[node] = "recover"
     elif health < 0.3:
         broadcast_penalty(node, 0.2)
         force_quarantine(node)
-        RECOVERY_CANDIDATES[node] = "replace"
+        with state_lock:
+            RECOVERY_CANDIDATES[node] = "replace"
 
-    LAST_POLICY_ACTION[node] = now
-   
 def force_quarantine(node):
-    targets = list(set(NODES + list(CLUSTER_STATUS.keys())))
-
+    with state_lock:
+        targets = list(set(NODES + list(CLUSTER_STATUS.keys())))
+    
     for target in targets:
         try:
             requests.post(
                 f"http://{target}:5000/governance/quarantine",
                 json={"node": node, "duration": 180},
-                timeout=2
+                timeout=5
             )
         except:
             pass
-    insert_audit(
-        action="quarantine",
-        actor="controller",
-        target=node
-    )
+    insert_audit(action="quarantine", actor="controller", target=node)
 
 def spawn_replacement(node_name):
     new_node = f"{node_name}_r{int(time.time())}"
-
     print(f"♻️ Spawning replacement for {node_name} → {new_node}")
-
-    # determine image + volume from original node name
     image = f"self-healing-server-{node_name}"
     volume = f"self-healing-server_{node_name}-data:/data"
-    peers = ",".join(list(set(NODES + list(CLUSTER_STATUS.keys()))))
+    
+    with state_lock:
+        peers = ", ".join(list(set(NODES + list(CLUSTER_STATUS.keys()))))
 
     try:
         subprocess.run([
@@ -607,56 +546,43 @@ def spawn_replacement(node_name):
             "-e", f"PEERS={peers}",
             "-v", volume,
             image
-        ])
+        ], check=True)
     except Exception as e:
         print(f"❌ spawn failed for {node_name}: {e}")
+    
+    with state_lock:
+        last_replacement[node_name] = time.time()
 
-    last_replacement[node_name] = time.time()
-
+# --- Flask Routes ---
 
 @app.route("/cluster/status")
 def cluster_status():
-    return jsonify(CLUSTER_STATUS)
-
+    with state_lock:
+        return jsonify(dict(CLUSTER_STATUS))
 
 @app.route("/cluster/events")
 def cluster_events():
-    return jsonify(CLUSTER_EVENTS)
-
+    with state_lock:
+        return jsonify(list(CLUSTER_EVENTS))
 
 @app.route("/cluster/nodes")
 def cluster_nodes():
-    return jsonify(list(CLUSTER_STATUS.keys()))
-
+    with state_lock:
+        return jsonify(list(CLUSTER_STATUS.keys()))
 
 @app.route("/history")
 def history():
     return jsonify(load_recent_events(500))
 
-
 @app.route("/stats")
 def stats():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
-    cur.execute("""
-        SELECT node, COUNT(*) 
-        FROM events
-        GROUP BY node
-    """)
-
+    cur.execute("SELECT node, COUNT(*) FROM events GROUP BY node")
     per_node = dict(cur.fetchall())
-
-    cur.execute("""
-        SELECT result, COUNT(*)
-        FROM events
-        GROUP BY result
-    """)
-
+    cur.execute("SELECT result, COUNT(*) FROM events GROUP BY result")
     per_result = dict(cur.fetchall())
-
     conn.close()
-
     return jsonify({
         "events_total": sum(per_node.values()),
         "by_node": per_node,
@@ -665,26 +591,18 @@ def stats():
 
 @app.route("/cluster/explain/<case_id>")
 def explain_case(case_id):
-
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
-    row = cur.execute(
-        """
-        SELECT case_id, node, process, result, weighted, time
-        FROM events
-        WHERE case_id = ?
-        ORDER BY time DESC
-        LIMIT 1
-        """,
-        (case_id,),
-    ).fetchone()
-
+    row = cur.execute("""
+    SELECT case_id, node, process, result, weighted, time
+    FROM events
+    WHERE case_id = ?
+    ORDER BY time DESC
+    LIMIT 1
+    """, (case_id,)).fetchone()
     conn.close()
-
     if not row:
         return jsonify({"error": "case not found"}), 404
-
     event = {
         "case_id": row[0],
         "node": row[1],
@@ -693,9 +611,7 @@ def explain_case(case_id):
         "weighted": row[4],
         "time": row[5],
     }
-
     explanation = generate_explanation(event)
-
     return jsonify({
         "case_id": case_id,
         "explanation": explanation,
@@ -704,63 +620,54 @@ def explain_case(case_id):
 
 @app.route("/cluster/trust")
 def cluster_trust():
-
-    snapshot = {}
-
-    for node, data in CLUSTER_STATUS.items():
-        if node in excluded_nodes:
-            continue
-        snapshot[node] = {
-            "trust": data.get("trust"),
-            "strikes": data.get("strikes"),
-            "active_cases": data.get("active_cases"),
-        }
-
+    with state_lock:
+        snapshot = {}
+        for node, data in CLUSTER_STATUS.items():
+            if node in excluded_nodes:
+                continue
+            snapshot[node] = {
+                "trust": data.get("trust"),
+                "strikes": data.get("strikes"),
+                "active_cases": data.get("active_cases"),
+            }
     return jsonify(snapshot)
 
 @app.route("/cluster/quarantine")
 def cluster_quarantine():
-    snap = {}
-
-    for node, data in CLUSTER_STATUS.items():
-        if node in excluded_nodes:
-            continue
-        snap[node] = data.get("quarantined", {})
-
+    with state_lock:
+        snap = {}
+        for node, data in CLUSTER_STATUS.items():
+            if node in excluded_nodes:
+                continue
+            snap[node] = data.get("quarantined", {})
     return jsonify(snap)
 
 @app.route("/cluster/quarantine_timers")
 def cluster_quarantine_timers():
-
     timers = {}
     now = time.time()
-
-    for node, data in CLUSTER_STATUS.items():
-        if node in excluded_nodes:
-            continue
-        q = data.get("quarantined", {})
-        timers[node] = {}
-
-        for peer, info in q.items():
-            if info.get("active"):
-                remaining = int(info.get("until", 0) - now)
-                timers[node][peer] = max(0, remaining)
-            else:
-                timers[node][peer] = 0
-
+    with state_lock:
+        for node, data in CLUSTER_STATUS.items():
+            if node in excluded_nodes:
+                continue
+            q = data.get("quarantined", {})
+            timers[node] = {}
+            for peer, info in q.items():
+                if info.get("active"):
+                    remaining = int(info.get("until", 0) - now)
+                    timers[node][peer] = max(0, remaining)
+                else:
+                    timers[node][peer] = 0
     return jsonify(timers)
-
 
 @app.route("/cluster/reputation")
 def cluster_reputation():
-
-    snap = {}
-
-    for node, data in CLUSTER_STATUS.items():
-        if node in excluded_nodes:
-            continue
-        snap[node] = data.get("reputation", {})
-
+    with state_lock:
+        snap = {}
+        for node, data in CLUSTER_STATUS.items():
+            if node in excluded_nodes:
+                continue
+            snap[node] = data.get("reputation", {})
     return jsonify(snap)
 
 @app.route("/cluster/anomalies")
@@ -771,115 +678,96 @@ def cluster_anomalies():
 def cluster_metrics():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     rows = cur.execute("""
     SELECT case_id, proposer, start_time, consensus_time, result
     FROM metrics
     """).fetchall()
-
     conn.close()
-
     output = []
-
     for r in rows:
-        if r[3]:
-            latency = round(r[3] - r[2], 2)
-        else:
-            latency = None
-
+        latency = round(r[3] - r[2], 2) if r[3] else None
         output.append({
             "case_id": r[0],
             "proposer": r[1],
             "latency": latency,
             "result": r[4]
         })
-
     return jsonify(output)
 
 @app.route("/cluster/health")
 def cluster_health():
     health_map = {}
-
-    for node, data in CLUSTER_STATUS.items():
-        if node in excluded_nodes:
-            continue
-        if "error" in data:
-            health_map[node] = 0.0
-            continue
-
-        health_map[node] = compute_node_health(node, data)
-
+    with state_lock:
+        for node, data in CLUSTER_STATUS.items():
+            if node in excluded_nodes:
+                continue
+            # ✅ FIXED: was "if 'error' in"
+            if "error" in data:
+                health_map[node] = 0.0
+                continue
+            health_map[node] = compute_node_health(node, data)
     return jsonify(health_map)
 
 @app.route("/cluster/recovery_candidates")
 def cluster_recovery_candidates():
-    return jsonify(RECOVERY_CANDIDATES)
+    with state_lock:
+        return jsonify(dict(RECOVERY_CANDIDATES))
 
 @app.route("/cluster/snapshots")
 def cluster_snapshots():
-    return jsonify({
-        "version": SNAPSHOT_VERSION,
-        "nodes": CLUSTER_SNAPSHOTS
-    })
+    with state_lock:
+        return jsonify({
+            "version": SNAPSHOT_VERSION,
+            "nodes": dict(CLUSTER_SNAPSHOTS)
+        })
 
 @app.route("/cluster/recover", methods=["POST"])
 def cluster_recover():
     data = request.json
     node = data.get("node")
-
-    if node not in CLUSTER_SNAPSHOTS:
-        return jsonify({"status": "unknown_node"}), 404
-
-    print(f"🩺 recovery requested by {node}")
-    insert_audit(
-        action="recovery_start",
-        actor="controller",
-        target=node
-    )
-
-    # Pick healthiest donor
-    donor = None
-    for peer, snap in CLUSTER_SNAPSHOTS.items():
-        if peer != node and snap.get("trust"):
-            donor = snap
-            break
-
+    
+    with state_lock:
+        if node not in CLUSTER_SNAPSHOTS:
+            return jsonify({"status": "unknown_node"}), 404
+        donor = None
+        for peer, snap in CLUSTER_SNAPSHOTS.items():
+            if peer != node and snap.get("trust"):
+                donor = snap
+                break
+    
     if not donor:
         return jsonify({"status": "no_donor"}), 500
+
+    print(f"🩺 recovery requested by {node}")
+    insert_audit(action="recovery_start", actor="controller", target=node)
 
     try:
         requests.post(
             f"http://{node}:5000/state/restore",
             json=donor,
-            timeout=3
+            timeout=5
         )
     except:
         pass
-    insert_audit(
-        action="recovery_complete",
-        actor="controller",
-        target=node
-    )
+    insert_audit(action="recovery_complete", actor="controller", target=node)
     return jsonify({"status": "recovery_sent"})
 
 @app.route("/cluster/dead")
 def cluster_dead():
-    return jsonify(dead_nodes)
+    with state_lock:
+        return jsonify(dict(dead_nodes))
 
 @app.route("/cluster/audit")
 def audit_all():
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     rows = cur.execute("""
-        SELECT action, actor, target, case_id, metadata, time
-        FROM audit
-        ORDER BY id DESC
-        LIMIT 500
+    SELECT action, actor, target, case_id, metadata, time
+    FROM audit
+    ORDER BY id DESC
+    LIMIT 500
     """).fetchall()
-
     conn.close()
-
     return jsonify([
         {
             "action": r[0],
@@ -896,17 +784,14 @@ def audit_all():
 def audit_node(node):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     rows = cur.execute("""
-        SELECT action, actor, target, case_id, metadata, time
-        FROM audit
-        WHERE actor = ? OR target = ?
-        ORDER BY id DESC
-        LIMIT 200
+    SELECT action, actor, target, case_id, metadata, time
+    FROM audit
+    WHERE actor = ? OR target = ?
+    ORDER BY id DESC
+    LIMIT 200
     """, (node, node)).fetchall()
-
     conn.close()
-
     return jsonify([
         {
             "action": r[0],
@@ -923,16 +808,13 @@ def audit_node(node):
 def audit_case(case_id):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     rows = cur.execute("""
-        SELECT action, actor, target, metadata, time
-        FROM audit
-        WHERE case_id = ?
-        ORDER BY time ASC
+    SELECT action, actor, target, metadata, time
+    FROM audit
+    WHERE case_id = ?
+    ORDER BY time ASC
     """, (case_id,)).fetchall()
-
     conn.close()
-
     return jsonify([
         {
             "time": r[4],
@@ -948,16 +830,13 @@ def audit_case(case_id):
 def node_timeline(node):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     rows = cur.execute("""
-        SELECT action, actor, target, metadata, time
-        FROM audit
-        WHERE actor = ? OR target = ?
-        ORDER BY time ASC
+    SELECT action, actor, target, metadata, time
+    FROM audit
+    WHERE actor = ? OR target = ?
+    ORDER BY time ASC
     """, (node, node)).fetchall()
-
     conn.close()
-
     return jsonify([
         {
             "time": r[4],
@@ -969,30 +848,24 @@ def node_timeline(node):
         for r in rows
     ])
 
-# -----------------------------------------------------------------
+# --- Helpers ---
+
 def anomaly_severity(a):
     acc = a.get("accuracy", 1.0)
     total = a.get("total_cases", 0)
-
     if total < 3:
-        return None   # not enough data
-
+        return None
     if acc < 0.15 and total >= 8:
         return "critical"
-
     if acc < 0.25 and total >= 5:
         return "high"
-
     if acc < 0.4:
         return "medium"
-
     return None
-
 
 def insert_anomaly(a):
     conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
-
     cur.execute("""
     INSERT INTO anomalies (node, peer, reason, severity, accuracy, total_cases, time)
     VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -1005,7 +878,6 @@ def insert_anomaly(a):
         a["total_cases"],
         time.time()
     ))
-
     conn.commit()
     conn.close()
 
@@ -1015,99 +887,81 @@ def governance_feedback(peer, severity):
         "high": 0.1,
         "critical": 0.2
     }.get(severity, 0)
-
     if penalty > 0:
         broadcast_penalty(peer, penalty)
 
 def replica_sync_loop():
     while True:
         time.sleep(10)
-
-        if not CLUSTER_SNAPSHOTS:
+        with state_lock:
+            snaps_copy = dict(CLUSTER_SNAPSHOTS)
+            status_copy = dict(CLUSTER_STATUS)
+        
+        if not snaps_copy:
             continue
 
-        for node, snap in CLUSTER_SNAPSHOTS.items():
-
+        for node, snap in snaps_copy.items():
             if "error" in snap:
                 continue
-
-            # ---- detect amnesia ----
             is_amnesiac = (
                 not snap.get("node_stats") or
                 not snap.get("reputation") or
                 len(snap.get("events", [])) == 0
             )
-
             if not is_amnesiac:
                 continue
 
             print(f"🧠 {node} detected amnesia")
-
-            # ---- select donor ----
             donor_node = None
             best_health = 0
 
-            for peer in CLUSTER_STATUS.keys():
+            for peer in status_copy.keys():
                 if peer == node:
                     continue
-
-                peer_snap = CLUSTER_SNAPSHOTS.get(peer)
-
+                peer_snap = snaps_copy.get(peer)
                 if not peer_snap or "error" in peer_snap:
                     continue
-
-                # donor must have real memory
                 if (
                     not peer_snap.get("node_stats") or
                     len(peer_snap.get("events", [])) == 0
                 ):
                     continue
-
-                peer_status = CLUSTER_STATUS.get(peer, {})
+                peer_status = status_copy.get(peer, {})
                 h = peer_status.get("health", 0)
-
-                # ---- trust guard ----
                 peer_trust_map = peer_status.get("trust", {})
-
                 avg_trust = (
                     sum(peer_trust_map.values()) / len(peer_trust_map)
                     if peer_trust_map else 1.0
                 )
-
-                # require healthy AND trusted donor
                 if h < 0.6 or avg_trust < 0.6:
                     continue
-
-                # select best donor by health
                 if h > best_health:
                     donor_node = peer
                     best_health = h
-
 
             if not donor_node:
                 print(f"⚠️ no valid donor for {node}")
                 continue
 
-            donor = CLUSTER_SNAPSHOTS[donor_node]
-
+            donor = snaps_copy[donor_node]
             try:
                 r = requests.post(
                     f"http://{node}:5000/state/restore",
                     json=donor,
-                    timeout=3
+                    timeout=5
                 )
                 print(f"🧬 restored {node} from {donor_node} status={r.status_code}")
             except Exception as e:
                 print(f"❌ restore failed {node}: {e}")
 
-
-
+# --- Startup ---
 init_db()
-CLUSTER_EVENTS[:] = load_recent_events()
+with state_lock:
+    CLUSTER_EVENTS[:] = load_recent_events()
 
 threading.Thread(target=poll_nodes, daemon=True).start()
 threading.Thread(target=anomaly_watchdog, daemon=True).start()
 threading.Thread(target=replica_sync_loop, daemon=True).start()
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=7000)
+    app.run(host="0.0.0.0", port=7000, threaded=True)

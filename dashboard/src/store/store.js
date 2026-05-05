@@ -2,6 +2,56 @@ import { create } from "zustand";
 import { generateMockState } from "../utils/mockData";
 import * as api from "./api";
 
+const safeFetch = async (request, fallback) => {
+  try {
+    return { data: await request(), ok: true };
+  } catch {
+    return { data: fallback, ok: false };
+  }
+};
+
+const deriveStatus = (node, data, health, quarantine) => {
+  const selfQuarantine = quarantine?.[node]?.[node];
+  if (selfQuarantine?.active) return "quarantined";
+  if (data.status) return data.status;
+  if (data.online === false || data.error) return "degraded";
+  if (health < 0.3) return "compromised";
+  if (health < 0.65) return "degraded";
+  return "healthy";
+};
+
+const normalizeClusterStatus = (status, health, quarantine) =>
+  Object.fromEntries(
+    Object.entries(status || {}).map(([node, data]) => {
+      const nodeHealth = health?.[node] ?? data.health ?? 0;
+      return [
+        node,
+        {
+          ...data,
+          node: data.node || node,
+          health: nodeHealth,
+          status: deriveStatus(node, data, nodeHealth, quarantine),
+          role: data.role || "follower",
+          latency: data.latency || 0,
+          cpu: data.cpu || 0,
+          memory: data.memory || 0,
+          message_delay: data.message_delay || 0,
+        },
+      ];
+    }),
+  );
+
+const updateTrustHistory = (previous, status) => {
+  const time = Date.now();
+  const next = { ...previous };
+  Object.entries(status || {}).forEach(([node, data]) => {
+    const trust = data.trust?.[node];
+    if (typeof trust !== "number") return;
+    next[node] = [...(next[node] || []), { time, trust }].slice(-100);
+  });
+  return next;
+};
+
 const useStore = create((set, get) => ({
   // Connection
   connected: false,
@@ -81,36 +131,53 @@ const useStore = create((set, get) => ({
 
   // fetch from real API
   fetchFromAPI: async () => {
-    try {
-      const [
-        status,
-        health,
-        events,
-        trust,
-        audit,
-        metrics,
-        quarantine,
-        reputation,
-        dead,
-        snapshots,
-        anomalies,
-        stats,
-        recoveryCandidates,
-      ] = await Promise.all([
-        api.fetchClusterStatus(),
-        api.fetchClusterHealth(),
-        api.fetchClusterEvents(),
-        api.fetchClusterTrust(),
-        api.fetchClusterAudit(),
-        api.fetchClusterMetrics(),
-        api.fetchClusterQuarantine(),
-        api.fetchClusterReputation(),
-        api.fetchClusterDead(),
-        api.fetchClusterSnapshots(),
-        api.fetchClusterAnomalies(),
-        api.fetchStats(),
-        api.fetchClusterRecoveryCandidates(),
-      ]);
+    const current = get();
+    const results = await Promise.all([
+      safeFetch(api.fetchClusterStatus, current.clusterStatus),
+      safeFetch(api.fetchClusterHealth, current.clusterHealth),
+      safeFetch(api.fetchClusterEvents, current.events),
+      safeFetch(api.fetchClusterTrust, current.trust || {}),
+      safeFetch(api.fetchClusterAudit, current.forensicLogs),
+      safeFetch(api.fetchClusterMetrics, current.metricsHistory),
+      safeFetch(api.fetchClusterQuarantine, current.quarantine),
+      safeFetch(api.fetchClusterReputation, current.reputation),
+      safeFetch(api.fetchClusterDead, current.deadNodes),
+      safeFetch(api.fetchClusterSnapshots, current.snapshots),
+      safeFetch(api.fetchClusterAnomalies, current.anomalies),
+      safeFetch(api.fetchStats, current.stats),
+      safeFetch(api.fetchClusterRecoveryCandidates, current.recoveryData),
+    ]);
+
+    const [
+      statusResult,
+      healthResult,
+      eventsResult,
+      trustResult,
+      auditResult,
+      metricsResult,
+      quarantineResult,
+      reputationResult,
+      deadResult,
+      snapshotsResult,
+      anomaliesResult,
+      statsResult,
+      recoveryCandidatesResult,
+    ] = results;
+
+    const rawStatus = statusResult.data || {};
+    const health = healthResult.data || {};
+    const events = Array.isArray(eventsResult.data) ? eventsResult.data : [];
+    const trust = trustResult.data || {};
+    const audit = Array.isArray(auditResult.data) ? auditResult.data : [];
+    const metrics = Array.isArray(metricsResult.data) ? metricsResult.data : [];
+    const quarantine = quarantineResult.data || {};
+    const reputation = reputationResult.data || {};
+    const dead = deadResult.data || {};
+    const snapshots = snapshotsResult.data || { nodes: {} };
+    const anomalies = anomaliesResult.data || {};
+    const stats = statsResult.data || {};
+    const recoveryCandidates = recoveryCandidatesResult.data || {};
+    const status = normalizeClusterStatus(rawStatus, health, quarantine);
 
       const nodeIds = Object.keys(status);
 
@@ -229,16 +296,19 @@ const useStore = create((set, get) => ({
       });
 
       set({
-        connected: true,
+        connected: results.some((result) => result.ok),
         clusterStatus: status,
         clusterHealth: health,
+        trustHistory: updateTrustHistory(current.trustHistory, status),
         events,
+        trust,
         quarantine,
         reputation,
         deadNodes: dead,
         snapshots,
         anomalies,
         stats,
+        metricsHistory: metrics,
         forensicLogs: audit,
         clusterMetrics: liveMetrics,
         consensusCases,
@@ -253,9 +323,6 @@ const useStore = create((set, get) => ({
           ),
         ].slice(-100),
       });
-    } catch (err) {
-      set({ connected: false });
-    }
   },
 
   // refresh with mock data
